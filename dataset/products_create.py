@@ -24,7 +24,7 @@ def generate_product_data(num_rows: int,
     :return: None.
     """
     # Product quantity units used in the dataset.
-    units = ['ml', 'gr', 'pieces']
+    units = ['ml', 'gr', 'pieces'] # 'ml' (milliliters),'gr' (grams),
     # Create a list to hold the data.
     data = []
     # Generate a list of dates included in [start_date, end_date].
