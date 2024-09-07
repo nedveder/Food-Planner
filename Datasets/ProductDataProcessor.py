@@ -49,14 +49,13 @@ class ProductDataProcessor:
         random_date = start_date + timedelta(days=random_days)
         return random_date.strftime('%Y-%m-%d')
 
-    def save_to_excel(self, output_path):
+    def save_to_csv(self, output_path):
         """
-        Saves the DataFrame to an Excel file.
+        Saves the DataFrame to a CSV file.
 
-        :param df: The DataFrame to save.
-        :param output_path: The file path for the output Excel file.
+        :param output_path: The file path for the output CSV file.
         """
-        self.random_data_set.to_excel(output_path, index=False)
+        self.random_data_set.to_csv(output_path, index=False)
         print(f"Dataset saved to {output_path}")
 
 
@@ -69,8 +68,8 @@ def main():
     smaller_dataset = processor.create_smaller_dataset(sample_size)
 
     # Save the smaller dataset to a new Excel file
-    output_path = 'smaller_products_data.xlsx'  # Define your output path
-    processor.save_to_excel(output_path)
+    output_path = 'smaller_products_data.csv'  # Define your output path
+    processor.save_to_csv(output_path)
 
 
 if __name__ == "__main__":
