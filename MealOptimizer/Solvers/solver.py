@@ -1,18 +1,10 @@
 from abc import ABC, abstractmethod
-import random
-import math
-from typing import List, Dict, Any, Tuple
-
 from ..Problems.problem import Problem
+from ..Problems.state import State
 
 
 class Solver(ABC):
     @abstractmethod
-    def solve(self, problem: 'Problem') -> Any:
+    def solve(self, problem: Problem, state: State) -> State:
         """Solve the given problem and return the solution."""
-        pass
-
-    @abstractmethod
-    def get_iterations(self) -> int:
-        """Return the number of iterations performed by the solver."""
-        pass
+        raise NotImplementedError

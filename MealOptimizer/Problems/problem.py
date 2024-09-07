@@ -1,53 +1,50 @@
 from abc import ABC, abstractmethod
 import pandas as pd
 from typing import List, Dict, Any
+from ..Problems.utils import Action, Piece
 
 
 class Problem(ABC):
-    @abstractmethod
-    def load_data(self, data_source: str) -> pd.DataFrame:
-        """Load data from the given source into a pandas DataFrame."""
-        pass
+    def __init__(self, actions_dataset, start_date, pieces_with_dates, requested_amount=2):
+        """Legal actions is all available recipies that can be made in this current dataset"""
+        self.start_date = start_date
+        self.action_dataset = actions_dataset
+        self.legal_actions = self.create_legal_actions(actions_dataset, pieces_with_dates)
+        self.requested_amount = requested_amount
+
+    @staticmethod
+    def create_legal_actions(action_dataset, pieces_with_dates) -> List[Action]:
+        legal_actions = []
+        for index, row in action_dataset.iterrows():
+            pieces = []
+            for product in row["Products"].split(","):
+                name, quantity = product.split("(")
+                quantity, unit = quantity[:-1].split(" ")
+                expiration_date = pieces_with_dates[pieces_with_dates["Product Name"] == name]["Date"].values[0]
+                piece = Piece(name, quantity, unit, expiration_date)
+                pieces.append(piece)
+            action = Action(row["Recipe ID"], pieces)
+            legal_actions.append(action)
+        return legal_actions
 
     @abstractmethod
-    def apply_solution(self, solution: Any) -> None:
-        """Apply the given solution to the problem."""
+    def get_action_score(self, action) -> float:
+        """Action is selected recipe"""
         pass
 
-    @abstractmethod
-    def evaluate_solution(self) -> Dict[str, float]:
-        """Evaluate the applied solution based on defined KPIs."""
-        pass
+    def get_available_actions(self, state) -> List[Action]:
+        """State is all available products and used recipies, meaning available moves are all the recipies
+        that can be made with the available products minus products used by recipies"""
+        available_actions = []
+        for action in self.legal_actions:
+            if all(state.is_available_piece(piece) for piece in action.pieces):
+                available_actions.append(action)
+        return available_actions
 
-    @abstractmethod
-    def generate_output(self) -> pd.DataFrame:
-        """Generate a meaningful output for the user."""
-        pass
+    def get_score(self, state) -> float:
+        """Calculate the score of the current state"""
+        return sum(self.get_action_score(action) for action in state.selected_actions)
 
-    @abstractmethod
-    def get_state(self) -> Any:
-        """Get the current state of the problem."""
-        pass
-
-    @abstractmethod
-    def is_goal_state(self, state: Any) -> bool:
-        """Check if the given state is a goal state."""
-        pass
-
-    @abstractmethod
-    def get_possible_actions(self, state: Any) -> List[Any]:
-        """Get possible actions for the given state."""
-        pass
-
-    @abstractmethod
-    def apply_action(self, state: Any, action: Any) -> Any:
-        """Apply the given action to the state and return the new state."""
-        pass
-
-    @abstractmethod
-    def get_kpis(self) -> List[str]:
-        """Return a list of KPI names for this problem."""
-        pass
-
-
-
+    def is_goal_state(self, state) -> bool:
+        """Have we reached the requested amount of recipies"""
+        return len(state.selected_actions) == self.requested_amount

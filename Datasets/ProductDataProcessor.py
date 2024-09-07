@@ -2,16 +2,17 @@ import pandas as pd
 import random
 from datetime import datetime, timedelta
 
-EXCEL_PRODUCT_PATH = r'C:\Users\moric\Documents\CS\year4\B\Food-Planner\dataset\products_data.xlsx' # TODO change
+EXCEL_PRODUCT_PATH = r'C:\Users\moric\Documents\CS\year4\B\Food-Planner\dataset\products_data.xlsx'  # TODO change
+
 
 # will set the future date to a month from now if not filled
 class ProductDataProcessor:
-    def __init__(self, sample_size, future_date = None,excel_path=EXCEL_PRODUCT_PATH):
+    def __init__(self, sample_size, future_date=None, excel_path=EXCEL_PRODUCT_PATH):
         self.excel_path = excel_path
         self.products_df = pd.read_excel(self.excel_path)
         self.random_data_set = self.create_smaller_dataset(sample_size, future_date)
 
-    def create_smaller_dataset(self, sample_size, future_date = None):
+    def create_smaller_dataset(self, sample_size, future_date=None):
         """
         Creates a smaller dataset with random dates up to the given future date.
 
@@ -66,6 +67,7 @@ def main():
     # Save the smaller dataset to a new Excel file
     output_path = 'smaller_dataset.xlsx'  # Define your output path
     processor.save_to_excel(output_path)
+
 
 if __name__ == "__main__":
     main()

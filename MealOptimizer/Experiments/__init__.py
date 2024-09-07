@@ -1,1 +1,1 @@
-from .experiment import MealPlanningExperiment
+from .experiment import Experiment

@@ -1,47 +1,53 @@
-from abc import ABC, abstractmethod
-from typing import List
-import time
-from ..Problems.problem import Problem
-from ..Solvers.solver import Solver
-from ..Metrics.visualization import VisualizationComparison, PerformanceMetrics
+from typing import Dict
+import pandas as pd
+
+from ..Problems.state import State
+from ..Problems.utils import Piece
 
 
-class Experiment(ABC):
-    def __init__(self, datasets: List[str], problem: Problem, solvers: List[Solver]):
-        self.problem = problem
+def _load_piece_dataset(piece_dataset_path) -> pd.DataFrame:
+    try:
+        return pd.read_csv(piece_dataset_path)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Product dataset not found at {piece_dataset_path}")
+
+
+def _load_action_dataset(action_dataset_path) -> pd.DataFrame:
+    try:
+        return pd.read_csv(action_dataset_path)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Product dataset not found at {action_dataset_path}")
+
+
+class Experiment:
+    def __init__(self, problem, solvers, start_date, piece_dataset_path, action_dataset_path):
         self.solvers = solvers
-        self.visualization = VisualizationComparison()
-        self.datasets = datasets
+        self.piece_dataset = _load_piece_dataset(piece_dataset_path)
+        self.action_dataset = _load_action_dataset(action_dataset_path)
+        self.current_state = self.create_initial_state(self.piece_dataset)
+        pieces_with_dates = self.piece_dataset[["Product Name", "Date"]]
+        self.problem = problem(self.action_dataset, start_date, pieces_with_dates)
 
-    @abstractmethod
-    def run(self):
-        pass
+    @staticmethod
+    def create_initial_state(piece_dataset) -> State:
+        available_pieces = []
+        for index, row in piece_dataset.iterrows():
+            piece = Piece(row["Product"], row["Quantity"], row["Unit"], row["Date"])
+            available_pieces.append(piece)
+        current_state = State(available_pieces)
+        return current_state
+
+    def run(self) -> Dict[str, State]:
+        results = {}
+        for solver in self.solvers:
+            solver_final_state = solver(self.problem, self.current_state)
+            # Check that solver reached the goal state
+            if not self.problem.is_goal_state(solver_final_state):
+                print(f"{solver.__name__} did not reach the goal state")
+                continue
+            results[solver.__name__] = solver_final_state
+            print(f"{solver.__name__} reached the goal state with score {self.problem.get_score(solver_final_state)}")
+        return results
 
     def visualize_results(self):
-        self.visualization.plot_runtime_comparison()
-        self.visualization.plot_iterations_comparison()
-        for kpi in self.problem.get_kpis():
-            self.visualization.plot_kpi_comparison(kpi)
-
-        comparison_table = self.visualization.generate_comparison_table()
-        print("Comparison Table:")
-        print(comparison_table)
-
-
-class MealPlanningExperiment(Experiment):
-    def run(self):
-        for solver in self.solvers:
-            for dataset in self.datasets:
-                self.problem.load_data(dataset)
-                dataset_size = len(self.problem.get_state())
-                start_time = time.time()
-                solution = solver.solve(self.problem)
-                end_time = time.time()
-
-                runtime = end_time - start_time
-                iterations = solver.get_iterations()
-                self.problem.apply_solution(solution)
-                kpis = self.problem.evaluate_solution()
-
-                metrics = PerformanceMetrics(dataset_size, runtime, iterations, kpis)
-                self.visualization.add_solver_performance(solver.__class__.__name__, metrics)
+        raise NotImplementedError
