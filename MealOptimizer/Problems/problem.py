@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import pandas as pd
 from typing import List, Dict, Any
+
 from ..Problems.utils import Action, Piece
 
 
@@ -17,15 +18,20 @@ class Problem(ABC):
         legal_actions = []
         for index, row in action_dataset.iterrows():
             pieces = []
+            is_all_products_exist = True
             for product in row["Products"].split(","):
                 name, quantity = product.split("(")
                 quantity, unit = quantity[:-1].split(" ")
                 if name not in pieces_with_dates["Product Name"].values:
                     print("Product not found in dataset")
+                    is_all_products_exist = False
+                    break
                 expiration_date = pieces_with_dates[pieces_with_dates["Product Name"] == name]["Date"].values[0]
                 piece = Piece(name, quantity, unit, expiration_date)
                 pieces.append(piece)
-            action = Action(row["Recipe ID"], pieces)
+            if not is_all_products_exist:
+                continue
+            action = Action(row["Recipe ID"], row["Recipe Name"], pieces)
             legal_actions.append(action)
         return legal_actions
 

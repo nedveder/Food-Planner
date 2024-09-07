@@ -36,3 +36,8 @@ class State:
     @property
     def get_available_pieces(self):
         return self.available_pieces
+
+    def __repr__(self):
+        selected_recipes = "\n".join([action.name for action in self.selected_actions])
+        pieces_used = "\n".join([f"{piece.item_id} {piece.quantity} {piece.unit}" for action in self.selected_actions for piece in action.pieces])
+        return f"Selected recipes: \n{selected_recipes} \nProducts used: \n{pieces_used}"

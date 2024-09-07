@@ -20,13 +20,13 @@ def _load_action_dataset(action_dataset_path) -> pd.DataFrame:
 
 
 class Experiment:
-    def __init__(self, problem, solvers, start_date, piece_dataset_path, action_dataset_path):
+    def __init__(self, problem, solvers, start_date, piece_dataset_path, action_dataset_path,number_of_recipes=1):
         self.solvers = solvers
         self.piece_dataset = _load_piece_dataset(piece_dataset_path)
         self.action_dataset = _load_action_dataset(action_dataset_path)
         self.current_state = self.create_initial_state(self.piece_dataset)
         pieces_with_dates = self.piece_dataset[["Product Name", "Date"]]
-        self.problem = problem(self.action_dataset, start_date, pieces_with_dates)
+        self.problem = problem(self.action_dataset, start_date, pieces_with_dates, number_of_recipes)
 
     @staticmethod
     def create_initial_state(piece_dataset) -> State:
@@ -40,13 +40,13 @@ class Experiment:
     def run(self) -> Dict[str, State]:
         results = {}
         for solver in self.solvers:
-            solver_final_state = solver(self.problem, self.current_state)
+            solver_final_state = solver.solve(self.problem, self.current_state)
             # Check that solver reached the goal state
             if not self.problem.is_goal_state(solver_final_state):
-                print(f"{solver.__name__} did not reach the goal state")
+                print(f"{solver} did not reach the goal state")
                 continue
-            results[solver.__name__] = solver_final_state
-            print(f"{solver.__name__} reached the goal state with score {self.problem.get_score(solver_final_state)}")
+            results[solver] = solver_final_state
+            print(f"{solver} reached the goal state with score {self.problem.get_score(solver_final_state)}")
         return results
 
     def visualize_results(self):

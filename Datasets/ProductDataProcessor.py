@@ -2,7 +2,7 @@ import pandas as pd
 import random
 from datetime import datetime, timedelta
 
-EXCEL_PRODUCT_PATH = r'C:\Users\moric\Documents\CS\year4\B\Food-Planner\Datasets\products_data.csv'  # TODO change
+EXCEL_PRODUCT_PATH = r'./products_data.csv'  # TODO change
 
 
 # will set the future date to a month from now if not filled
@@ -60,7 +60,7 @@ class ProductDataProcessor:
 
 
 def main():
-    sample_size = 100  # Number of products in the smaller dataset
+    sample_size = 1000  # Number of products in the smaller dataset
     # future_date = '2024-12-31'  # Example future date
     processor = ProductDataProcessor(sample_size)
 
