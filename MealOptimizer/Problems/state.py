@@ -10,14 +10,22 @@ class State:
 
     def update_state(self, action) -> None:
         """Remove from available pieces all pieces used in the selected action"""
-        pass
+        self.selected_actions.append(action)
+        for piece in action.pieces:
+            for available_piece in self.available_pieces:
+                if self.is_there_enough(available_piece, piece):
+                    available_piece.quantity -= piece.quantity
+
+    @staticmethod
+    def is_there_enough(available_piece, piece):
+        return available_piece.item_id == piece.item_id and \
+            available_piece.unit == piece.unit and \
+            available_piece.quantity >= piece.quantity
 
     def is_available_piece(self, piece) -> bool:
         """Check if the piece is available in the current state"""
         for available_piece in self.available_pieces:
-            if (available_piece.item_id == piece.item_id and
-                    available_piece.unit == piece.unit and
-                    available_piece.quantity >= piece.quantity):
+            if self.is_there_enough(available_piece, piece):
                 return True
         return False
 

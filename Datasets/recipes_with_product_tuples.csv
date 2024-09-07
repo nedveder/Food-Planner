@@ -1,0 +1,201 @@
+Recipe ID,Products,Energy (kcal),Carbs (g),Protein (g),Fat (g),Preparation Time (min),Type of Preparation,Taste Rating,Shelf Time (days)
+R-001!,"Pineapple Chunks(112 ml),Pesto Sauce(167 ml),Pistachios(191 gr),Pickled Ginger(197 ml),Pepitas(129 gr)",229.24,69.79,26.69,26.04,42,Baking,3,1
+R-002!,"Plum Sauce(76 ml),Pepper Jack Cheese(156 gr),Pickled Ginger(71 ml),Pineapple Chunks(143 ml),Pine Nuts(188 gr),Pepitas(135 gr),Plantains(168 pieces)",183.91,67.56,34.14,26.17,12,Cooking,3,3
+R-003!,"Pistachios(81 gr),Pickled Ginger(103 ml),Plantains(50 pieces),Pepper Jack Cheese(119 gr),Plum Sauce(53 ml),Pine Nuts(90 gr),Pickled Beets(137 ml)",400.39,29.96,20.21,7.19,20,Frying,7,4
+R-004,"Cashew Cream(197 ml),Mint Extract(97 ml),Cherry Tomatoes(59 pieces)",118.98,41.22,31.57,14.02,27,Cooking,5,3
+R-005!,"Pickled Ginger(170 ml),Pineapple Chunks(198 ml),Pine Nuts(109 gr),Plantains(172 pieces),Pesto Sauce(166 ml),Pickled Beets(156 ml)",428.2,62.89,24.96,17.06,39,Frying,8,4
+R-006!,"Plum Sauce(175 ml),Pine Nuts(57 gr),Pecans(147 gr),Pink Peppercorns(61 gr),Pepper Jack Cheese(184 gr),Pickled Beets(85 ml)",387.01,54.77,20.98,12.41,19,Frying,2,4
+R-007,"Tahini(63 ml),Meyer Lemon(187 pieces),Coconut Flour(183 gr),Pistachios(163 gr)",327.6,35.71,34.88,15.83,26,Cooking,2,3
+R-008,"Brown Butter(63 ml),Milk Chocolate(139 gr),Pecan Nuts(122 gr)",460.26,22.23,23.61,11.53,26,Cooking,9,3
+R-009,"Shiitake Mushrooms(110 gr),Lentil Flour(103 gr),Radicchio(58 ml),Cassava Flour(136 gr),Tempeh Bacon(144 gr),Jalapeño Peppers(134 pieces),Lettuce(116 ml)",482.9,50.26,35.01,17.0,42,Baking,1,5
+R-010!,"Plum Sauce(117 ml),Pistachios(101 gr),Pink Peppercorns(200 gr),Pickled Ginger(102 ml),Pesto Sauce(110 ml),Pine Nuts(90 gr)",452.29,43.24,29.43,7.95,18,Grilling,3,3
+R-011!,"Pink Peppercorns(150 gr),Pineapple Chunks(177 ml),Pickled Beets(85 ml),Plum Sauce(164 ml),Pepper Jack Cheese(54 gr),Pickled Ginger(114 ml),Pine Nuts(99 gr)",400.87,51.3,36.25,19.74,50,Baking,8,5
+R-012,"Red Chili Peppers(145 pieces),Fruit Cocktail(125 ml),Blanched Almonds(146 gr),Red Bell Pepper(131 pieces),Dried Herbs(111 gr),Onion Powder(64 gr),Demerara Sugar(62 gr)",189.97,60.5,33.87,13.48,24,Grilling,6,1
+R-013!,"Pickled Ginger(64 ml),Pesto Sauce(64 ml),Pecans(132 gr),Pickled Beets(116 ml),Pepper Jack Cheese(159 gr)",334.76,42.15,16.25,25.74,40,Grilling,2,5
+R-014!,"Pesto Sauce(164 ml),Pineapple Chunks(154 ml),Pine Nuts(101 gr),Plantains(156 pieces),Plum Sauce(180 ml),Pink Peppercorns(52 gr)",362.36,44.4,26.08,8.3,33,Frying,10,4
+R-015!,"Pine Nuts(54 gr),Pesto Sauce(186 ml),Pink Peppercorns(182 gr),Pepper Jack Cheese(65 gr),Pepitas(114 gr)",385.3,22.99,23.77,27.17,54,Cooking,5,1
+R-016,"Flaxseed Oil(137 ml),Vanilla Extract(59 ml),Dukkah(162 gr),Buttermilk(79 ml),Nori(138 gr)",279.06,66.51,37.12,29.02,43,Baking,8,3
+R-017!,"Plum Sauce(192 ml),Pesto Sauce(51 ml),Plantains(165 pieces),Pineapple Chunks(163 ml),Pink Peppercorns(114 gr),Pine Nuts(106 gr),Pickled Ginger(62 ml)",221.21,60.34,36.33,18.2,57,Frying,2,2
+R-018!,"Pink Peppercorns(110 gr),Pepper Jack Cheese(151 gr),Pine Nuts(172 gr)",400.72,66.36,21.06,29.32,21,Frying,5,5
+R-019!,"Pine Nuts(149 gr),Pickled Beets(157 ml),Pickled Ginger(94 ml)",353.01,56.37,23.5,16.21,54,Grilling,3,1
+R-020!,"Plantains(135 pieces),Pickled Ginger(120 ml),Pickled Beets(114 ml),Pepper Jack Cheese(179 gr),Pine Nuts(50 gr)",430.65,55.92,28.14,6.76,24,Baking,6,4
+R-021,"Balsamic Vinegar(148 ml),Frozen Peas(190 ml),Mushroom Soy Sauce(72 ml)",275.7,67.86,12.12,20.08,52,Frying,5,2
+R-022!,"Pickled Ginger(176 ml),Plantains(95 pieces),Plum Sauce(194 ml),Pineapple Chunks(144 ml),Pine Nuts(154 gr),Pistachios(111 gr),Pepper Jack Cheese(126 gr)",454.1,36.66,17.74,17.1,55,Frying,3,2
+R-023,"Buckwheat Flour(109 gr),Sun-Dried Tomatoes(94 ml),Galangal(73 gr)",318.63,62.87,15.24,13.1,23,Baking,1,3
+R-024!,"Pickled Beets(175 ml),Pecans(200 gr),Pine Nuts(182 gr)",230.87,36.67,21.65,23.98,23,Baking,4,2
+R-025!,"Plantains(145 pieces),Pepitas(152 gr),Pistachios(123 gr),Plum Sauce(67 ml),Pineapple Chunks(142 ml),Pickled Ginger(108 ml),Pesto Sauce(96 ml)",143.78,37.47,30.01,29.57,49,Baking,8,2
+R-026!,"Pickled Beets(148 ml),Pesto Sauce(101 ml),Plantains(99 pieces),Plum Sauce(185 ml),Pickled Ginger(165 ml),Pepper Jack Cheese(152 gr)",387.02,51.61,14.27,20.8,17,Baking,9,5
+R-027,"Egg(198 pieces),Brussels Sprouts(147 ml),Provolone Cheese(172 gr),Yellow Cornmeal(130 gr),Colby Cheese(145 gr),Canary Beans(200 ml)",147.35,48.97,26.06,15.41,54,Cooking,9,5
+R-028!,"Pecans(96 gr),Pistachios(174 gr),Pine Nuts(179 gr)",452.6,68.3,24.09,23.82,58,Cooking,10,2
+R-029,"Kohlrabi(185 pieces),Mascarpone Cheese(163 gr),Cassava Flour(89 gr),Chow Mein Noodles(153 ml)",113.94,57.9,31.12,5.07,23,Cooking,9,2
+R-030,"Tarragon Vinegar(139 ml),Whole-Wheat Flour(177 ml),Cream Cheese Frosting(137 ml),Celery Seed(116 gr)",389.19,61.24,35.41,12.96,29,Cooking,6,3
+R-031,"Sweet Basil(169 ml),Coconut Water(177 ml),Cheddar Cheese(50 gr)",437.8,30.91,13.26,21.43,54,Grilling,6,4
+R-032,"Vermicelli(177 ml),Jalapeno Pepper(149 pieces),Dried Blueberries(62 gr)",374.39,35.56,18.8,17.64,40,Frying,4,1
+R-033!,"Pecans(84 gr),Pepper Jack Cheese(97 gr),Pistachios(197 gr),Plum Sauce(185 ml),Plantains(181 pieces)",357.35,68.0,12.19,17.27,21,Cooking,9,4
+R-034!,"Pesto Sauce(132 ml),Pickled Ginger(93 ml),Pepper Jack Cheese(192 gr),Pineapple Chunks(133 ml),Plantains(61 pieces)",376.66,41.42,15.43,9.51,59,Frying,1,5
+R-035,"Lime Leaves(186 ml),Red Bell Pepper(69 pieces),Thyme(181 ml),Apple Cider Vinegar(78 ml)",342.93,42.67,34.85,25.8,51,Frying,10,4
+R-036!,"Pickled Beets(105 ml),Pepitas(151 gr),Pecans(136 gr)",422.11,37.52,19.31,25.86,41,Frying,5,1
+R-037!,"Pine Nuts(95 gr),Pineapple Chunks(184 ml),Pecans(166 gr),Pepper Jack Cheese(75 gr),Pink Peppercorns(137 gr),Pickled Ginger(139 ml)",241.71,52.55,35.3,27.85,10,Grilling,7,5
+R-038,"Fontina Cheese(58 gr),Oat Bran(107 gr),Chorizo(171 gr)",301.08,56.78,14.83,23.7,55,Grilling,9,4
+R-039!,"Pistachios(67 gr),Pine Nuts(121 gr),Pepper Jack Cheese(164 gr),Pink Peppercorns(136 gr),Plantains(175 pieces),Pecans(163 gr)",317.86,55.48,23.08,6.85,30,Cooking,8,2
+R-040!,"Pesto Sauce(153 ml),Pineapple Chunks(135 ml),Pepitas(200 gr),Plantains(116 pieces),Pepper Jack Cheese(68 gr)",345.06,28.17,18.8,11.14,54,Grilling,6,2
+R-041,"Instant Coffee(77 gr),Stilton Cheese(143 gr),Falafel Mix(183 gr),Pecans(100 gr),Quiche(160 ml),Gherkins(137 ml),Halva(156 gr)",404.3,41.71,22.35,27.68,14,Frying,5,2
+R-042!,"Pine Nuts(124 gr),Pickled Ginger(128 ml),Pistachios(127 gr),Pink Peppercorns(54 gr),Pickled Beets(177 ml)",378.17,46.91,39.24,21.93,52,Baking,8,1
+R-043,"Butter Beans(154 ml),Lychee(137 pieces),Dried Onion(127 gr),Shea Butter(74 ml),Soy Milk(200 ml),Blue Curacao(81 ml)",253.87,56.75,13.87,7.21,11,Grilling,8,1
+R-044!,"Pine Nuts(57 gr),Pistachios(165 gr),Pecans(138 gr),Plantains(187 pieces)",400.25,35.09,14.85,6.83,38,Baking,3,5
+R-045,"Flageolet Beans(71 ml),Mushroom Soy Sauce(172 ml),Blanched Almonds(137 gr),Endive(164 ml),Galangal(147 gr),Croissants(170 pieces)",125.77,31.84,28.34,15.43,34,Frying,6,3
+R-046!,"Pesto Sauce(176 ml),Pecans(164 gr),Pink Peppercorns(170 gr),Plantains(179 pieces),Pepper Jack Cheese(83 gr),Pickled Ginger(80 ml)",463.08,35.32,28.31,7.99,20,Baking,5,4
+R-047,"Caraway Powder(50 gr),Wholegrain Mustard(154 ml),Allspice Berries(72 gr),Coconut Water(95 ml),Collard Greens(139 ml),Balsamic Glaze(107 ml),Red Potatoes(119 pieces)",379.37,32.57,33.87,19.85,47,Frying,9,1
+R-048,"Goat Cheese(121 gr),Toasted Sesame Oil(165 ml),Pine Nuts(80 gr),Apple Butter(110 ml),Caraway Seeds(149 gr)",265.34,20.11,30.86,29.9,54,Baking,7,2
+R-049,"Nut Butter(64 ml),Vegetable Broth(135 ml),Ground White Pepper(170 gr)",422.45,42.75,33.49,22.28,56,Baking,8,3
+R-050!,"Pecans(184 gr),Pine Nuts(145 gr),Pineapple Chunks(119 ml),Plum Sauce(147 ml),Pink Peppercorns(148 gr)",116.97,37.34,16.03,7.82,13,Baking,6,2
+R-051,"Dried Papaya(120 gr),Black Lentils(199 ml),Hawaiian Sea Salt(153 gr)",297.34,21.83,25.23,14.61,10,Cooking,9,1
+R-052,"Safflower Oil(155 ml),Limoncello(158 ml),Lemongrass Stalks(66 pieces),Peanut Oil(153 ml),Navy Bean Soup(68 ml),Mustard Seeds(65 gr),Mustard Greens(71 ml)",223.77,54.68,17.88,10.9,60,Baking,8,4
+R-053!,"Pink Peppercorns(104 gr),Plum Sauce(73 ml),Pecans(92 gr),Pineapple Chunks(101 ml),Pickled Ginger(82 ml),Pistachios(140 gr),Pesto Sauce(89 ml)",235.68,43.81,14.86,6.83,35,Grilling,8,3
+R-054,"Tobiko(104 gr),Ground Beef(173 gr),Whole Milk(131 ml),Apple Juice(156 ml),Guava(56 pieces),Blackberry(144 ml)",100.66,32.17,38.47,21.69,59,Grilling,4,3
+R-055!,"Pepitas(87 gr),Pepper Jack Cheese(195 gr),Pink Peppercorns(148 gr),Plantains(80 pieces),Plum Sauce(119 ml),Pesto Sauce(178 ml),Pineapple Chunks(151 ml)",488.24,49.47,21.38,28.56,25,Baking,3,2
+R-056!,"Pistachios(167 gr),Pickled Beets(75 ml),Pineapple Chunks(54 ml),Plum Sauce(186 ml),Pine Nuts(186 gr),Pepitas(189 gr),Pecans(175 gr)",298.07,22.85,25.06,18.56,53,Baking,2,1
+R-057,"Ricotta Cheese(192 ml),Marjoram(131 gr),Rainbow Chard(68 ml),Celery Stalks(149 pieces),Red Cabbage(107 ml),Vegetable Broth(77 ml)",407.23,51.34,17.32,7.17,52,Baking,8,4
+R-058!,"Plum Sauce(186 ml),Pine Nuts(106 gr),Pickled Beets(106 ml),Plantains(99 pieces),Pickled Ginger(129 ml)",484.41,34.81,23.99,16.97,42,Frying,10,4
+R-059,"Ancho Chili Powder(129 gr),Egg Noodles(168 ml),Capicola(190 gr)",434.75,27.77,39.5,15.36,43,Frying,3,4
+R-060!,"Pickled Ginger(76 ml),Pecans(130 gr),Pickled Beets(90 ml)",141.15,29.7,35.99,17.15,29,Baking,7,4
+R-061,"Almond Butter(137 ml),Almond Extract(114 ml),Tortilla Chips(57 gr),Rainbow Chard(136 ml),Breadcrumbs(125 gr),Za’atar(83 gr),Red Quinoa(85 ml)",159.31,24.62,12.75,26.71,55,Frying,4,2
+R-062,"Broccoli Rabe(93 ml),Cantaloupe(167 pieces),Sesame Seeds(77 gr),Fruit Pectin(89 gr),Sweetened Condensed Milk(143 ml)",212.46,42.51,36.75,17.96,25,Grilling,3,5
+R-063,"Rye Flour(107 gr),Bread Cubes(90 ml),Dried Turmeric(60 gr)",442.14,52.84,39.34,5.3,16,Cooking,7,5
+R-064,"Crabmeat(172 gr),Asafoetida(138 gr),Orange Zest(140 gr),Almond Extract(75 ml)",397.65,26.45,26.93,23.92,19,Cooking,9,2
+R-065!,"Pistachios(62 gr),Pine Nuts(78 gr),Pink Peppercorns(180 gr),Pineapple Chunks(168 ml),Pepper Jack Cheese(132 gr),Pickled Ginger(166 ml),Pesto Sauce(196 ml)",336.79,56.43,31.36,9.12,25,Baking,1,3
+R-066,"Ground Turkey(182 gr),Cassava Flour(53 gr),Red Wine(76 ml)",311.76,22.01,39.59,13.58,17,Baking,2,5
+R-067!,"Plantains(111 pieces),Pickled Beets(97 ml),Pepper Jack Cheese(134 gr),Pink Peppercorns(78 gr)",181.69,40.2,29.84,7.71,20,Cooking,8,3
+R-068,"Almond Butter(154 ml),Balsamic Vinegar(123 ml),Coriander Seeds(143 gr)",330.44,44.54,19.61,11.01,32,Grilling,3,1
+R-069!,"Pepper Jack Cheese(189 gr),Pickled Beets(150 ml),Pecans(142 gr),Pesto Sauce(142 ml),Pickled Ginger(71 ml),Plantains(153 pieces),Plum Sauce(100 ml)",259.11,65.14,25.32,22.02,39,Baking,4,1
+R-070,"Grated Parmesan(190 gr),Edamame(91 ml),Sardines(104 gr),Spinach Leaves(104 ml)",367.99,23.59,18.34,29.17,38,Baking,9,1
+R-071!,"Pepitas(148 gr),Pepper Jack Cheese(101 gr),Pecans(134 gr),Pickled Ginger(152 ml)",135.23,20.6,16.05,21.48,25,Cooking,6,3
+R-072!,"Plum Sauce(172 ml),Pickled Ginger(133 ml),Pesto Sauce(170 ml),Pecans(139 gr)",473.31,55.3,23.77,14.89,27,Cooking,10,3
+R-073,"Fennel(80 ml),Papaya(86 pieces),Durum Wheat(156 gr),Yogurt(99 ml),Black Beans(103 ml),Blackberry(192 ml)",254.73,60.95,28.11,14.94,45,Cooking,7,1
+R-074!,"Pink Peppercorns(130 gr),Pesto Sauce(153 ml),Pineapple Chunks(164 ml),Plantains(99 pieces),Plum Sauce(179 ml),Pickled Ginger(153 ml),Pistachios(54 gr)",486.43,65.79,35.61,17.23,43,Frying,4,1
+R-075!,"Plum Sauce(190 ml),Pickled Ginger(197 ml),Plantains(196 pieces),Pecans(74 gr),Pepitas(178 gr),Pesto Sauce(180 ml)",491.19,62.38,38.85,15.91,44,Cooking,1,2
+R-076,"Kale(100 ml),Sea Salt(118 gr),Potatoes(130 pieces),Lima Beans(73 ml)",418.45,30.08,12.5,6.8,44,Cooking,9,4
+R-077!,"Pickled Beets(60 ml),Pink Peppercorns(144 gr),Pistachios(54 gr)",149.81,57.03,13.28,14.36,27,Grilling,8,5
+R-078!,"Plantains(189 pieces),Pine Nuts(188 gr),Pepitas(94 gr),Pickled Beets(102 ml),Pickled Ginger(180 ml),Pecans(163 gr)",339.63,46.13,26.45,27.36,30,Frying,3,3
+R-079,"Lemon Juice(126 ml),Epazote(87 gr),Tomato Sauce(176 ml)",292.42,56.48,23.47,11.45,40,Grilling,10,3
+R-080!,"Pistachios(119 gr),Pepitas(116 gr),Pesto Sauce(158 ml),Pink Peppercorns(170 gr)",112.02,32.21,25.95,8.28,17,Baking,5,2
+R-081,"Goat Cheese(153 gr),Pistachios(128 gr),Coconut Aminos(90 ml),Pineapple Chunks(99 pieces),Fiddlehead Ferns(194 ml)",227.61,59.58,38.04,7.14,14,Frying,6,4
+R-082,"Melon Balls(182 pieces),Dijon Mustard(93 ml),Country Ham(110 gr)",417.59,29.65,29.19,23.94,31,Frying,8,5
+R-083,"Olive Tapenade(190 ml),Palm Sugar(85 gr),Ground Turkey(117 gr)",409.46,43.83,12.76,16.49,30,Cooking,7,1
+R-084,"Red Quinoa(91 ml),Chive(137 ml),Lemon Peel(82 gr)",185.82,25.87,29.97,27.8,30,Frying,2,4
+R-085!,"Pineapple Chunks(136 ml),Pesto Sauce(51 ml),Plantains(79 pieces),Pepitas(64 gr),Pickled Beets(159 ml),Pepper Jack Cheese(190 gr)",333.57,48.47,20.85,19.56,51,Grilling,8,4
+R-086!,"Pineapple Chunks(132 ml),Pickled Ginger(163 ml),Pecans(93 gr)",493.77,47.54,39.41,5.44,52,Cooking,4,4
+R-087,"Rye Flour(58 gr),Fenugreek Seeds(104 gr),Adzuki Beans(105 ml),Hoisin Sauce(113 ml),French Green Lentils(72 ml),Banana(96 pieces)",256.58,69.59,29.47,29.54,29,Baking,10,2
+R-088,"Red Wine(102 ml),Achiote Paste(138 gr),Pomegranate Seeds(155 ml)",187.66,57.37,19.51,28.3,30,Grilling,4,5
+R-089!,"Pepper Jack Cheese(51 gr),Pecans(88 gr),Pickled Beets(198 ml),Pesto Sauce(120 ml),Plum Sauce(126 ml),Pine Nuts(128 gr)",203.56,61.0,19.21,24.18,42,Frying,1,5
+R-090!,"Pine Nuts(135 gr),Plantains(156 pieces),Pepitas(185 gr),Plum Sauce(98 ml),Pistachios(194 gr),Pesto Sauce(91 ml),Pineapple Chunks(94 ml)",271.09,20.69,33.63,6.19,57,Baking,9,1
+R-091!,"Pickled Ginger(143 ml),Pistachios(176 gr),Pineapple Chunks(175 ml),Pickled Beets(155 ml),Pesto Sauce(61 ml),Pepitas(92 gr)",318.98,34.75,29.89,21.81,51,Grilling,4,3
+R-092,"Cornbread Mix(157 gr),Poppy Seeds(125 gr),Mushroom Powder(164 gr),Ajwain Seeds(76 gr),Tobiko(85 gr)",302.57,53.65,10.61,7.79,39,Frying,8,3
+R-093!,"Pepper Jack Cheese(97 gr),Pesto Sauce(118 ml),Pickled Ginger(123 ml),Plum Sauce(131 ml),Pickled Beets(67 ml)",471.34,36.09,35.71,14.87,16,Frying,6,2
+R-094!,"Pepper Jack Cheese(100 gr),Pineapple Chunks(81 ml),Pistachios(50 gr),Pecans(169 gr),Pepitas(69 gr),Pickled Ginger(111 ml),Plum Sauce(139 ml)",131.01,59.59,22.38,10.89,12,Cooking,9,1
+R-095!,"Pineapple Chunks(178 ml),Pesto Sauce(170 ml),Pink Peppercorns(163 gr)",414.2,53.36,37.22,19.42,44,Baking,2,4
+R-096!,"Pine Nuts(88 gr),Pineapple Chunks(167 ml),Pepitas(156 gr),Pink Peppercorns(89 gr),Pepper Jack Cheese(161 gr),Plum Sauce(119 ml)",228.39,39.51,26.73,5.54,32,Baking,1,3
+R-097,"Shea Butter(120 ml),Banana(162 pieces),Chow Mein Noodles(192 ml),Dried Sage(123 gr),Cremini Mushrooms(198 gr),Red Grapes(75 pieces)",303.36,51.49,26.53,21.82,46,Frying,9,1
+R-098,"Diced Tomatoes(147 ml),Raisins(152 ml),Sage Leaves(173 ml),Balsamic Glaze(76 ml)",468.83,20.68,28.73,28.69,44,Cooking,3,1
+R-099!,"Pistachios(151 gr),Pickled Ginger(130 ml),Plantains(100 pieces),Pineapple Chunks(148 ml),Pepitas(106 gr),Pecans(61 gr),Pesto Sauce(187 ml)",460.45,21.43,30.21,23.97,17,Cooking,5,1
+R-100,"Eucalyptus Honey(115 ml),Soy Milk(93 ml),Goji Berries(94 gr),Coconut Oil(190 ml),Hummus(90 ml)",238.48,53.67,24.61,10.91,54,Cooking,8,1
+R-101,"Heavy Whipping Cream(138 ml),Taleggio Cheese(91 gr),Pecan Nuts(100 gr),Mayonnaise(84 ml),Candy Canes(92 pieces),Pasta Sauce(125 ml)",193.47,53.77,26.27,23.29,42,Grilling,10,1
+R-102,"Black Salt(163 gr),Tomato Puree(81 ml),Shiitake Mushrooms(179 gr)",453.27,68.11,30.64,19.53,45,Grilling,7,3
+R-103!,"Pine Nuts(80 gr),Pistachios(97 gr),Pickled Ginger(98 ml),Pink Peppercorns(139 gr),Plum Sauce(151 ml)",474.61,53.53,19.58,7.75,56,Grilling,4,2
+R-104!,"Pineapple Chunks(185 ml),Pickled Ginger(50 ml),Pecans(188 gr),Pink Peppercorns(136 gr),Plantains(156 pieces),Plum Sauce(52 ml)",142.53,41.95,29.4,15.22,33,Frying,4,1
+R-105!,"Pesto Sauce(172 ml),Pineapple Chunks(67 ml),Plantains(186 pieces),Pickled Beets(180 ml),Plum Sauce(136 ml),Pink Peppercorns(51 gr)",313.69,58.02,34.34,11.3,37,Grilling,3,4
+R-106!,"Pickled Beets(60 ml),Plum Sauce(161 ml),Pineapple Chunks(72 ml),Pink Peppercorns(70 gr),Pesto Sauce(104 ml),Pepitas(169 gr)",296.99,27.97,22.42,11.72,44,Cooking,4,1
+R-107,"Fish Stock(61 ml),Coconut Water(68 ml),Nectarines(67 pieces)",235.57,34.22,38.21,10.09,15,Baking,5,2
+R-108!,"Pineapple Chunks(147 ml),Pickled Ginger(113 ml),Pickled Beets(98 ml)",283.5,54.24,35.81,24.31,60,Grilling,4,3
+R-109,"Rye Bread(173 pieces),Kiwifruit(152 pieces),Paprika(86 gr),Yeast(119 gr)",387.63,33.11,26.31,19.66,46,Frying,5,3
+R-110,"Kale(131 ml),Poblano Peppers(156 pieces),Lingonberry(198 gr),Lotus Root(184 ml),Palm Sugar(121 gr),Jackfruit(190 pieces),White Beans(199 ml)",120.76,64.24,22.36,6.81,51,Cooking,7,4
+R-111,"Corn Syrup(164 ml),Meyer Lemon(123 pieces),Broccoli Florets(148 ml),Bacon(86 gr),Amaretto(83 ml),Cottage Cheese(197 ml)",214.45,36.6,39.7,22.29,52,Cooking,5,5
+R-112,"Cashew Milk(90 ml),Kale(90 ml),Garlic Powder(73 gr),Asafoetida(126 gr),Tapioca Flour(57 gr)",288.01,65.88,38.76,28.43,11,Cooking,7,2
+R-113!,"Pistachios(76 gr),Pesto Sauce(145 ml),Pineapple Chunks(159 ml)",447.37,48.88,14.13,8.79,41,Frying,10,1
+R-114!,"Pesto Sauce(58 ml),Plantains(95 pieces),Pickled Beets(132 ml),Pink Peppercorns(95 gr),Pepper Jack Cheese(82 gr),Pistachios(130 gr),Pecans(133 gr)",140.07,58.36,17.74,11.21,10,Baking,9,3
+R-115!,"Pesto Sauce(52 ml),Pepper Jack Cheese(69 gr),Pine Nuts(56 gr)",242.34,41.96,15.11,25.22,14,Cooking,6,3
+R-116,"Whole-Wheat Flour(158 ml),Green Onions(111 pieces),Ginger Ale(167 ml),Shallot Oil(70 ml),Hot Sauce(63 ml)",453.05,33.8,26.36,6.91,35,Grilling,4,2
+R-117!,"Pistachios(152 gr),Pickled Beets(179 ml),Pink Peppercorns(52 gr),Pineapple Chunks(85 ml)",152.4,46.61,35.91,28.91,59,Baking,6,1
+R-118!,"Plantains(176 pieces),Pepitas(66 gr),Pickled Beets(51 ml)",486.83,38.39,15.66,14.94,24,Baking,7,4
+R-119,"Red Beans(76 ml),Okra Pods(185 ml),Italian Sausage(54 gr),Cinnamon(133 gr),Artisan Bread(190 pieces),Kumquats(111 pieces),Lemongrass Stalks(144 pieces)",396.19,51.9,12.94,27.7,49,Frying,1,4
+R-120!,"Pineapple Chunks(174 ml),Pickled Beets(157 ml),Pine Nuts(68 gr),Pink Peppercorns(197 gr),Plum Sauce(79 ml)",410.21,66.01,18.62,18.15,17,Cooking,8,1
+R-121,"Cilantro Seeds(196 gr),Hummus(121 ml),Lasagna Noodles(178 ml),Herbes de Provence(139 gr),Mineral Water(128 ml),Mulberries(175 gr),Nut Butter(131 ml)",281.19,30.83,17.86,13.52,23,Grilling,2,1
+R-122!,"Pickled Ginger(145 ml),Pickled Beets(86 ml),Pine Nuts(100 gr),Pistachios(124 gr),Plum Sauce(200 ml),Plantains(113 pieces),Pecans(112 gr)",151.95,51.03,10.31,11.57,42,Frying,5,4
+R-123,"Apple Cider Vinegar(91 ml),Brown Mushrooms(154 gr),Kohlrabi(62 pieces),Brussels Sprouts(96 ml)",322.4,20.3,16.82,23.33,35,Cooking,6,4
+R-124,"Hot Paprika(86 gr),Grapefruit(191 pieces),Jalapeño Peppers(55 pieces)",408.13,23.24,28.73,8.76,17,Cooking,9,4
+R-125,"Lemon Grass(52 ml),Kasha(124 ml),Clams(150 pieces),Mayonnaise(64 ml),Balsamic Glaze(110 ml),Butternut Squash(91 pieces),Garam Masala(174 gr)",305.46,37.54,11.55,29.68,53,Frying,9,3
+R-126!,"Pickled Beets(117 ml),Plantains(187 pieces),Pickled Ginger(129 ml),Pecans(103 gr),Pink Peppercorns(82 gr),Pineapple Chunks(72 ml),Pepper Jack Cheese(155 gr)",211.0,67.5,27.1,22.62,52,Grilling,6,2
+R-127!,"Pepper Jack Cheese(91 gr),Pesto Sauce(129 ml),Pine Nuts(107 gr),Pistachios(197 gr)",107.51,38.9,31.5,20.73,14,Grilling,9,2
+R-128!,"Pink Peppercorns(165 gr),Pickled Ginger(179 ml),Pineapple Chunks(175 ml),Pistachios(72 gr),Pecans(156 gr),Pickled Beets(193 ml)",326.41,37.1,25.48,10.73,48,Cooking,4,1
+R-129,"Sunflower Seeds(140 gr),Chive(89 ml),Pears(131 pieces),Napa Cabbage(159 ml),Celery(119 ml)",413.83,58.32,20.9,27.41,12,Cooking,1,2
+R-130,"Elderberry Syrup(61 ml),Meringues(197 gr),Marzipan(115 gr),Rosemary Sprigs(140 pieces),Fennel(122 ml)",130.03,64.86,25.77,12.16,55,Baking,7,4
+R-131,"Garlic Powder(118 gr),Blue Cheese(200 gr),Hummus(151 ml)",106.19,56.37,19.15,19.13,39,Cooking,1,4
+R-132,"Hazelnut Butter(109 ml),Lemon Balm(156 ml),Mini Marshmallows(198 gr)",439.62,29.0,28.8,7.11,43,Cooking,9,5
+R-133,"Marzipan(149 gr),Za’atar(193 gr),Madras Curry Powder(113 gr)",212.65,22.06,20.57,13.62,43,Cooking,1,3
+R-134,"Lima Beans(193 ml),Tarragon Vinegar(170 ml),Halibut(180 pieces),French Vanilla(192 ml),Tortilla Chips(78 gr),Five Spice Powder(166 gr),Portobello Mushrooms(157 gr)",225.98,64.47,26.02,6.37,25,Frying,4,5
+R-135!,"Pepper Jack Cheese(113 gr),Pink Peppercorns(177 gr),Pickled Beets(93 ml),Pecans(122 gr),Pepitas(191 gr),Plum Sauce(166 ml)",320.36,51.6,18.67,14.75,16,Baking,6,1
+R-136!,"Pepper Jack Cheese(167 gr),Pink Peppercorns(128 gr),Pickled Ginger(160 ml),Plum Sauce(124 ml),Pepitas(184 gr)",177.78,53.64,35.28,25.84,53,Cooking,3,4
+R-137,"Ancho Chili Powder(68 gr),Habanero Peppers(122 gr),Bell Peppers(101 pieces)",102.39,38.49,27.58,7.5,43,Grilling,5,4
+R-138,"Dried Herbs(152 gr),Napa Cabbage(67 ml),Heavy Whipping Cream(129 ml),Maraschino Cherries(186 ml),Celeriac Root(54 pieces),Mascarpone Cheese(64 gr),Spring Onions(160 pieces)",358.02,60.45,24.56,20.89,48,Frying,6,4
+R-139!,"Pistachios(72 gr),Pineapple Chunks(181 ml),Pepitas(84 gr),Pepper Jack Cheese(186 gr),Pickled Ginger(113 ml),Pesto Sauce(118 ml),Pink Peppercorns(92 gr)",155.57,25.24,32.93,9.5,41,Frying,7,3
+R-140!,"Pink Peppercorns(200 gr),Pickled Ginger(195 ml),Pesto Sauce(55 ml)",262.25,34.53,22.76,17.36,51,Frying,9,3
+R-141,"Cornstarch(114 gr),Ricotta Cheese(186 ml),Egg Noodles(179 ml),Cream of Tartar(136 gr),Ice Cream(156 ml),Gruyere Cheese(157 gr)",367.87,63.46,29.61,16.5,34,Grilling,9,3
+R-142,"Spelt(82 ml),Buckwheat(122 ml),Cilantro(75 ml),Barley(90 ml),Unflavored Gelatin(88 gr)",199.0,34.83,30.82,25.85,37,Baking,7,1
+R-143,"Truffle Oil(164 ml),Grated Parmesan(176 gr),Saffron Threads(112 gr),Parsley(184 ml),Mozzarella Cheese(191 gr),Cilantro Seeds(156 gr),Halloumi Cheese(61 gr)",156.47,32.32,15.79,24.41,30,Frying,7,5
+R-144!,"Pistachios(160 gr),Pepper Jack Cheese(164 gr),Pesto Sauce(177 ml),Pickled Ginger(68 ml),Pine Nuts(199 gr),Pink Peppercorns(102 gr)",116.34,36.18,34.76,22.42,25,Baking,1,3
+R-145!,"Pecans(194 gr),Pineapple Chunks(179 ml),Pepitas(150 gr)",417.74,61.51,14.11,27.39,21,Grilling,9,3
+R-146!,"Pickled Beets(98 ml),Pine Nuts(125 gr),Plum Sauce(108 ml)",286.43,60.06,10.01,29.63,59,Baking,5,5
+R-147,"Wonton Wrappers(65 pieces),Coleslaw Mix(85 ml),Cornflour(66 gr),Lemon Balm(122 ml),Rosemary Sprigs(68 pieces),Jalapeno Pepper(97 pieces)",381.38,42.36,18.86,17.3,29,Grilling,9,3
+R-148!,"Pickled Beets(66 ml),Pepper Jack Cheese(52 gr),Pecans(166 gr),Pink Peppercorns(139 gr),Pepitas(166 gr),Pineapple Chunks(86 ml),Pesto Sauce(145 ml)",219.55,38.62,11.19,12.63,31,Baking,5,4
+R-149!,"Pistachios(85 gr),Pepitas(175 gr),Plantains(182 pieces)",256.76,65.0,35.83,6.12,60,Frying,6,5
+R-150!,"Pine Nuts(66 gr),Plantains(173 pieces),Pecans(178 gr)",265.35,40.58,12.0,23.62,49,Baking,3,2
+R-151!,"Pickled Ginger(50 ml),Plum Sauce(104 ml),Pecans(125 gr),Pesto Sauce(185 ml),Pickled Beets(170 ml),Pineapple Chunks(171 ml),Plantains(88 pieces)",115.35,21.37,28.75,27.17,47,Frying,8,1
+R-152!,"Pineapple Chunks(188 ml),Pistachios(156 gr),Pepitas(105 gr),Pickled Ginger(78 ml),Pecans(115 gr),Pesto Sauce(126 ml),Pine Nuts(156 gr)",348.95,51.95,35.82,9.04,28,Baking,5,1
+R-153!,"Pickled Beets(172 ml),Pineapple Chunks(155 ml),Plantains(168 pieces),Pepitas(53 gr),Pickled Ginger(176 ml)",377.72,43.85,34.61,15.9,16,Baking,2,4
+R-154,"Sunflower Seeds(56 gr),Sumac(102 gr),Italian Bread(149 pieces),Red Bell Pepper(182 pieces)",178.64,53.48,13.33,29.31,51,Grilling,6,5
+R-155!,"Pine Nuts(142 gr),Pepitas(113 gr),Pistachios(66 gr),Pecans(63 gr),Pineapple Chunks(119 ml)",161.66,36.23,16.58,18.0,58,Grilling,2,3
+R-156,"Allspice Berries(51 gr),Italian Sausage(184 gr),Jasmine Tea(170 gr),Gruyere Cheese(125 gr),Ghee Butter(98 ml)",166.12,35.39,37.3,29.88,32,Baking,10,1
+R-157,"Black Vinegar(81 ml),Pineapple Juice(118 ml),Chili Garlic Sauce(86 ml),Lemongrass Stalks(118 pieces)",244.61,36.14,22.86,14.71,18,Frying,7,4
+R-158,"Crabmeat(162 gr),Couscous(167 ml),Za’atar(168 gr),Cashew Nuts(101 gr)",130.01,34.27,33.94,22.9,53,Cooking,9,4
+R-159!,"Pickled Ginger(95 ml),Pepitas(101 gr),Pine Nuts(159 gr)",435.34,59.02,12.99,19.48,33,Grilling,7,3
+R-160,"Espresso Beans(123 gr),Sunflower Seeds(159 gr),Chicken Breasts(118 pieces),Nori(172 gr)",314.6,53.13,17.74,7.55,25,Baking,6,2
+R-161,"Nori Sheets(177 pieces),Watercress(71 ml),Longan(84 pieces),Manchego Cheese(149 gr),Red Onion(191 pieces)",351.5,26.0,10.5,29.34,11,Frying,5,1
+R-162,"Cashew Milk(89 ml),Provolone Cheese(101 gr),Dulce de Leche(148 ml),Buffalo Mozzarella(144 gr)",260.13,33.23,25.97,23.25,35,Grilling,7,4
+R-163,"Feta Cheese(164 gr),Dried Cranberries(74 gr),Heavy Cream(168 ml),Tamales(136 pieces),Coconut Milk(162 ml)",177.72,30.99,22.2,21.77,44,Grilling,7,1
+R-164,"Shea Butter(76 ml),Dried Cranberries(57 gr),Chickpea Flour(78 gr),Arborio Rice(116 ml),Coconut Butter(139 ml),Maraschino Cherries(166 ml)",253.31,52.74,15.24,26.43,19,Cooking,1,2
+R-165,"Corn Tortillas(197 pieces),Rice(118 ml),Mullet Roe(179 gr),Turkish Delight(141 gr),Vegetable Oil(180 ml),Angelica Root(187 gr),Naan Bread(143 pieces)",221.55,26.85,33.82,11.14,51,Baking,8,5
+R-166!,"Pickled Beets(165 ml),Pine Nuts(70 gr),Pesto Sauce(132 ml),Plantains(89 pieces)",275.91,42.38,35.88,29.49,24,Baking,7,5
+R-167,"Kale(197 ml),Cranberry Juice(187 ml),Macadamia Nuts(77 gr)",288.31,61.43,32.68,15.14,48,Frying,2,1
+R-168,"Hubbard Squash(80 pieces),Dates(194 gr),Celeriac(152 pieces),Red Beans(188 ml),Farro(137 ml)",389.03,54.96,11.89,8.08,10,Grilling,6,5
+R-169,"Bell Peppers(83 pieces),Parsley(63 ml),Coffee Beans(191 gr),Flatbread(172 pieces)",400.65,43.15,39.55,23.93,15,Frying,8,3
+R-170,"Fermented Black Beans(62 gr),Rye Bread(66 pieces),Endive(149 ml)",161.37,53.66,21.16,25.92,15,Cooking,3,4
+R-171!,"Pine Nuts(126 gr),Pecans(98 gr),Plum Sauce(193 ml),Plantains(110 pieces),Pickled Beets(145 ml),Pink Peppercorns(83 gr)",230.21,39.15,26.06,16.71,45,Cooking,7,3
+R-172!,"Pine Nuts(187 gr),Pesto Sauce(152 ml),Pepitas(134 gr),Pistachios(163 gr),Pink Peppercorns(147 gr),Pickled Ginger(105 ml),Pickled Beets(77 ml)",409.64,32.24,35.8,26.32,26,Frying,7,4
+R-173!,"Plum Sauce(111 ml),Pink Peppercorns(60 gr),Pecans(177 gr),Pickled Ginger(182 ml)",396.55,46.13,34.27,28.38,19,Cooking,7,4
+R-174!,"Pecans(94 gr),Pesto Sauce(157 ml),Pickled Beets(191 ml),Pepitas(169 gr),Pistachios(76 gr),Plum Sauce(61 ml),Pickled Ginger(107 ml)",125.53,22.69,10.32,8.19,13,Baking,1,5
+R-175!,"Plantains(173 pieces),Plum Sauce(112 ml),Pecans(107 gr)",252.94,20.81,23.56,13.1,21,Grilling,1,5
+R-176,"Coconut Oil(150 ml),Vegetable Shortening(144 ml),Celeriac(53 pieces),Palm Sugar(200 gr),Colby Cheese(120 gr)",161.49,20.86,16.58,27.39,49,Baking,6,2
+R-177!,"Plum Sauce(107 ml),Pepper Jack Cheese(165 gr),Pistachios(68 gr),Plantains(81 pieces)",385.01,62.45,24.47,10.6,60,Grilling,3,4
+R-178!,"Pistachios(126 gr),Pink Peppercorns(148 gr),Plum Sauce(74 ml),Pickled Ginger(180 ml)",301.49,64.61,30.85,5.34,45,Grilling,1,5
+R-179!,"Pickled Ginger(99 ml),Pistachios(120 gr),Pickled Beets(96 ml)",241.08,27.01,31.04,29.19,40,Cooking,6,3
+R-180!,"Pink Peppercorns(121 gr),Pine Nuts(76 gr),Plantains(146 pieces),Pickled Ginger(200 ml),Pepitas(110 gr),Pickled Beets(133 ml)",411.66,64.76,37.69,24.58,12,Baking,9,3
+R-181,"Croutons(94 gr),Mango Puree(138 ml),Cabbage(159 ml),Ice Cream(77 ml),Chicken Broth(151 ml)",248.62,47.44,30.1,25.78,13,Frying,9,4
+R-182,"Chicken Thighs(71 pieces),Angelica Root(140 gr),Dried Tarragon(131 gr),Portobello Mushrooms(188 ml)",248.07,40.1,29.67,23.0,47,Cooking,7,2
+R-183!,"Pesto Sauce(102 ml),Pickled Ginger(128 ml),Pink Peppercorns(125 gr),Pickled Beets(77 ml),Plantains(167 pieces)",480.36,34.83,38.23,15.5,59,Baking,3,2
+R-184!,"Pepper Jack Cheese(66 gr),Pickled Ginger(199 ml),Pesto Sauce(168 ml),Plum Sauce(60 ml)",306.99,28.41,23.61,13.21,18,Grilling,9,2
+R-185!,"Pine Nuts(95 gr),Plum Sauce(143 ml),Pineapple Chunks(171 ml),Pecans(150 gr)",302.91,53.25,13.12,8.92,24,Baking,8,5
+R-186!,"Pesto Sauce(87 ml),Pink Peppercorns(107 gr),Pepper Jack Cheese(117 gr),Plantains(190 pieces),Pineapple Chunks(100 ml)",310.39,66.1,17.04,7.04,44,Grilling,4,5
+R-187,"Lotus Root(88 ml),Halva(152 gr),Black Olives(187 ml),Turbinado Sugar(149 gr),Lentils(94 ml),Cantaloupe(197 pieces),Heavy Whipping Cream(104 ml)",338.73,47.82,37.0,28.67,20,Grilling,1,1
+R-188,"Coconut Milk(135 ml),Kale(123 ml),Turbinado Sugar(116 gr),Broccoli Florets(72 ml),Rainbow Chard(180 ml)",147.29,23.91,34.37,21.42,38,Baking,6,3
+R-189,"Tortilla Chips(176 gr),Blackberry(72 ml),Cream Cheese Frosting(77 ml),Artichoke Hearts(108 ml),Celery(144 ml)",140.8,34.22,11.49,22.16,45,Grilling,4,3
+R-190!,"Pickled Beets(187 ml),Pickled Ginger(136 ml),Pink Peppercorns(55 gr),Pepper Jack Cheese(159 gr),Pesto Sauce(78 ml)",305.49,44.22,20.54,19.16,20,Baking,7,1
+R-191!,"Pickled Ginger(107 ml),Pineapple Chunks(102 ml),Plantains(70 pieces)",364.13,69.11,10.82,13.4,34,Baking,1,5
+R-192,"Tarragon Vinegar(177 ml),Fruit(59 ml),Mung Beans(88 ml),Oregano(66 ml),Pineapple Chunks(116 pieces)",350.3,62.32,32.76,14.18,54,Baking,5,4
+R-193!,"Pineapple Chunks(124 ml),Pickled Beets(133 ml),Pecans(151 gr),Pistachios(60 gr)",413.64,45.47,37.3,10.55,30,Grilling,10,5
+R-194!,"Plum Sauce(146 ml),Plantains(80 pieces),Pine Nuts(115 gr),Pineapple Chunks(92 ml),Pepper Jack Cheese(185 gr),Pickled Beets(97 ml)",126.14,41.14,22.75,10.31,47,Frying,4,4
+R-195,"Duck Breast(196 gr),Gochujang(184 ml),Millet(199 ml),Orange Juice(64 ml),Dried Shrimp(70 gr),Dried Goji Berries(90 gr),Tapioca Flour(96 gr)",418.4,63.08,33.08,29.43,25,Cooking,5,2
+R-196!,"Pistachios(77 gr),Pepper Jack Cheese(51 gr),Pepitas(147 gr),Plum Sauce(143 ml),Pineapple Chunks(162 ml)",389.56,65.72,24.19,28.78,19,Frying,2,3
+R-197!,"Pickled Ginger(178 ml),Plum Sauce(94 ml),Pepitas(55 gr),Pistachios(190 gr)",141.13,31.79,20.06,12.84,27,Frying,7,4
+R-198,"Whole Wheat Flour(88 gr),Fregola(72 ml),Limoncello(103 ml)",233.83,29.48,33.47,15.05,42,Baking,9,4
+R-199,"Brown Butter(94 ml),Fruit Pectin(87 gr),Green Beans(93 ml),Molasses(185 ml),Ranch Dressing(131 ml)",324.32,64.21,38.71,21.78,57,Cooking,1,2
+R-200!,"Pickled Ginger(178 ml),Pine Nuts(192 gr),Pepper Jack Cheese(88 gr),Pineapple Chunks(139 ml),Plum Sauce(136 ml)",186.86,61.09,24.21,25.77,16,Cooking,3,5

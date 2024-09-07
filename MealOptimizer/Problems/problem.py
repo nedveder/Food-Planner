@@ -20,6 +20,8 @@ class Problem(ABC):
             for product in row["Products"].split(","):
                 name, quantity = product.split("(")
                 quantity, unit = quantity[:-1].split(" ")
+                if name not in pieces_with_dates["Product Name"].values:
+                    print("Product not found in dataset")
                 expiration_date = pieces_with_dates[pieces_with_dates["Product Name"] == name]["Date"].values[0]
                 piece = Piece(name, quantity, unit, expiration_date)
                 pieces.append(piece)

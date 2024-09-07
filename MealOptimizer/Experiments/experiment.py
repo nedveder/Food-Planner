@@ -32,7 +32,7 @@ class Experiment:
     def create_initial_state(piece_dataset) -> State:
         available_pieces = []
         for index, row in piece_dataset.iterrows():
-            piece = Piece(row["Product"], row["Quantity"], row["Unit"], row["Date"])
+            piece = Piece(row["Product Name"], row["Quantity"], row["Unit"], row["Date"])
             available_pieces.append(piece)
         current_state = State(available_pieces)
         return current_state
