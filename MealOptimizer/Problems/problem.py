@@ -1,3 +1,4 @@
+import datetime
 from abc import ABC, abstractmethod
 import pandas as pd
 from typing import List, Dict, Any
@@ -6,12 +7,13 @@ from ..Problems.utils import Action, Piece
 
 
 class Problem(ABC):
-    def __init__(self, actions_dataset, start_date, pieces_with_dates, requested_amount=2):
+    def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=2, meals_per_day=3):
         """Legal actions is all available recipies that can be made in this current dataset"""
         self.start_date = start_date
         self.action_dataset = actions_dataset
         self.legal_actions = self.create_legal_actions(actions_dataset, pieces_with_dates)
-        self.requested_amount = requested_amount
+        self.requested_amount = number_of_days
+        self.meals_per_day = meals_per_day
 
     @staticmethod
     def create_legal_actions(action_dataset, pieces_with_dates) -> List[Action]:
@@ -43,9 +45,11 @@ class Problem(ABC):
     def get_available_actions(self, state) -> List[Action]:
         """State is all available products and used recipies, meaning available moves are all the recipies
         that can be made with the available products minus products used by recipies"""
+        meals_cooked = len(state.selected_actions)
+        current_date = self.start_date + datetime.timedelta(days=meals_cooked * self.meals_per_day)
         available_actions = []
         for action in self.legal_actions:
-            if all(state.is_available_piece(piece) for piece in action.pieces):
+            if all(state.is_available_piece(piece, current_date) for piece in action.pieces):
                 available_actions.append(action)
         return available_actions
 
@@ -55,4 +59,6 @@ class Problem(ABC):
 
     def is_goal_state(self, state) -> bool:
         """Have we reached the requested amount of recipies"""
-        return len(state.selected_actions) == self.requested_amount
+        current_date = self.start_date + datetime.timedelta(days=self.requested_amount * self.meals_per_day)
+        return (current_date - self.start_date).days == len(state.selected_actions) * self.meals_per_day \
+            or state.get_available_pieces == []

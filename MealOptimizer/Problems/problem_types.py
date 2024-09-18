@@ -18,7 +18,7 @@ class MinimizeWasteProblem(Problem):
         return score
 
 
-class MaximizeRecipeParametersProblem(Problem):
+class MaximizeByParametersProblem(Problem):
     def __init__(self, actions_dataset, start_date, pieces_with_dates, requested_amount=2, parameters_to_maximize: List[str] = None):
         super().__init__(actions_dataset, start_date, pieces_with_dates, requested_amount)
         self.parameters_to_maximize = parameters_to_maximize or []

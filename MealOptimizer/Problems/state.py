@@ -24,10 +24,10 @@ class State:
             available_piece.unit == piece.unit and \
             available_piece.quantity >= piece.quantity
 
-    def is_available_piece(self, piece) -> bool:
+    def is_available_piece(self, piece, current_date) -> bool:
         """Check if the piece is available in the current state"""
         for available_piece in self.available_pieces:
-            if self.is_there_enough(available_piece, piece):
+            if piece.expiration_date > current_date and self.is_there_enough(available_piece, piece):
                 return True
         return False
 
