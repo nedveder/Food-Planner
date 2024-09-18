@@ -4,8 +4,10 @@ from ..Problems.utils import Action, Piece
 
 
 class State:
-    def __init__(self, available_pieces: List[Piece]):
-        self.selected_actions: List[Action] = []
+    def __init__(self, available_pieces: List[Piece], selected_actions=None):
+        if selected_actions is None:
+            selected_actions = []
+        self.selected_actions: List[Action] = selected_actions
         self.available_pieces: List[Piece] = available_pieces
 
     def update_state(self, action) -> None:
@@ -39,5 +41,9 @@ class State:
 
     def __repr__(self):
         selected_recipes = "\n".join([action.name for action in self.selected_actions])
-        pieces_used = "\n".join([f"{piece.item_id} {piece.quantity} {piece.unit}" for action in self.selected_actions for piece in action.pieces])
+        pieces_used = "\n".join(
+            [f"{piece.item_id} {piece.quantity} {piece.unit}" for action in self.selected_actions for piece in action.pieces])
         return f"Selected recipes: \n{selected_recipes} \nProducts used: \n{pieces_used}"
+
+    def __copy__(self):
+        return State(self.available_pieces.copy(), self.selected_actions.copy())

@@ -48,6 +48,3 @@ class Experiment:
             results[solver] = solver_final_state
             print(f"{solver} reached the goal state with score {self.problem.get_score(solver_final_state)}")
         return results
-
-    def visualize_results(self):
-        raise NotImplementedError
