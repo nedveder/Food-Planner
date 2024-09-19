@@ -5784,8 +5784,8 @@ def main():
     ]
 
     # Define the number of rows in the database.
-    num_rows = 50000
-    output_file = 'products_data.csv'
+    num_rows = 50
+    output_file = 'fifty.csv'
     # Define the date range.
     start_date = datetime(2024, 9, 15)
     end_date = datetime(2026, 12, 31)

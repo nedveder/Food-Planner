@@ -8,7 +8,7 @@ from ..Problems.utils import Action, Piece
 
 class Problem(ABC):
     def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=2, meals_per_day=3):
-        """Legal actions is all available recipies that can be made in this current dataset"""
+        """Legal actions is all available recipes that can be made in this current dataset"""
         self.start_date = start_date
         self.action_dataset = actions_dataset
         self.legal_actions = self.create_legal_actions(actions_dataset, pieces_with_dates)
@@ -22,19 +22,38 @@ class Problem(ABC):
             pieces = []
             is_all_products_exist = True
             for product in row["Products"].split(","):
-                name, quantity = product.split("(")
-                quantity, unit = quantity[:-1].split(" ")
-                if name not in pieces_with_dates["Product Name"].values:
-                    print("Product not found in dataset")
+                try:
+                    name_part, quantity_part = product.rsplit("(", 1)
+                    name = name_part.strip()
+                    quantity_unit = quantity_part.rstrip(")").strip()
+
+                    # Try to split quantity and unit
+                    try:
+                        quantity, unit = quantity_unit.split(" ", 1)
+                    except ValueError:
+                        # If split fails, assume the whole string is quantity and unit is empty
+                        quantity = quantity_unit
+                        unit = ""
+
+                    if name not in pieces_with_dates["Product Name"].values:
+                        print(f"Product not found in dataset: {name}")
+                        is_all_products_exist = False
+                        break
+                    expiration_date = pieces_with_dates[pieces_with_dates["Product Name"] == name]["Date"].values[0]
+                    piece = Piece(name, quantity, unit, expiration_date)
+                    pieces.append(piece)
+                except Exception as e:
+                    print(f"Error parsing product: {product}. Error: {str(e)}")
                     is_all_products_exist = False
                     break
-                expiration_date = pieces_with_dates[pieces_with_dates["Product Name"] == name]["Date"].values[0]
-                piece = Piece(name, quantity, unit, expiration_date)
-                pieces.append(piece)
+
             if not is_all_products_exist:
                 continue
+
             action = Action(row["Recipe ID"], row["Recipe Name"], pieces)
             legal_actions.append(action)
+
+        print(f"Created {len(legal_actions)} legal actions")
         return legal_actions
 
     @abstractmethod
@@ -43,10 +62,10 @@ class Problem(ABC):
         pass
 
     def get_available_actions(self, state) -> List[Action]:
-        """State is all available products and used recipies, meaning available moves are all the recipies
-        that can be made with the available products minus products used by recipies"""
+        """State is all available products and used recipes, meaning available moves are all the recipes
+        that can be made with the available products minus products used by recipes"""
         meals_cooked = len(state.selected_actions)
-        current_date = self.start_date + datetime.timedelta(days=meals_cooked * self.meals_per_day)
+        current_date = self.start_date + datetime.timedelta(days=meals_cooked // self.meals_per_day)
         available_actions = []
         for action in self.legal_actions:
             if all(state.is_available_piece(piece, current_date) for piece in action.pieces):
@@ -58,7 +77,6 @@ class Problem(ABC):
         return sum(self.get_action_score(action) for action in state.selected_actions)
 
     def is_goal_state(self, state) -> bool:
-        """Have we reached the requested amount of recipies"""
-        current_date = self.start_date + datetime.timedelta(days=self.requested_amount * self.meals_per_day)
-        return (current_date - self.start_date).days == len(state.selected_actions) * self.meals_per_day \
-            or state.get_available_pieces == []
+        """Have we reached the requested amount of recipes"""
+        return len(
+            state.selected_actions) >= self.requested_amount * self.meals_per_day or not state.get_available_pieces

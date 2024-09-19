@@ -1,3 +1,4 @@
+from datetime import datetime
 import customtkinter as ctk
 import os
 from PIL import Image
@@ -5,6 +6,7 @@ import pandas as pd
 from datetime import date
 from tkinter import filedialog, messagebox
 from MealOptimizer.Experiments import Experiment
+from MealOptimizer.Problems import MinimizeWasteProblem, MaximizeByParametersProblem
 from MealOptimizer import Problems
 from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, PlanningGraphSolver, RLSolver
 import traceback
@@ -120,47 +122,41 @@ class MealPlannerGUI(ctk.CTk):
             messagebox.showerror("Error", "Please select at least one algorithm")
             return
 
-        if not self.create_temp_csv_files():
-            return  # Error message already shown in create_temp_csv_files
-
-        problem = Problems.MinimizeWasteProblem
-        start_date = date.today()
-
         try:
-            # Get number of days and meals per day, with error handling
-            try:
-                number_of_days = int(self.settings_frame.days_var.get())
-            except ValueError:
-                number_of_days = 7  # Default value
-                print(f"Invalid number of days, using default: {number_of_days}")
+            start_date = datetime.strptime(self.settings_frame.start_date_var.get(), "%Y-%m-%d").date()
+            number_of_days = int(self.settings_frame.days_var.get())
+            meals_per_day = int(self.settings_frame.meals_var.get())
 
-            try:
-                meals_per_day = int(self.settings_frame.meals_var.get())
-            except ValueError:
-                meals_per_day = 3  # Default value
-                print(f"Invalid meals per day, using default: {meals_per_day}")
+            # Determine which problem to use
+            if self.settings_frame.problem_var.get() == "Minimize Waste":
+                problem = MinimizeWasteProblem
+            else:  # Maximize Parameters
+                parameters_to_maximize = []
+                if self.settings_frame.prep_time_var.get():
+                    parameters_to_maximize.append("Preparation Time (min)")
+                if self.settings_frame.prep_type_var.get():
+                    parameters_to_maximize.append("Type of Preparation")
+                if self.settings_frame.taste_rating_var.get():
+                    parameters_to_maximize.append("Taste Rating")
+                if self.settings_frame.shelf_time_var.get():
+                    parameters_to_maximize.append("Shelf Time (days)")
 
-            # Print debug information
-            print(f"Selected solvers: {[solver.__class__.__name__ for solver in selected_solvers]}")
-            print(f"Start date: {start_date}")
-            print(f"Number of days: {number_of_days}")
-            print(f"Meals per day: {meals_per_day}")
+                problem = lambda *args, **kwargs: MaximizeByParametersProblem(*args, **kwargs,
+                                                                              parameters_to_maximize=parameters_to_maximize)
 
-            # Load and print sample of the CSV files
-            products_df = pd.read_csv("temp_products.csv")
-            recipes_df = pd.read_csv("temp_recipes.csv")
-            print("\nSample of products:")
-            print(products_df.head())
-            print("\nSample of recipes:")
-            print(recipes_df.head())
-
-            experiment = Experiment(problem, selected_solvers, start_date,
-                                    "temp_products.csv", "temp_recipes.csv",
-                                    number_of_days=number_of_days,
-                                    meals_per_day=meals_per_day)
+            # Create Experiment instance
+            experiment = Experiment(
+                problem,
+                selected_solvers,
+                start_date,
+                "temp_products.csv",  # piece_dataset_path
+                "temp_recipes.csv",  # action_dataset_path
+                number_of_days=number_of_days,
+                meals_per_day=meals_per_day
+            )
 
             results = experiment.run()
-            self.results_frame.display_results(results)
+            self.results_frame.display_results(results, number_of_days, experiment.problem)
             self.select_frame_by_name("results")
         except Exception as e:
             error_message = f"An error occurred during optimization:\n{str(e)}\n\nStacktrace:\n{traceback.format_exc()}"
@@ -169,10 +165,6 @@ class MealPlannerGUI(ctk.CTk):
 
     def create_temp_csv_files(self):
         # Create temporary products CSV
-        if not self.upload_frame.product_list.products:
-            messagebox.showerror("Error", "No products added. Please add products before running optimization.")
-            return False
-
         products_df = pd.DataFrame(self.upload_frame.product_list.products,
                                    columns=["ID", "Product Name", "Quantity", "Unit", "Date"])
         products_df.to_csv("temp_products.csv", index=False)

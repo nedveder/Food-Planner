@@ -21,6 +21,8 @@ class UploadFrame(ctk.CTkFrame):
         self.create_manual_input()
         self.create_csv_upload()
         self.create_product_list()
+        self.create_clear_button()
+
 
     def create_manual_input(self):
         manual_label = ctk.CTkLabel(self, text="Add Products Manually", font=ctk.CTkFont(size=16, weight="bold"))
@@ -82,6 +84,10 @@ class UploadFrame(ctk.CTkFrame):
         self.product_list = ScrollableProductFrame(self, width=500, height=200)
         self.product_list.grid(row=6, column=0, padx=20, pady=10, sticky="nsew")
 
+    def create_clear_button(self):
+        self.clear_button = ctk.CTkButton(self, text="Clear All Products", command=self.clear_all_products)
+        self.clear_button.grid(row=7, column=0, padx=20, pady=10)
+
     def add_product(self):
         product = self.product_var.get()
         quantity = self.quantity_var.get()
@@ -102,6 +108,14 @@ class UploadFrame(ctk.CTkFrame):
                 messagebox.showerror("Error", "Quantity must be a number")
         else:
             messagebox.showerror("Error", "Please fill in all fields")
+
+    def clear_all_products(self):
+        if self.product_list.products:
+            if messagebox.askyesno("Clear Products", "Are you sure you want to clear all products?"):
+                self.product_list.clear_products()
+                messagebox.showinfo("Clear Products", "All products have been cleared.")
+        else:
+            messagebox.showinfo("Clear Products", "There are no products to clear.")
 
     def browse_csv(self):
         file_path = filedialog.askopenfilename(filetypes=[("CSV Files", "*.csv")])

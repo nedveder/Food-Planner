@@ -1,4 +1,5 @@
-from typing import Dict
+import time
+from typing import Dict, Tuple
 import pandas as pd
 
 from ..Problems.state import State
@@ -39,14 +40,18 @@ class Experiment:
         current_state = State(available_pieces)
         return current_state
 
-    def run(self) -> Dict[str, State]:
+    def run(self) -> Dict[str, Tuple[State, float]]:
         results = {}
         for solver in self.solvers:
+            start_time = time.time()
             solver_final_state = solver.solve(self.problem, self.current_state)
-            # Check that solver reached the goal state
-            if not self.problem.is_goal_state(solver_final_state):
+            end_time = time.time()
+            solver_time = end_time - start_time
+
+            if self.problem.is_goal_state(solver_final_state):
+                results[solver] = (solver_final_state, solver_time)
+                print(f"{solver} reached the goal state with score {self.problem.get_score(solver_final_state)}")
+            else:
+                results[solver] = (None, solver_time)
                 print(f"{solver} did not reach the goal state")
-                continue
-            results[solver] = solver_final_state
-            print(f"{solver} reached the goal state with score {self.problem.get_score(solver_final_state)}")
         return results
