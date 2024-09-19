@@ -7,12 +7,13 @@ from ..Problems.utils import Action, Piece
 
 
 class Problem(ABC):
-    def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=2, meals_per_day=3):
-        """Legal actions is all available recipes that can be made in this current dataset"""
+    def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=1, meals_per_day=3,
+                 parameters_to_maximize: List[str] = None):
         self.start_date = start_date
         self.action_dataset = actions_dataset
         self.legal_actions = self.create_legal_actions(actions_dataset, pieces_with_dates)
-        self.requested_amount = number_of_days
+        self.requested_amount = number_of_days * meals_per_day
+        self.number_of_days = number_of_days
         self.meals_per_day = meals_per_day
 
     @staticmethod
@@ -79,4 +80,4 @@ class Problem(ABC):
     def is_goal_state(self, state) -> bool:
         """Have we reached the requested amount of recipes"""
         return len(
-            state.selected_actions) >= self.requested_amount * self.meals_per_day or not state.get_available_pieces
+            state.selected_actions) >= self.number_of_days * self.meals_per_day or not state.get_available_pieces

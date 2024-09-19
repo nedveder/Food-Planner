@@ -62,14 +62,12 @@ class SettingsFrame(ctk.CTkFrame):
         self.parameter_frame.grid_columnconfigure((0, 1), weight=1)
 
         self.prep_time_var = ctk.BooleanVar(value=False)
-        self.prep_type_var = ctk.BooleanVar(value=False)
         self.taste_rating_var = ctk.BooleanVar(value=False)
         self.shelf_time_var = ctk.BooleanVar(value=False)
 
         ctk.CTkCheckBox(self.parameter_frame, text="Preparation Time", variable=self.prep_time_var).grid(row=0, column=0, padx=10, pady=5, sticky="w")
-        ctk.CTkCheckBox(self.parameter_frame, text="Type of Preparation", variable=self.prep_type_var).grid(row=0, column=1, padx=10, pady=5, sticky="w")
-        ctk.CTkCheckBox(self.parameter_frame, text="Taste Rating", variable=self.taste_rating_var).grid(row=1, column=0, padx=10, pady=5, sticky="w")
-        ctk.CTkCheckBox(self.parameter_frame, text="Shelf Time", variable=self.shelf_time_var).grid(row=1, column=1, padx=10, pady=5, sticky="w")
+        ctk.CTkCheckBox(self.parameter_frame, text="Taste Rating", variable=self.taste_rating_var).grid(row=0, column=1, padx=10, pady=5, sticky="w")
+        ctk.CTkCheckBox(self.parameter_frame, text="Shelf Time", variable=self.shelf_time_var).grid(row=0, column=2, padx=10, pady=5, sticky="w")
 
         self.parameter_frame.grid_remove()  # Hide initially
 

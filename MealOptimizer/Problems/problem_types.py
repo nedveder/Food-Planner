@@ -19,8 +19,8 @@ class MinimizeWasteProblem(Problem):
 
 
 class MaximizeByParametersProblem(Problem):
-    def __init__(self, actions_dataset, start_date, pieces_with_dates, requested_amount=2, parameters_to_maximize: List[str] = None):
-        super().__init__(actions_dataset, start_date, pieces_with_dates, requested_amount)
+    def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=2, meals_per_day=3, parameters_to_maximize: List[str] = None):
+        super().__init__(actions_dataset, start_date, pieces_with_dates, number_of_days, meals_per_day)
         self.parameters_to_maximize = parameters_to_maximize or []
 
         # Validate that all specified parameters exist in the dataset

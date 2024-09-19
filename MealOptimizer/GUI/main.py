@@ -126,23 +126,27 @@ class MealPlannerGUI(ctk.CTk):
             start_date = datetime.strptime(self.settings_frame.start_date_var.get(), "%Y-%m-%d").date()
             number_of_days = int(self.settings_frame.days_var.get())
             meals_per_day = int(self.settings_frame.meals_var.get())
+            requested_amount = number_of_days * meals_per_day
+            parameters_to_maximize = []
 
             # Determine which problem to use
             if self.settings_frame.problem_var.get() == "Minimize Waste":
                 problem = MinimizeWasteProblem
             else:  # Maximize Parameters
-                parameters_to_maximize = []
+
                 if self.settings_frame.prep_time_var.get():
                     parameters_to_maximize.append("Preparation Time (min)")
-                if self.settings_frame.prep_type_var.get():
-                    parameters_to_maximize.append("Type of Preparation")
                 if self.settings_frame.taste_rating_var.get():
                     parameters_to_maximize.append("Taste Rating")
                 if self.settings_frame.shelf_time_var.get():
                     parameters_to_maximize.append("Shelf Time (days)")
 
-                problem = lambda *args, **kwargs: MaximizeByParametersProblem(*args, **kwargs,
-                                                                              parameters_to_maximize=parameters_to_maximize)
+                problem = MaximizeByParametersProblem
+                # problem = lambda actions_dataset, start_date, pieces_with_dates, requested_amount, meals_per_day: \
+                #     MaximizeByParametersProblem(actions_dataset, start_date, pieces_with_dates,
+                #                                 requested_amount=requested_amount,
+                #                                 meals_per_day=meals_per_day,
+                #                                 parameters_to_maximize=parameters_to_maximize)
 
             # Create Experiment instance
             experiment = Experiment(
@@ -152,7 +156,8 @@ class MealPlannerGUI(ctk.CTk):
                 "temp_products.csv",  # piece_dataset_path
                 "temp_recipes.csv",  # action_dataset_path
                 number_of_days=number_of_days,
-                meals_per_day=meals_per_day
+                meals_per_day=meals_per_day,
+                parameters_to_maximize=parameters_to_maximize
             )
 
             results = experiment.run()

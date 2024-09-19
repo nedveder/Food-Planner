@@ -21,7 +21,7 @@ class ResultsFrame(ctk.CTkFrame):
     def display_results(self, results, number_of_days, problem):
         self.results_text.delete("1.0", ctk.END)
         for solver, (state, solve_time) in results.items():
-            self.results_text.insert(ctk.END, f"{solver.__class__.__name__} Results:\n", "bold")
+            self.results_text.insert(ctk.END, f"{solver.__class__.__name__} Results:\n")
             self.results_text.insert(ctk.END, f"Time taken: {solve_time:.2f} seconds\n\n")
 
             if state is None:
@@ -30,12 +30,15 @@ class ResultsFrame(ctk.CTkFrame):
 
             for day in range(number_of_days):
                 self.results_text.insert(ctk.END, f"Day {day + 1}:\n")
-                day_actions = state.selected_actions[day * 3:(day + 1) * 3]
-                for action in day_actions:
-                    self.results_text.insert(ctk.END, f"  Recipe: {action.name}\n")
+                day_actions = state.selected_actions[day * problem.meals_per_day:(day + 1) * problem.meals_per_day]
+                if not day_actions:
+                    self.results_text.insert(ctk.END, "  No meals planned for this day.\n")
+                for meal, action in enumerate(day_actions, 1):
+                    self.results_text.insert(ctk.END, f"  Meal {meal}: {action.name}\n")
                     self.results_text.insert(ctk.END, f"  Ingredients:\n")
                     for piece in action.pieces:
                         self.results_text.insert(ctk.END, f"    - {piece.item_id}: {piece.quantity} {piece.unit}\n")
+                    self.results_text.insert(ctk.END, "\n")
                 self.results_text.insert(ctk.END, "\n")
 
             self.results_text.insert(ctk.END, f"Total Score: {problem.get_score(state):.2f}\n\n")
