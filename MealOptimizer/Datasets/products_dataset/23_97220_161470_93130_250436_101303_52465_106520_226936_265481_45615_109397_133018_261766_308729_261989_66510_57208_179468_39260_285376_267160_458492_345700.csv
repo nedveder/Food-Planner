@@ -1,0 +1,656 @@
+ID,Product Name,Quantity,Date
+P001,yellow cake mix with pudding,1.0,2024-10-06
+P002,mandarin oranges,1.0,2024-09-25
+P003,pineapple chunks,1.0,2024-09-29
+P004,sweetened coconut,1.0,2024-10-19
+P005,vegetable oil,1.0,2024-10-02
+P006,eggs,1.0,2024-10-16
+P007,cool whip,1.0,2024-10-19
+P008,instant pudding mix,1.0,2024-10-16
+P009,cream cheese,1.0,2024-10-13
+P010,unflavored gelatin,1.0,2024-10-20
+P011,self-rising flour,1.0,2024-09-26
+P012,buttermilk,1.0,2024-10-04
+P013,baking powder,1.0,2024-09-20
+P014,crisco shortening,1.0,2024-10-08
+P015,sweet potato,1.0,2024-10-12
+P016,potato,1.0,2024-10-05
+P017,fresh zucchini,1.0,2024-10-02
+P018,frozen peas,1.0,2024-10-20
+P019,olive oil,1.0,2024-10-19
+P020,fresh sage,1.0,2024-10-08
+P021,honey,1.0,2024-09-21
+P022,garlic,1.0,2024-10-20
+P023,scallion,1.0,2024-10-02
+P024,cayenne pepper,1.0,2024-09-28
+P025,dijon mustard,1.0,2024-10-11
+P026,mayonnaise,1.0,2024-09-30
+P027,pine nuts,1.0,2024-10-20
+P028,salt,1.0,2024-10-20
+P029,black pepper,1.0,2024-09-20
+P030,chili powder,1.0,2024-09-26
+P031,ground cumin,1.0,2024-10-12
+P032,hard-boiled eggs,1.0,2024-10-09
+P033,balsamic vinegar,1.0,2024-10-19
+P034,smoked bacon,1.0,2024-10-12
+P035,maple syrup,1.0,2024-10-07
+P036,ground beef,1.0,2024-10-13
+P037,milk,1.0,2024-09-21
+P038,dry breadcrumbs,1.0,2024-10-16
+P039,onion,1.0,2024-10-15
+P040,egg,1.0,2024-10-18
+P041,mustard,1.0,2024-10-16
+P042,hp steak sauce,1.0,2024-09-25
+P043,worcestershire sauce,1.0,2024-10-12
+P044,spaghetti,1.0,2024-09-23
+P045,italian dressing,1.0,2024-10-13
+P046,parmesan cheese,1.0,2024-09-27
+P047,sesame seeds,1.0,2024-10-01
+P048,poppy seed,1.0,2024-10-15
+P049,seasoning salt,1.0,2024-09-26
+P050,paprika,1.0,2024-10-08
+P051,garlic powder,1.0,2024-09-22
+P052,cucumber,1.0,2024-10-16
+P053,red onion,1.0,2024-10-15
+P054,tomatoes,1.0,2024-09-23
+P055,parsley,1.0,2024-09-24
+P056,water,1.0,2024-09-21
+P057,sugar,1.0,2024-10-07
+P058,table salt,1.0,2024-09-20
+P059,cloves,1.0,2024-10-05
+P060,whole nutmegs,1.0,2024-09-21
+P061,ham,1.0,2024-10-18
+P062,coriander seeds,1.0,2024-10-07
+P063,cumin seeds,1.0,2024-10-19
+P064,whole black peppercorns,1.0,2024-09-23
+P065,kosher salt,1.0,2024-10-09
+P066,dark rum,1.0,2024-09-23
+P067,molasses,1.0,2024-10-10
+P068,unsalted butter,1.0,2024-10-09
+P069,plain soymilk,1.0,2024-10-02
+P070,lowfat silken tofu,1.0,2024-10-16
+P071,bananas,1.0,2024-10-16
+P072,cocoa powder,1.0,2024-09-23
+P073,stevia,1.0,2024-10-19
+P074,canola oil,1.0,2024-09-29
+P075,cinnamon sticks,1.0,2024-10-11
+P076,green cardamom pods,1.0,2024-09-30
+P077,fresh ginger,1.0,2024-10-02
+P078,garlic cloves,1.0,2024-09-21
+P079,turmeric powder,1.0,2024-10-19
+P080,coriander powder,1.0,2024-10-16
+P081,yoghurt,1.0,2024-09-20
+P082,tomato puree,1.0,2024-09-20
+P083,skinless chicken breasts,1.0,2024-10-14
+P084,sliced almonds,1.0,2024-09-22
+P085,fresh coriander,1.0,2024-10-05
+P086,poblano chiles,1.0,2024-10-16
+P087,hot pepper sauce,1.0,2024-10-06
+P088,beef t-bone steaks,1.0,2024-09-21
+P089,white sugar,1.0,2024-09-27
+P090,fast rising yeast,1.0,2024-10-13
+P091,bread flour,1.0,2024-10-15
+P092,rolled oats,1.0,2024-10-08
+P093,pecans,1.0,2024-10-11
+P094,butter,1.0,2024-10-06
+P095,fennel bulbs,1.0,2024-09-24
+P096,"orange, zest of",1.0,2024-09-25
+P097,frozen orange juice concentrate,1.0,2024-10-18
+P098,sherry wine vinegar,1.0,2024-10-09
+P099,chili flakes,1.0,2024-09-29
+P100,extra virgin olive oil,1.0,2024-10-05
+P101,orange section,1.0,2024-10-08
+P102,fennel leaves,1.0,2024-09-27
+P103,brown lentils,1.0,2024-10-07
+P104,carrot,1.0,2024-09-24
+P105,shallot,1.0,2024-09-27
+P106,celery,1.0,2024-10-08
+P107,fresh thyme,1.0,2024-09-30
+P108,fresh ground pepper,1.0,2024-10-01
+P109,egg yolk,1.0,2024-10-04
+P110,lemon juice,1.0,2024-09-21
+P111,fresh cranberries,1.0,2024-09-30
+P112,all-purpose flour,1.0,2024-10-14
+P113,baking soda,1.0,2024-10-01
+P114,orange juice,1.0,2024-09-25
+P115,walnuts,1.0,2024-10-12
+P116,wonton wrappers,1.0,2024-09-23
+P117,bulk pork sausage,1.0,2024-09-26
+P118,colby cheese,1.0,2024-10-15
+P119,green pepper,1.0,2024-10-16
+P120,sweet red pepper,1.0,2024-09-26
+P121,green onions,1.0,2024-09-22
+P122,ranch salad dressing,1.0,2024-10-10
+P123,corn tortillas,1.0,2024-10-08
+P124,cream soup,1.0,2024-10-03
+P125,chicken breasts,1.0,2024-09-22
+P126,mild green chilies,1.0,2024-10-04
+P127,cheddar cheese,1.0,2024-10-05
+P128,shrimp,1.0,2024-10-16
+P129,creole seasoning,1.0,2024-10-20
+P130,sliced mushrooms,1.0,2024-09-25
+P131,heavy cream,1.0,2024-09-21
+P132,linguine,1.0,2024-09-27
+P133,nonstick cooking spray,1.0,2024-10-16
+P134,cooked chicken,1.0,2024-09-28
+P135,cheese,1.0,2024-09-24
+P136,cream of mushroom soup,1.0,2024-10-05
+P137,cream of celery soup,1.0,2024-09-23
+P138,ro-tel tomatoes,1.0,2024-09-20
+P139,diced green chilies,1.0,2024-10-10
+P140,flour tortilla,1.0,2024-10-18
+P141,macaroni,1.0,2024-10-07
+P142,frozen broccoli florets,1.0,2024-09-25
+P143,flour,1.0,2024-10-09
+P144,hot sauce,1.0,2024-10-18
+P145,low fat cottage cheese,1.0,2024-10-14
+P146,extra-sharp cheddar cheese,1.0,2024-09-20
+P147,salt and pepper,1.0,2024-10-18
+P148,frozen cut green beans,1.0,2024-10-14
+P149,raw potatoes,1.0,2024-10-18
+P150,evaporated milk,1.0,2024-10-02
+P151,dried parsley flakes,1.0,2024-09-28
+P152,lemon pepper,1.0,2024-10-16
+P153,banana,1.0,2024-10-19
+P154,boneless skinless chicken breasts,1.0,2024-10-01
+P155,italian style breadcrumbs,1.0,2024-10-18
+P156,head of cabbage,3.0,2024-09-22
+P157,freezer jam pectin,2.0,2024-09-22
+P158,seafood sauce,5.0,2024-09-21
+P159,black coffee,2.0,2024-10-15
+P160,green apple vodka,1.0,2024-10-20
+P161,cola-flavored carbonated beverage,5.0,2024-09-30
+P162,raw sweet potato,4.0,2024-10-19
+P163,field peas,2.0,2024-10-16
+P164,ham steaks,5.0,2024-10-07
+P165,skinless duck breasts,4.0,2024-09-30
+P166,roquefort cheese,5.0,2024-09-20
+P167,garlic oil,1.0,2024-10-18
+P168,non-fat strawberry yogurt,4.0,2024-09-24
+P169,licor 43,4.0,2024-10-18
+P170,maize flour,2.0,2024-09-25
+P171,hazelnut biscotti,3.0,2024-09-29
+P172,blueberry gelatin,1.0,2024-10-11
+P173,sugar-free whole berry cranberry sauce,1.0,2024-10-15
+P174,tilsiter cheese,2.0,2024-10-14
+P175,roasting chickens,5.0,2024-10-12
+P176,chili vinegar,3.0,2024-10-20
+P177,trans-fat free non-hydrogenated vegetable shortening,5.0,2024-09-25
+P178,skewer,2.0,2024-10-16
+P179,dry lasagna noodle,3.0,2024-10-12
+P180,monkfish fillets,3.0,2024-10-05
+P181,ground fenugreek,1.0,2024-09-23
+P182,hard green pears,2.0,2024-10-05
+P183,frozen sliced strawberries in syrup,3.0,2024-10-19
+P184,marinara sauce,5.0,2024-09-27
+P185,long grain brown rice,1.0,2024-10-01
+P186,anise oil,1.0,2024-09-23
+P187,gluten-free butter,5.0,2024-10-15
+P188,baby bella mushrooms,4.0,2024-09-21
+P189,dry chili lime seasoning,1.0,2024-10-09
+P190,cooked salad macaroni,1.0,2024-10-16
+P191,hearts of palm,2.0,2024-10-20
+P192,celery rib,1.0,2024-10-06
+P193,raspberry-lime juice,2.0,2024-10-18
+P194,low-fat refried beans,1.0,2024-09-26
+P195,canned broth,5.0,2024-10-17
+P196,good seasons italian dressing,3.0,2024-10-16
+P197,red raisins,4.0,2024-09-20
+P198,liquid dish soap,2.0,2024-09-28
+P199,your favorite dressing,4.0,2024-09-24
+P200,bisquick heart smart mix,2.0,2024-10-12
+P201,miracle whip light,1.0,2024-09-30
+P202,habanero pepper cheese,3.0,2024-09-25
+P203,quick-cooking couscous,2.0,2024-09-25
+P204,mandarin syrup,3.0,2024-10-12
+P205,seedless black grapes,1.0,2024-10-12
+P206,ginger marmalade,5.0,2024-10-15
+P207,chocolate fudge instant pudding mix,4.0,2024-10-08
+P208,mixed candied fruit,5.0,2024-09-27
+P209,turkey chorizo,4.0,2024-10-15
+P210,lemon cream-filled ginger sandwich cookies,2.0,2024-10-15
+P211,golden vanilla cake mix,3.0,2024-09-20
+P212,glace red cherries,3.0,2024-09-20
+P213,frozen pineapple chunks,5.0,2024-09-25
+P214,saltine,5.0,2024-10-14
+P215,poblano chile,2.0,2024-09-26
+P216,roasted deli chicken,1.0,2024-09-24
+P217,barberries,5.0,2024-10-19
+P218,instant chocolate fudge pudding,2.0,2024-10-04
+P219,green peppercorns in brine,1.0,2024-10-08
+P220,lightlife gimme lean ground sausage,5.0,2024-09-24
+P221,pillsbury refrigerated breadsticks,3.0,2024-09-25
+P222,low-sugar raspberry preserves,4.0,2024-09-24
+P223,tomato bruschetta topping,2.0,2024-09-21
+P224,worthington veja-links,2.0,2024-09-26
+P225,potato crisps,1.0,2024-10-08
+P226,peanuts,2.0,2024-10-03
+P227,garlic parmesan pretzel crisps,4.0,2024-10-16
+P228,drambuie,2.0,2024-10-05
+P229,egg beaters cheese and chive egg substitute,5.0,2024-10-12
+P230,butterhead lettuce,4.0,2024-10-17
+P231,small scallop,5.0,2024-10-06
+P232,extra-large egg yolk,3.0,2024-10-19
+P233,boneless pork butt shank steaks,3.0,2024-10-07
+P234,center-cut pork loin chops,5.0,2024-10-07
+P235,bacon fat,5.0,2024-10-07
+P236,low-carb spaghetti sauce,1.0,2024-10-19
+P237,whole wheat pasta shells,3.0,2024-10-19
+P238,veal steak,4.0,2024-10-18
+P239,vegan egg substitute,3.0,2024-10-07
+P240,warm water,5.0,2024-09-20
+P241,biryani spice mix,5.0,2024-09-22
+P242,ground masticha,4.0,2024-10-01
+P243,onion ring batter,2.0,2024-10-12
+P244,campbell's cream of chicken soup,2.0,2024-10-06
+P245,horseradish root,4.0,2024-10-08
+P246,quick curing salt,4.0,2024-09-29
+P247,ham bouillon cube,4.0,2024-09-24
+P248,raw red bell pepper,1.0,2024-10-06
+P249,passion fruit pulp,3.0,2024-10-08
+P250,parmesan and mozzarella pasta sauce,4.0,2024-10-18
+P251,smoked turkey leg,4.0,2024-10-07
+P252,crusty bread,3.0,2024-10-09
+P253,dried chilies,4.0,2024-10-17
+P254,mixed nuts,4.0,2024-10-15
+P255,vermicelli,2.0,2024-10-02
+P256,apple juice,2.0,2024-10-06
+P257,english pea,5.0,2024-10-17
+P258,parboiled rice,3.0,2024-10-17
+P259,chickpea rice miso,3.0,2024-10-05
+P260,boston lettuce leaves,5.0,2024-10-16
+P261,sambal bajak,5.0,2024-10-10
+P262,braggs liquid aminos,4.0,2024-10-08
+P263,peach preserves,4.0,2024-10-12
+P264,black pudding,3.0,2024-09-29
+P265,devil's food cake mix with pudding,1.0,2024-10-08
+P266,macaroni and cheese mix,4.0,2024-09-21
+P267,morningstar farms grillers,5.0,2024-10-07
+P268,green decorating gel,2.0,2024-10-13
+P269,kosher pickles,1.0,2024-09-26
+P270,kraft tuscan house italian dressing and marinade,4.0,2024-10-18
+P271,tomato juice,1.0,2024-10-06
+P272,italian-style tomatoes,1.0,2024-09-23
+P273,gingersnap crumbs,5.0,2024-09-25
+P274,coffee-mate fat free powder,3.0,2024-09-24
+P275,spelt berries,5.0,2024-09-22
+P276,garlic heads,3.0,2024-09-29
+P277,tempeh,3.0,2024-10-13
+P278,prepared graham cracker crust,2.0,2024-10-02
+P279,fat-free honey-dijon salad dressing,4.0,2024-10-17
+P280,crisco,2.0,2024-10-09
+P281,low sodium ketchup,2.0,2024-10-13
+P282,fat-free cream cheese,5.0,2024-10-04
+P283,tarragon leaf,5.0,2024-09-20
+P284,hickory liquid smoke,2.0,2024-10-11
+P285,turkey strips,3.0,2024-09-30
+P286,string bean,4.0,2024-09-29
+P287,maraskina liqueur,4.0,2024-09-24
+P288,chicken,2.0,2024-10-20
+P289,cherry pepper,1.0,2024-09-26
+P290,raw peanuts,5.0,2024-10-06
+P291,skinless chicken leg quarters,4.0,2024-09-26
+P292,low-fat extra-firm silken tofu,3.0,2024-10-19
+P293,white cranberry strawberry juice,2.0,2024-09-27
+P294,minute tapioca,5.0,2024-09-26
+P295,brown sugar twin,4.0,2024-10-20
+P296,low-fat whole grain waffle,3.0,2024-10-14
+P297,rye rolls,4.0,2024-10-06
+P298,white cornbread mix,3.0,2024-09-22
+P299,white wine vinaigrette,1.0,2024-10-07
+P300,sugar-free instant lemon pudding,1.0,2024-10-19
+P301,frito corn chip,4.0,2024-10-20
+P302,first cut briskets of beef,4.0,2024-09-26
+P303,turkey liver,5.0,2024-09-23
+P304,fat free banana cream pie flavored pudding mix,2.0,2024-10-07
+P305,honey snap biscuits,2.0,2024-10-01
+P306,beet with greens,2.0,2024-09-24
+P307,greek vinaigrette dressing with feta and oregano,2.0,2024-10-09
+P308,grapefruit-mango juice,3.0,2024-09-20
+P309,whole wheat hoagie rolls,5.0,2024-10-03
+P310,mixed sprouts,2.0,2024-09-27
+P311,frozen whole okra,1.0,2024-09-23
+P312,pillsbury crescent recipe creations refrigerated flaky dough sheet,1.0,2024-10-14
+P313,no-salt-added tomato puree,1.0,2024-10-10
+P314,tamarind pulp,4.0,2024-10-19
+P315,chocolate square,3.0,2024-09-24
+P316,loquats,1.0,2024-10-11
+P317,vegetarian chicken broth,4.0,2024-10-19
+P318,orange food coloring,4.0,2024-10-01
+P319,dried mulato chiles,2.0,2024-10-02
+P320,grilled steak,1.0,2024-10-01
+P321,condensed chicken gumbo soup,5.0,2024-09-26
+P322,german mustard,4.0,2024-09-27
+P323,boneless lean pork,1.0,2024-09-29
+P324,dried morels,4.0,2024-10-13
+P325,frozen hash brown potatoes,4.0,2024-10-04
+P326,barbados molasses,3.0,2024-10-04
+P327,plain white flour,4.0,2024-09-20
+P328,white castle hamburgers,5.0,2024-09-24
+P329,marinated artichoke hearts,2.0,2024-10-17
+P330,skinless boneless turkey breast,2.0,2024-09-29
+P331,sausage patty,3.0,2024-10-16
+P332,vegetable margarine,2.0,2024-10-18
+P333,rose petals,3.0,2024-10-08
+P334,lawry's teriyaki marinade,1.0,2024-10-20
+P335,nacho chip,4.0,2024-10-20
+P336,pumpkin flesh,4.0,2024-09-22
+P337,better than bouillon no beef base,2.0,2024-09-22
+P338,minced clams,5.0,2024-09-22
+P339,avocado,4.0,2024-10-17
+P340,tortellini,1.0,2024-10-17
+P341,garlic,2.0,2024-10-08
+P342,potassium chloride,4.0,2024-10-05
+P343,toasted coconut marshmallows,5.0,2024-09-22
+P344,frozen broccoli with red pepper,5.0,2024-10-18
+P345,reduced-sodium fat-free beef broth,1.0,2024-09-30
+P346,vermicelli rice noodles,1.0,2024-10-18
+P347,chocolate crumb crusts,2.0,2024-10-20
+P348,burgundy cooking wine,1.0,2024-09-29
+P349,french vanilla instant pudding,1.0,2024-09-27
+P350,dry roasted peanuts,2.0,2024-09-26
+P351,celery salt,3.0,2024-09-20
+P352,polished rice,1.0,2024-10-02
+P353,raspberry gelatin powder,3.0,2024-09-25
+P354,dried oranges,3.0,2024-09-23
+P355,chocolate extract,1.0,2024-10-07
+P356,banana pepper juice,1.0,2024-10-10
+P357,passion fruit syrup,4.0,2024-10-16
+P358,juice,1.0,2024-10-14
+P359,reduced-fat parmesan cheese,1.0,2024-10-19
+P360,flat iron steak,5.0,2024-10-07
+P361,asparagus spears,4.0,2024-09-26
+P362,dark sweet cherries,2.0,2024-10-20
+P363,buckwheat flakes,2.0,2024-09-25
+P364,pork neck bones,5.0,2024-09-30
+P365,coriander sprigs,2.0,2024-09-24
+P366,frozen oriental-style vegetables,1.0,2024-10-05
+P367,pav bhaji masala,5.0,2024-10-07
+P368,pecan shortbread cookies,2.0,2024-10-19
+P369,soy ginger glaze,1.0,2024-10-14
+P370,cardamom,1.0,2024-10-09
+P371,lean lamb,4.0,2024-10-04
+P372,heinz apple cider vinegar,5.0,2024-10-09
+P373,creamy garlic dressing,2.0,2024-09-21
+P374,dry-roasted salted macadamia nuts,3.0,2024-10-15
+P375,soy protein,1.0,2024-10-12
+P376,unseasoned breadcrumbs,5.0,2024-09-28
+P377,white chocolate pieces,1.0,2024-09-22
+P378,boneless sirloin pork chop,4.0,2024-09-27
+P379,tomato cream sauce,4.0,2024-10-07
+P380,salmon-gefilte,3.0,2024-10-20
+P381,whole wheat bread dough,5.0,2024-09-20
+P382,vegan margarine,4.0,2024-09-22
+P383,duck breasts,2.0,2024-10-14
+P384,cream of potato soup,5.0,2024-09-26
+P385,spiral shaped pasta,2.0,2024-10-10
+P386,lamb ribs,4.0,2024-10-18
+P387,back ribs,5.0,2024-09-22
+P388,green giant sliced mushrooms,2.0,2024-09-27
+P389,mocha syrup,3.0,2024-09-25
+P390,hot cross buns,3.0,2024-10-07
+P391,fresh lemongrass,4.0,2024-10-15
+P392,rib chops,1.0,2024-10-07
+P393,caciocavallo,3.0,2024-10-05
+P394,caramel-swirl ice cream,3.0,2024-10-16
+P395,italian salad mix,1.0,2024-10-14
+P396,butter-flavored oil,5.0,2024-09-27
+P397,shrimp sauce,1.0,2024-09-25
+P398,dried greek oregano,4.0,2024-09-28
+P399,yellow cling peaches,5.0,2024-10-14
+P400,toasted hazelnuts,1.0,2024-10-16
+P401,pomegranate jelly,4.0,2024-10-09
+P402,terra chips,1.0,2024-10-13
+P403,cooked japanese-style rice,5.0,2024-09-26
+P404,fresh green herbs,5.0,2024-10-20
+P405,"navel orange, juice of",5.0,2024-09-22
+P406,no-salt-added stewed tomatoes,2.0,2024-09-29
+P407,dry tapioca,1.0,2024-09-29
+P408,fudge cake mix,2.0,2024-09-26
+P409,lean hot italian sausages,4.0,2024-10-17
+P410,haggis,1.0,2024-10-14
+P411,dry salami,1.0,2024-09-23
+P412,fresh tarragon sprig,5.0,2024-10-15
+P413,whole grain cereal,5.0,2024-09-23
+P414,gluten-free rice flour mix,1.0,2024-10-06
+P415,whole wheat spiral pasta,5.0,2024-09-26
+P416,pork blade steaks,4.0,2024-09-23
+P417,french-style green beans,1.0,2024-10-20
+P418,vol-au-vent cases,3.0,2024-09-29
+P419,laughing cow light garlic and herb cheese,4.0,2024-10-05
+P420,butter lettuce leaf,1.0,2024-10-20
+P421,dried mexican oregano,3.0,2024-10-05
+P422,whole grain cornmeal,4.0,2024-09-25
+P423,red burgundy wine,2.0,2024-09-24
+P424,cambozola cheese,2.0,2024-10-03
+P425,pasta sauce with vegetables,3.0,2024-10-03
+P426,muscovado sugar,4.0,2024-09-26
+P427,chocolate-covered english toffee bar,3.0,2024-09-23
+P428,black soy sauce,4.0,2024-10-02
+P429,oxtails,3.0,2024-10-03
+P430,bottled water,1.0,2024-09-29
+P431,sardines in tomato sauce,2.0,2024-09-29
+P432,marinated roasted red peppers,4.0,2024-10-06
+P433,tom yam broth cubes,3.0,2024-10-05
+P434,chocolate icing,2.0,2024-10-06
+P435,soy cheddar cheese,3.0,2024-10-17
+P436,roma tomato,3.0,2024-09-24
+P437,kraft roka blue spread,1.0,2024-10-04
+P438,low-calorie cran-raspberry juice,1.0,2024-10-08
+P439,marzipan paste,5.0,2024-10-01
+P440,soybean flour,5.0,2024-10-15
+P441,chipotle chile,5.0,2024-10-18
+P442,strawberry koolaid,3.0,2024-10-15
+P443,waffles,5.0,2024-10-18
+P444,lasagna noodle,4.0,2024-10-04
+P445,lilikoi juice,5.0,2024-10-09
+P446,sour gherkins,1.0,2024-10-17
+P447,lean pot roast beef,3.0,2024-10-13
+P448,pureed chipotle chiles,3.0,2024-09-23
+P449,whole grain pie crust,2.0,2024-10-07
+P450,gluten-free breadcrumbs,1.0,2024-10-02
+P451,romano beans,3.0,2024-10-04
+P452,chicken thighs,3.0,2024-09-20
+P453,fresh sorrel leaf,5.0,2024-10-19
+P454,frozen whole strawberries,2.0,2024-10-05
+P455,strawberry essence,2.0,2024-10-04
+P456,red chili peppers,5.0,2024-10-03
+P457,fruit jam,4.0,2024-10-08
+P458,fat-free caesar salad dressing,4.0,2024-10-12
+P459,peach jello,4.0,2024-10-06
+P460,eagle brand condensed milk,1.0,2024-09-22
+P461,peach slices in syrup,4.0,2024-10-19
+P462,jalapeno dip,5.0,2024-09-21
+P463,dried spearmint,2.0,2024-09-25
+P464,huckleberries,4.0,2024-10-05
+P465,thin crackers,1.0,2024-10-03
+P466,yeast energizer,3.0,2024-10-16
+P467,watermelon gelatin,3.0,2024-09-20
+P468,bird's custard mix,4.0,2024-10-20
+P469,large refrigerated biscuits,5.0,2024-09-27
+P470,veal liver,3.0,2024-10-02
+P471,crusty bread rolls,2.0,2024-09-23
+P472,california walnuts,4.0,2024-09-28
+P473,creamy milk,5.0,2024-10-07
+P474,cooked whole grain brown rice,3.0,2024-10-11
+P475,butter powder,2.0,2024-10-08
+P476,i can't believe it's not butter,5.0,2024-10-10
+P477,angel hair with parmesan cheese pasta roni,1.0,2024-10-20
+P478,free-range eggs,4.0,2024-10-10
+P479,prickly pear juice,1.0,2024-09-26
+P480,five-spice powder,5.0,2024-09-20
+P481,prune baby food,5.0,2024-09-29
+P482,guindilla pepper,2.0,2024-10-03
+P483,soya margarine,3.0,2024-09-20
+P484,fat free sugar free yogurt,3.0,2024-10-04
+P485,date spread,3.0,2024-10-18
+P486,beef tip roast,4.0,2024-10-16
+P487,milk chocolate kiss,5.0,2024-09-22
+P488,bread machine flour,4.0,2024-10-09
+P489,mild chiles,2.0,2024-10-10
+P490,cracklin' oat bran cereal,1.0,2024-10-19
+P491,four cheese pasta sauce,5.0,2024-09-24
+P492,onion and mushroom soup mix,2.0,2024-09-24
+P493,fish heads,5.0,2024-09-21
+P494,skordalia,5.0,2024-10-10
+P495,canned tuna,3.0,2024-10-07
+P496,chinese egg noodles,4.0,2024-10-04
+P497,broccoli coleslaw mix,2.0,2024-10-10
+P498,granola-type cereal,1.0,2024-09-25
+P499,turkey slice,2.0,2024-09-29
+P500,dried chamomile,5.0,2024-10-01
+P501,pineapple chunks,1.0,2024-10-17
+P502,all purpose wine yeast,4.0,2024-10-03
+P503,canned red kidney beans,5.0,2024-10-19
+P504,boneless beef steaks,3.0,2024-10-20
+P505,candy oil,4.0,2024-09-29
+P506,buttery crackers,5.0,2024-09-27
+P507,vegan chocolate,3.0,2024-10-06
+P508,havarti cheese with herbs,5.0,2024-10-18
+P509,bamboo leaves,3.0,2024-09-28
+P510,fresh onion,3.0,2024-10-10
+P511,arctic char,3.0,2024-10-08
+P512,low-fat firm tofu,5.0,2024-09-20
+P513,candied violet,4.0,2024-09-21
+P514,mint oreo cookies,1.0,2024-09-28
+P515,cooked radiatore,1.0,2024-10-11
+P516,sweet tart crust,4.0,2024-10-04
+P517,amaretto di saronno liqueur,3.0,2024-10-15
+P518,beef tenderloin,3.0,2024-10-14
+P519,tapioca starch wraps,4.0,2024-10-06
+P520,venison shoulder,2.0,2024-10-04
+P521,pickled jalapeno peppers,1.0,2024-10-01
+P522,buttered bread crumbs,4.0,2024-09-22
+P523,light vegetable stock,1.0,2024-10-14
+P524,stuffing cubes,2.0,2024-09-24
+P525,duck hindquarters,1.0,2024-10-02
+P526,sweetened condensed coconut milk,2.0,2024-09-23
+P527,horseradish mayonnaise,3.0,2024-10-14
+P528,light margarine spread,5.0,2024-09-25
+P529,jumbo black olives,5.0,2024-09-23
+P530,coarse-ground mustard,4.0,2024-10-03
+P531,grape jelly,4.0,2024-10-20
+P532,ground lean pork,1.0,2024-10-16
+P533,sugar-free cherry pie filling,5.0,2024-10-08
+P534,creme de banane,4.0,2024-10-14
+P535,raspberry salsa,3.0,2024-10-15
+P536,dried dill weed,3.0,2024-10-01
+P537,peach jam,4.0,2024-10-16
+P538,blintzes,3.0,2024-09-27
+P539,coffee creamer,1.0,2024-10-02
+P540,eggnog ice cream,3.0,2024-09-29
+P541,skinless chicken thighs,4.0,2024-10-01
+P542,low-calorie italian salad dressing,1.0,2024-09-26
+P543,chicken and rice soup,4.0,2024-10-10
+P544,quince paste,3.0,2024-09-29
+P545,tomato sauce with basic and garlic,5.0,2024-10-18
+P546,cheese-filled egg tortellini,2.0,2024-10-17
+P547,condensed cream of asparagus soup,2.0,2024-10-20
+P548,converted long grain rice,5.0,2024-09-27
+P549,chinese sausage,4.0,2024-10-13
+P550,wheat flour tortillas,4.0,2024-10-18
+P551,king crab meat,2.0,2024-10-18
+P552,pineapple soda,5.0,2024-10-08
+P553,buttermilk biscuits,2.0,2024-10-11
+P554,montreal chicken seasoning,5.0,2024-09-20
+P555,fruit vinegar,5.0,2024-09-30
+P556,honey,4.0,2024-09-22
+P557,red chilies,1.0,2024-10-09
+P558,vegan worcestershire sauce,2.0,2024-10-13
+P559,freshly rendered lard,2.0,2024-09-29
+P560,baloney,4.0,2024-09-30
+P561,bolognese sauce,3.0,2024-09-24
+P562,tuna fillets,3.0,2024-10-02
+P563,whole oat groats,2.0,2024-10-12
+P564,dried peppermint,1.0,2024-10-17
+P565,gluten-free crackers,5.0,2024-10-04
+P566,mccormick grill mates zesty herb marinade,4.0,2024-09-22
+P567,jumbo egg,4.0,2024-10-15
+P568,jasmine essence,4.0,2024-09-29
+P569,mini sweet peppers,2.0,2024-10-03
+P570,ranch dip,5.0,2024-09-28
+P571,roasted unsalted peanuts,2.0,2024-09-24
+P572,bockwurst,3.0,2024-10-07
+P573,blackberry creme yogurt,1.0,2024-09-29
+P574,non-fat powdered milk,3.0,2024-09-26
+P575,george washington broth,4.0,2024-09-30
+P576,seedless raisins,5.0,2024-10-02
+P577,gem lettuce,1.0,2024-09-24
+P578,baby calamari,1.0,2024-10-01
+P579,white raisins,5.0,2024-09-22
+P580,garden trowel,1.0,2024-10-15
+P581,willow run soy margarine,3.0,2024-10-05
+P582,zatarians gumbo base mix,5.0,2024-10-01
+P583,strawberry preserves,2.0,2024-09-23
+P584,cornbread-muffin mix,5.0,2024-10-08
+P585,red ripe tomatoes,5.0,2024-10-17
+P586,powdered chocolate milk mix,4.0,2024-10-02
+P587,dole italian salad variety,1.0,2024-10-04
+P588,ground dill,4.0,2024-09-30
+P589,mushroom stock,4.0,2024-09-29
+P590,vegetable bouillon,3.0,2024-10-20
+P591,maypo,2.0,2024-09-28
+P592,frozen pearl onions,4.0,2024-10-08
+P593,light chive & onion cream cheese,3.0,2024-10-10
+P594,rubbed sage,1.0,2024-10-07
+P595,pistachio ice cream,2.0,2024-10-13
+P596,herbed croutons,1.0,2024-10-10
+P597,dried bird's eye chiles,1.0,2024-10-05
+P598,tri-colored corkscrew macaroni,5.0,2024-10-06
+P599,soft shelled crabs,2.0,2024-09-24
+P600,prosciutto,2.0,2024-10-19
+P601,pimento stuffed olives,4.0,2024-09-23
+P602,semisweet chocolate morsels,2.0,2024-10-13
+P603,rapini,2.0,2024-10-14
+P604,dried pink lentils,4.0,2024-10-10
+P605,frozen chopped onions,5.0,2024-10-05
+P606,green plantain,5.0,2024-10-08
+P607,kix cereal,2.0,2024-10-16
+P608,martha white yellow cornbread mix,2.0,2024-10-03
+P609,gluten-free crisp rice cereal,5.0,2024-10-03
+P610,jonagold apples,5.0,2024-09-23
+P611,corn oil,3.0,2024-10-03
+P612,chocolate piece,3.0,2024-10-12
+P613,hamburger bun,1.0,2024-10-06
+P614,low-sodium steak sauce,5.0,2024-10-17
+P615,boneless sirloin tip roast,1.0,2024-10-02
+P616,progresso recipe starters creamy three cheese cooking sauce,4.0,2024-09-25
+P617,maple sausage,1.0,2024-09-22
+P618,light asian vinaigrette,3.0,2024-10-20
+P619,cream cheese with tomato and basil,2.0,2024-10-10
+P620,unsweetened cherry drink mix,3.0,2024-09-24
+P621,extra-firm silken tofu,1.0,2024-10-14
+P622,tomato cocktail juice,4.0,2024-10-15
+P623,rye cracker crumbs,4.0,2024-10-20
+P624,cremini mushroom,5.0,2024-10-02
+P625,devil's food cake mix,2.0,2024-10-10
+P626,chocolate crumb crust,5.0,2024-10-04
+P627,chocolate wafer cookies,1.0,2024-10-07
+P628,yellow cornmeal,4.0,2024-10-16
+P629,lean ground meat,2.0,2024-10-06
+P630,turkey drippings,1.0,2024-10-06
+P631,radiatore,5.0,2024-09-23
+P632,pork knuckles,1.0,2024-10-06
+P633,szechuan oil,2.0,2024-09-21
+P634,greek dressing,2.0,2024-10-10
+P635,unsalted pistachio nuts,4.0,2024-10-05
+P636,cooked sticky rice,4.0,2024-10-12
+P637,pillsbury refrigerated crusty french loaf,5.0,2024-09-28
+P638,shredded chicken with barbecue sauce,5.0,2024-10-03
+P639,straw mushroom,1.0,2024-10-13
+P640,hot red chili peppers,4.0,2024-09-20
+P641,boneless leg of lamb,4.0,2024-10-01
+P642,mrs. dash tomato basil garlic seasoning,2.0,2024-09-30
+P643,instant chicken bouillon,1.0,2024-09-27
+P644,sour dill pickle,4.0,2024-09-24
+P645,raw cashews,1.0,2024-10-18
+P646,healthy request cream of mushroom soup,3.0,2024-10-04
+P647,meyer lemons,5.0,2024-10-07
+P648,basil seeds,2.0,2024-09-20
+P649,eggplant spread,2.0,2024-10-06
+P650,coconut syrup,3.0,2024-10-08
+P651,i can't believe it's not butter! spray original,4.0,2024-10-13
+P652,store-bought bordelaise sauce,3.0,2024-10-13
+P653,sweet marsala wine,5.0,2024-09-26
+P654,chung choi,5.0,2024-09-23
+P655,reduced-fat cheese,3.0,2024-10-17

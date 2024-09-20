@@ -13,7 +13,7 @@ def add_random_column(input_csv, output_csv, column_name="random_number"):
 
     # Generate a list of random numbers between 1 and 10 for each row
     df["Taste Rating"] = [random.randint(1, 10) for _ in range(len(df))]
-    df["Shelf Life"] = [random.randint(2, 30) for _ in range(len(df))]
+    df["Shelf Time"] = [random.randint(2, 30) for _ in range(len(df))]
 
 
     # Save the modified DataFrame to a new CSV file
@@ -149,11 +149,12 @@ if __name__ == "__main__":
     recipes_file = r"C:\Users\moric\Documents\CS\year4\B\Food-Planner\MealOptimizer\Datasets\recipes.csv"
     # Read the recipes CSV file
     recipes_df = pd.read_csv(recipes_file)
+
     all_products_df = extract_all_products_from_recipes(recipes_df)
 
-    for i in range(60,65):
+    for i in [0,50,100,200,300,400]:
         num_recipes = i
-        num_additional_rows = 500
+        num_additional_rows = 1000
 
 
         # Extract products from randomly selected recipes
@@ -169,7 +170,8 @@ if __name__ == "__main__":
 
         # Create the output file name
         st = str(num_recipes)
-        output_filename = f"{st}_{'_'.join(map(str, selected_recipe_ids))}.csv"
+        # output_filename = f"{st}_{'_'.join(map(str, selected_recipe_ids))}.csv"
+        output_filename = f"known_{st}.csv"
 
         # Get the directory of the input file and construct the full output path
         output_directory = os.path.dirname(os.path.abspath(recipes_file))

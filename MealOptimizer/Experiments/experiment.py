@@ -22,7 +22,7 @@ def _load_action_dataset(action_dataset_path) -> pd.DataFrame:
 
 class Experiment:
     def __init__(self, problem, solvers, start_date, piece_dataset, action_dataset, number_of_days=1,
-                 meals_per_day=3, parameters_to_maximize=None):
+                 meals_per_day=3, parameters=None):
         self.solvers = solvers
         self.piece_dataset = piece_dataset
         self.action_dataset = action_dataset
@@ -31,7 +31,7 @@ class Experiment:
         self.problem = problem(self.action_dataset, start_date, pieces_with_dates,
                                number_of_days=number_of_days,
                                meals_per_day=meals_per_day,
-                               parameters_to_maximize=parameters_to_maximize)
+                               parameters_to_maximize=parameters)
 
     @staticmethod
     def create_initial_state(piece_dataset) -> State:
