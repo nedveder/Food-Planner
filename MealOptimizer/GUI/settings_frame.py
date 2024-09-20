@@ -64,6 +64,8 @@ class SettingsFrame(ctk.CTkFrame):
         self.num_steps_var = ctk.BooleanVar(value=False)
         self.prep_time_var = ctk.BooleanVar(value=False)
         self.num_products_var = ctk.BooleanVar(value=False)
+        self.self_time_var = ctk.BooleanVar(value=False)
+        self.taste_rating_var = ctk.BooleanVar(value=False)
 
         ctk.CTkCheckBox(self.parameter_frame, text="Number of Steps", variable=self.num_steps_var).grid(row=0, column=0,
                                                                                                         padx=10, pady=5,
@@ -78,6 +80,12 @@ class SettingsFrame(ctk.CTkFrame):
                                                                                                               padx=10,
                                                                                                               pady=5,
                                                                                                               sticky="w")
+        ctk.CTkCheckBox(self.parameter_frame, text="Shelf Time", variable=self.self_time_var).grid(row=1, column=0,
+                                                                                                    padx=10, pady=5,
+                                                                                                    sticky="w")
+        ctk.CTkCheckBox(self.parameter_frame, text="Taste Rating", variable=self.taste_rating_var).grid(row=1, column=1,
+                                                                                                        padx=10, pady=5,
+                                                                                                        sticky="w")
 
         self.parameter_frame.grid_remove()
 

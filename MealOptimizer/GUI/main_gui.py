@@ -140,6 +140,10 @@ class MealPlannerGUI(ctk.CTk):
                     parameters_to_maximize.append("Preparation Time (min)")
                 if self.settings_frame.num_products_var.get():
                     parameters_to_maximize.append("Number of Products")
+                if self.settings_frame.self_time_var.get():
+                    parameters_to_maximize.append("Shelf Time")
+                if self.settings_frame.taste_rating_var.get():
+                    parameters_to_maximize.append("Taste Rating")
 
                 problem = ParametersProblem
 
@@ -159,7 +163,7 @@ class MealPlannerGUI(ctk.CTk):
                 recipes_df,  # action_dataset
                 number_of_days=number_of_days,
                 meals_per_day=meals_per_day,
-                parameters_to_maximize=parameters_to_maximize
+                parameters=parameters_to_maximize
             )
 
             results = experiment.run()
