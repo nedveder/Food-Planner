@@ -1,0 +1,41 @@
+GreedySolver Results:
+Selected recipes: 
+Fruit Acai Quinoa Rice Papaya 
+Products used: 
+Fruit Cocktail 104 ml
+Acai Berries 71 gr
+Quinoa Flour 196 gr
+Rice 89 ml
+Dried Papaya 112 gr
+
+SimulatedAnnealingSolver Results:
+Selected recipes: 
+Fruit Acai Quinoa Rice Papaya 
+Products used: 
+Fruit Cocktail 104 ml
+Acai Berries 71 gr
+Quinoa Flour 196 gr
+Rice 89 ml
+Dried Papaya 112 gr
+
+PlanningGraphSolver Results:
+Selected recipes: 
+Fruit Acai Quinoa Rice Papaya 
+Products used: 
+Fruit Cocktail 104 ml
+Acai Berries 71 gr
+Quinoa Flour 196 gr
+Rice 89 ml
+Dried Papaya 112 gr
+
+RLSolver Results:
+Selected recipes: 
+Fruit Acai Quinoa Rice Papaya 
+Products used: 
+Fruit Cocktail 104 ml
+Acai Berries 71 gr
+Quinoa Flour 196 gr
+Rice 89 ml
+Dried Papaya 112 gr
+
+

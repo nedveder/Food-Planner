@@ -1,0 +1,33 @@
+ID,Product Name,Quantity,Unit,Date
+P001,Kheer Mix,102.0,gr,2024-09-26
+P002,Pickled Ginger Juice,146.0,ml,2024-09-27
+P003,Korean Jujube,147.0,gr,2024-09-20
+P004,Fried Rice,82.0,gr,2024-10-07
+P005,Asari Miso Soup,130.0,gr,2024-10-13
+P006,Korean Bean Paste,109.0,gr,2024-10-18
+P007,Bay Leaves,107.0,gr,2024-10-13
+P008,Pine Nut Flour,141.0,gr,2024-10-07
+P009,Pineapple Mint Vinaigrette,157.0,ml,2024-09-27
+P010,Mint Ginger Vinaigrette,78.0,ml,2024-10-15
+P011,Sakura Shrimp Pack Kit,179.0,gr,2024-10-11
+P012,Dried Rose Buds,188.0,gr,2024-09-27
+P013,Poppy Seed Oil,56.0,ml,2024-10-16
+P014,Sherry,109.0,ml,2024-09-27
+P015,Honey,158.0,ml,2024-09-26
+P016,Bourbon,60.0,ml,2024-09-24
+P017,Pesto Sauce,143.0,ml,2024-10-16
+P018,French Vanilla,58.0,ml,2024-10-19
+P019,Sriracha Sauce,87.0,ml,2024-10-04
+P020,Mushroom Soy Sauce,126.0,ml,2024-10-02
+P021,Oat Flour,177.0,gr,2024-10-09
+P022,Farina,133.0,gr,2024-09-22
+P023,Random Product 1,257.0,ml,2024-10-16
+P024,Random Product 2,9.0,pieces,2024-10-07
+P025,Random Product 3,434.0,gr,2024-10-15
+P026,Random Product 4,504.0,ml,2024-09-25
+P027,Random Product 5,74.0,gr,2024-10-16
+P028,Random Product 6,814.0,gr,2024-10-17
+P029,Random Product 7,537.0,pieces,2024-09-22
+P030,Random Product 8,880.0,pieces,2024-09-25
+P031,Random Product 9,686.0,ml,2024-10-05
+P032,Random Product 10,831.0,ml,2024-10-08

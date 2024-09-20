@@ -1,0 +1,37 @@
+ID,Product Name,Quantity,Unit,Date
+P001,Herb Papaya Chutney,148.0,ml,2024-09-28
+P002,Asian Pear,168.0,pieces,2024-10-10
+P003,Soya Chunk Curry,100.0,gr,2024-09-30
+P004,Mint Ginger Vinaigrette,142.0,ml,2024-09-27
+P005,Pineapple Vanilla Vinaigrette,68.0,ml,2024-10-14
+P006,Sesame Salt,185.0,gr,2024-10-05
+P007,Turnip,154.0,pieces,2024-10-17
+P008,Rice Noodle Soup Base,155.0,ml,2024-10-16
+P009,Nectarine Basil Sauce,159.0,ml,2024-10-15
+P010,Japanese Red Miso,152.0,ml,2024-10-12
+P011,Vanilla Cilantro Sauce,146.0,ml,2024-09-24
+P012,Ginger Vinegar,198.0,ml,2024-09-29
+P013,Sesame Cilantro Butter,138.0,ml,2024-10-16
+P014,Sun-Dried Tomatoes,107.0,ml,2024-09-27
+P015,Italian Seasoning,155.0,gr,2024-09-21
+P016,Dried Tarragon,149.0,gr,2024-09-29
+P017,Chinese Five Spice,55.0,gr,2024-10-10
+P018,Pakora Atta,169.0,gr,2024-09-28
+P019,Zucchini Papaya Butter,183.0,ml,2024-09-21
+P020,Poppy Seeds,56.0,gr,2024-09-26
+P021,Tomato Cilantro Sauce,106.0,ml,2024-09-30
+P022,Shredded Coconut,81.0,gr,2024-09-30
+P023,Crispy Onions,88.0,gr,2024-09-27
+P024,Fig Jam,140.0,ml,2024-10-06
+P025,Pale Ale,68.0,ml,2024-10-02
+P026,Lamb Shanks,135.0,gr,2024-10-10
+P027,Random Product 1,656.0,ml,2024-10-16
+P028,Random Product 2,785.0,ml,2024-09-26
+P029,Random Product 3,578.0,gr,2024-10-13
+P030,Random Product 4,512.0,pieces,2024-09-21
+P031,Random Product 5,308.0,ml,2024-09-21
+P032,Random Product 6,471.0,pieces,2024-09-21
+P033,Random Product 7,936.0,pieces,2024-10-06
+P034,Random Product 8,494.0,pieces,2024-10-11
+P035,Random Product 9,927.0,ml,2024-10-14
+P036,Random Product 10,617.0,pieces,2024-10-08

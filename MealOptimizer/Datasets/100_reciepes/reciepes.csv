@@ -1,0 +1,101 @@
+Recipe ID,Recipe Name,Products,Energy (kcal),Carbs (g),Protein (g),Fat (g),Preparation Time (min),Type of Preparation,Taste Rating,Shelf Time (days)
+R-001!,Chipotle Nutmeg Blend,"Chipotle Peppers(103 gr),Nutmeg(183 gr),Dried Tarragon(126 gr),Carrot Juice(184 ml)",264.82,45.54,25.47,24.41,34,Baking,7,4
+R-002!,Lemongrass Quinoa Nuts,"Lemongrass(157 ml),Red Quinoa(63 ml),Macadamia Nuts(181 gr)",391.56,60.41,34.28,28.56,33,Grilling,6,5
+R-003,Kachori Seaweed Mix,"Aloo Kachori(177 gr),Wasabi Powder Paste(102 gr),Fennel Seed Oil(145 ml),Japanese Seaweed Salad(196 gr),Dried Starfruit(68 gr),Chinese Pickled Mustard Greens(94 gr),Mango Extract Powder(103 gr)",410.96,45,10.29,28.88,47,Baking,10,1
+R-004,Tomato Cilantro Butter,"Tomato Cilantro Butter(133 ml),Potato Starch(151 gr),Mustard Seeds(61 gr),Dried Kiwi Powder(88 gr),Tori Karaage Mix Kit(109 gr),Sweet Vanilla Vinaigrette(172 ml),Murg Masala(73 gr)",393.39,33.66,22.15,16.83,30,Cooking,2,3
+R-005,Mango Gochujang Paste,"Mango Pulp Paste(130 gr),Korean Gochujang Paste(189 ml),Apple Pie Spice(56 gr),Pakoras(184 gr),Chinese Broccoli(119 gr),Buckwheat Flour(152 gr),Japanese Dashi(138 ml)",455.34,39.44,34.89,20.19,39,Cooking,7,2
+R-006,Mint Korean Tofu,"Mint Papaya Sauce(57 ml),Korean Sweet Chilli Powder(177 gr),Tofu Skin(120 gr),Chinese Soybean Oil(159 ml)",398.45,62.64,28.71,11.23,18,Frying,1,2
+R-007!,Avocado Lime Bread,"Avocado(54 pieces),White Wine(177 ml),Lime Zest(67 gr),Bread Flour(189 gr)",440.51,24.73,29.88,26.16,48,Frying,6,5
+R-008!,Epazote Safflower Coffee,"Epazote(79 gr),Safflower Oil(161 ml),Tapioca Flour(117 gr),Instant Coffee(124 gr)",102.58,36.94,10.33,24.63,56,Cooking,7,3
+R-009!,Salsa Malted Milk,"Salsa(131 ml),Malted Milk Powder(190 gr),Lemon Extract(116 ml)",145.41,32.03,26.16,28.32,48,Grilling,4,1
+R-010,Chinese Spice Blend,"Chinese Five Spice(55 gr),Pakora Atta(169 gr),Zucchini Papaya Butter(183 ml),Poppy Seeds(56 gr),Tomato Cilantro Sauce(106 ml),Shredded Coconut(81 gr),Crispy Onions(88 gr)",145.34,44.63,28.6,23.91,51,Grilling,2,3
+R-011,Steamed Thai Buns,"Steamed Buns(197 gr),Thai Red Curry(50 gr),Yuzu Papaya Butter(52 ml)",370.84,34,28.08,7.64,36,Cooking,4,3
+R-012!,Papaya Quinoa Fruit,"Dried Papaya(87 gr),Quinoa Flour(165 gr),Fruit(191 ml),Tomato Paste(70 ml)",312.59,55.32,21.69,28.15,49,Baking,2,3
+R-013,Fermented Bean Sauce,"Fermented Bean Curd(161 gr),Tomato Puree Powder(128 gr),Pickled Chinese Vegetables(135 gr),Shabu-Shabu(74 gr),Yuzu Basil Sauce(107 ml)",432.34,62.55,27.29,15.15,59,Frying,3,3
+R-014!,Cheese Cider Raisins,"Colby Jack Cheese(194 gr),Apple Cider Vinegar(183 ml),Cashew Milk(162 ml),Port Wine(169 ml),Raisins(113 ml)",334.62,58.94,19.68,14.36,13,Cooking,2,3
+R-015,Sausage Matcha Vinaigrette,"Lao Sausage(143 gr),Bulgur Wheat(78 gr),Matcha Green Tea(129 gr),Cheela(122 gr),Chili Papaya Butter(122 ml),Fennel Cilantro Sauce(91 ml),Tomato Basil Vinaigrette(195 ml)",229.58,36.6,12.45,9.37,42,Grilling,7,1
+R-016!,Raisin Lentil Paneer,"Raisins(181 gr),Green Lentils(125 ml),Paneer(50 pieces)",309.75,27.74,20.27,26.12,16,Grilling,3,5
+R-017,Dolma Sichuan Chutney,"Dolma(129 gr),Sichuan Pepper Powder(179 gr),Maple Ginger Chutney(80 ml)",407.1,43.28,24.57,23.94,54,Grilling,2,5
+R-018,Thai Maple Chili,"Thai Curry Powder(143 gr),Maple Cilantro Vinaigrette(161 ml),Chili Oil Paste(126 gr),Asian Dried Seaweed(169 gr)",310.29,21.4,23.2,26.62,52,Cooking,8,1
+R-019,Tomato Lotus Ginger,"Tomato Mint Butter(126 ml),Lotus Seed Paste(71 ml),Ginger Citrus Chutney(80 ml),Naan Bread(120 gr)",419.44,59.49,26.62,16.21,37,Cooking,10,2
+R-020,Seaweed Grapefruit Guacamole,"Roasted Seaweed Sheets(76 gr),Grapefruit Sage Vinaigrette(124 ml),Yuzu Concentrate Powder(118 gr),Guacamole Mix(149 gr)",331.21,39.52,20.53,12.58,40,Cooking,5,2
+R-021,Bay Pineapple Vinaigrette,"Bay Leaves(107 gr),Pine Nut Flour(141 gr),Pineapple Mint Vinaigrette(157 ml),Mint Ginger Vinaigrette(78 ml),Sakura Shrimp Pack Kit(179 gr),Dried Rose Buds(188 gr),Poppy Seed Oil(56 ml)",258.2,41.09,31.39,23.23,53,Frying,5,5
+R-022!,Sugar Sunflower Mix,"Turbinado Sugar(157 gr),Sunflower Seeds(145 gr),Dried Strawberries(84 gr),Grapefruit(61 pieces),Fenugreek Leaves(190 ml),Whole Wheat Flour(199 gr)",393.63,57.53,20.4,29.33,43,Frying,4,5
+R-023,Ajitsuke Rogan Chutney,"Ajitsuke Tamago(118 gr),Rogan Josh(196 gr),Fig Papaya Vinaigrette(60 ml),Mustard Vinaigrette(57 ml),Japanese Soybean Flour(134 gr),Paneer Butter Masala(122 gr),Tomato Basil Chutney(178 ml)",414.07,45.31,13.36,16.63,44,Cooking,6,1
+R-024!,Mushroom Goji Tapenade,"Brown Mushrooms(68 gr),Cane Sugar(68 gr),Goji Berries(139 gr),Peanut Oil(124 ml),Olive Tapenade(138 ml),Parmesan Cheese(83 gr)",263.78,56.1,37.94,27.67,22,Cooking,3,4
+R-025,Lemongrass Mochi Mix,"Dried Lemongrass(136 gr),Mochi Rice Cake(142 gr),Shichimi Togarashi Mix Pack(139 gr)",475.27,54.06,19.74,20.59,49,Baking,5,1
+R-026!,Dal Lemon Paneer,"Toor Dal(83 ml),Lemon Curd(150 ml),Liquorice(86 gr),Paneer(99 pieces),Basmati Rice(200 ml)",423.88,31.51,29.66,28.33,22,Grilling,3,4
+R-027,Puri Garlic Litti,"Puri(138 gr),Japanese Dashi(126 ml),Korean Garlic Paste(185 ml),Litti(156 gr),Rice Bran Oil Powder(131 gr)",435.52,28.3,32.06,16.92,60,Cooking,2,3
+R-028!,Anchovy Paprika Ferns,"Anchovy Fillets(182 gr),Paprika(174 gr),Fiddlehead Ferns(99 ml),Sesame Oil(148 ml)",485.42,32.34,17.28,15.63,48,Grilling,3,1
+R-029,Pitha Angelica Pumpkin,"Pitha(141 gr),Chinese Angelica Root(176 gr),Aloo Baingan(118 gr),Pumpkin(158 ml)",315.2,50.42,11.86,5.14,53,Baking,3,2
+R-030,Rice Noodle Krapow,"Rice Noodles(138 gr),Chinese Red Chili Powder(189 gr),Moo Pad Krapow(75 gr)",443.71,46.79,10.65,6.97,50,Baking,1,4
+R-031,Goji Berry Roti,"Goji Berry Tea(192 ml),Roti Flour(69 gr),Japanese Rice Flour(95 gr),Pistachio Meal(101 gr)",104.78,56.24,11.26,18.21,38,Baking,2,1
+R-032!,Coconut Almond Asparagus,"Coconut Oil(199 ml),Basmati Rice(53 ml),Ground Almonds(112 gr),Rosemary Stalks(87 pieces),Cottage Cheese(67 ml),Asparagus(172 ml)",297.38,48.09,19.68,13.02,14,Grilling,10,3
+R-033,Curry Peach Saffron,"Green Curry Spice Mix(140 gr),Peach Mint Sauce(138 ml),Saffron Mango Butter(80 ml)",412.55,49.52,14.08,26.53,31,Baking,5,2
+R-034!,Horseradish Star Peas,"Horseradish(66 ml),Star Anise(180 gr),Frozen Peas(170 ml)",231.76,48.93,29.91,9.87,42,Cooking,9,5
+R-035,Herb Papaya Chutney,"Herb Papaya Chutney(148 ml),Asian Pear(168 pieces),Soya Chunk Curry(100 gr),Mint Ginger Vinaigrette(142 ml),Pineapple Vanilla Vinaigrette(68 ml),Sesame Salt(185 gr),Turnip(154 pieces)",458.21,62.31,36.84,23.09,22,Baking,2,1
+R-036!,Condensed Green Lotus,"Condensed Milk(135 ml),Green Beans(70 ml),Lotus Root(80 ml)",104.62,20.59,18.77,14.47,35,Baking,4,4
+R-037,Tomato Pineapple Sichuan,"Tomato Cilantro Sauce(124 ml),Pineapple Mint Butter(130 ml),Sichuan Hot Bean Paste(165 ml),Misal Pav(174 gr),Coconut Thyme Sauce(176 ml),Chili Oil(196 ml),Khao Soi(152 gr)",292.52,33.92,26.01,14.78,13,Baking,10,3
+R-038,Chili Dal Quinoa,"Chili Sauce Concentrate Mix(110 ml),Dal Chawal(190 gr),Quinoa Grain(78 gr),Turmeric Ginger Tea(120 gr),Almond Papaya Vinaigrette(71 ml)",272.82,37.75,34.09,13.15,15,Frying,10,5
+R-039,Turmeric Garlic Yucca,"Turmeric Vanilla Sauce(120 ml),Chinese Garlic Sauce(171 ml),Black Sesame Paste(56 ml),Yucca(148 pieces)",451.58,52.03,20.08,23.63,24,Baking,3,4
+R-040,Noodle Nectarine Miso,"Rice Noodle Soup Base(155 ml),Nectarine Basil Sauce(159 ml),Japanese Red Miso(152 ml),Vanilla Cilantro Sauce(146 ml),Ginger Vinegar(198 ml),Sesame Cilantro Butter(138 ml)",434.4,50.59,36.81,12.59,37,Frying,8,4
+R-041!,Halloumi Cardamom Lentils,"Halloumi Cheese(179 gr),Red Onion(52 pieces),Cardamom Powder(161 gr),Yellow Lentils(73 ml)",113.33,60.66,26.68,9.23,41,Frying,1,1
+R-042!,Frosting Camembert Ghee,"Frosting(121 ml),Demerara Sugar(115 gr),Camembert Cheese(116 gr),Ghee(91 ml),Coconut Oil(74 ml),Nut Butter(84 ml)",133.04,62.43,16.37,18.18,54,Grilling,2,3
+R-043!,Turnip Dragon Tomatoes,"Turnip Greens(75 ml),Dragon Fruit(92 pieces),Diced Tomatoes(60 ml)",180.59,53.73,10.86,28.45,60,Cooking,8,5
+R-044!,Ancho Endive Octopus,"Ancho Chili Powder(114 gr),Endive(131 ml),Emmental Cheese(88 gr),Octopus(69 pieces),Celery Stalks(157 pieces),Rice Paper(179 pieces),Barley(119 ml)",213.63,33.21,10.82,9.07,56,Grilling,8,3
+R-045,Sage Cardamom Garlic,"White Sage Sauce(128 ml),Coconut Cardamom Sauce(104 ml),Ginger Extract Powder(132 gr),Black Garlic Sauce(126 ml),Lavender Thyme Vinaigrette(104 ml),Fish Sauce(189 gr)",191.05,44.92,30.55,16.37,46,Baking,4,1
+R-046,Mirin Bajra Champuru,"Mirin Sweetener(134 ml),Bajra Flour(119 gr),Goya Champuru(190 gr),Aloo Gobi(116 gr),Seaweed Salad(73 gr),Pomegranate Thyme Vinaigrette(71 ml)",340.38,27.9,37.33,16.17,59,Frying,3,4
+R-047!,Cashew Saffron Blueberries,"Cashew Cream(190 ml),Saffron Threads(147 gr),Blueberries(80 ml),Buffalo Mozzarella(135 gr),Chopped Cilantro(198 gr)",150.5,37.96,21.1,29.44,38,Grilling,6,1
+R-048,Papaya Peppercorn Radicchio,"Dried Papaya Extract(146 ml),Chinese Peppercorns(64 gr),Methi Seeds(86 gr),Radicchio(125 ml),Goji Berries(79 gr),Yam Noodles(99 gr),Shiitake Mushroom Tea(120 ml)",460.93,38.37,13.42,19.19,29,Frying,9,1
+R-049!,Tapenade Gelatin Celery,"Tapenade(167 ml),Unflavored Gelatin(119 gr),Celery Salt(64 gr),Celery(59 ml),Adzuki Beans(112 ml),Beetroot(158 ml)",466.04,62.16,11.62,10.43,12,Frying,10,1
+R-050!,Sun-Dried Italian Tarragon,"Sun-Dried Tomatoes(107 ml),Italian Seasoning(155 gr),Dried Tarragon(149 gr)",155.73,63.77,15.94,9.61,51,Cooking,10,4
+R-051,Apple Pesto Gochujang,"Apple Mint Chutney(76 ml),Pesto Sauce(76 ml),Gochujang (Korean Chili Paste)(150 ml),Zaatar Blend(130 gr)",396.68,23.03,22.71,11.38,12,Cooking,8,1
+R-052!,Sherry Honey Bourbon,"Sherry(109 ml),Honey(158 ml),Bourbon(60 ml),Pesto Sauce(143 ml)",283.91,67.53,35.01,10.35,26,Frying,10,5
+R-053!,Cornmeal Melon Pine Nuts,"Cornmeal(173 gr),Melon Seeds(54 gr),Pine Nuts(100 gr),All-Purpose Flour(95 ml)",336.05,65.46,10.46,8.58,23,Grilling,5,4
+R-054,Torii Kebabs Chutney,"Torii Age Ingredients(111 gr),Cranberry Mint Chutney(194 ml),Creole Seasoning(148 gr),Edamame Beans(139 gr),Dried Cherry Tomatoes(189 gr),Chicken Seekh Kebabs(199 gr),Maki Sushi Pack Kit(123 gr)",377.02,46.37,25.93,23.85,55,Grilling,4,5
+R-055,Red Pepper Hoisin Plum,"Red Pepper Paste(96 gr),Hoisin Paste(150 ml),Plum Powder(155 gr),Asian Dried Mushrooms(191 gr)",273.98,38.56,21.01,10.96,54,Grilling,1,2
+R-056,Roti Orange Hawthorn,"Roti John(162 gr),Orange Vanilla Butter(143 ml),Chinese Hawthorn Berries(158 gr)",421.09,55.72,19.05,16.31,55,Grilling,2,3
+R-057,Mango Papdi Eggplant,"Mango Pulp Powder(108 gr),Papdi Chaat(63 gr),Chinese Eggplant(164 gr)",334.47,51.07,27.99,20.89,60,Cooking,10,4
+R-058!,Bourbon Jicama Kefir,"Bourbon(121 ml),Jicama(127 pieces),Tobiko(125 gr),Tomato Puree(156 ml),Cremini Mushrooms(166 gr),Kefir Cheese(148 ml)",244.12,43.14,15.46,26.53,60,Grilling,4,2
+R-059!,Maple Salsa Couscous,"Maple Extract(144 ml),Salsa Verde(61 ml),Couscous(61 ml),Cane Sugar(168 gr)",190.95,27.98,16.48,19.41,44,Cooking,7,5
+R-060,Satsuma Idli Tamarind,"Satsuma(71 pieces),Strawberry Cilantro Sauce(77 ml),Idli Sambhar(173 gr),Tamarind Concentrate Sauce(184 ml),Blackberry Cilantro Butter(98 ml),Sesame Mint Vinaigrette(195 ml),Garlic Thyme Butter(169 ml)",143.76,38.42,16.22,12.81,60,Baking,9,4
+R-061!,Orange String Caraway,"Orange Zest(83 gr),String Beans(65 ml),Caraway Powder(92 gr),Turmeric Powder(107 gr),Unflavored Gelatin(118 gr),Flour Tortillas(95 pieces)",437.54,22.53,11.46,17.88,56,Grilling,4,2
+R-062!,Peas Chayote Pancetta,"Frozen Peas(85 ml),Chayote Squash(54 ml),Pancetta(197 gr),Lime Juice(81 ml),Cream of Tartar(136 gr),Pasta Sauce(75 ml),Mullet Roe(90 gr)",291.64,62.16,12.14,22.94,41,Baking,6,5
+R-063!,Red Pepper Chive Bay,"Crushed Red Pepper(90 gr),Chive(143 ml),Bay Leaf(182 pieces),Ground Cumin(97 gr),Bamboo Shoots(195 ml),White Beans(110 ml)",460.64,29.11,37.88,9.41,25,Cooking,6,3
+R-064!,Cashew Apple Paprika,"Cashew Milk(114 ml),Apple Butter(199 ml),Ground Paprika(73 gr),Basil(81 ml),Red Grapes(172 pieces),Chicken Livers(165 pieces)",137.4,30.99,37.25,12.77,17,Baking,4,5
+R-065!,Rainbow Pears Lamb,"Rainbow Chard(137 ml),Pears(87 pieces),Lamb Chops(128 pieces),Dried Apricots(66 gr),Black Salt(70 gr),Potato Wedges(71 pieces)",227.23,26.74,28.57,12.49,10,Frying,1,4
+R-066!,Fig Spice Pale Ale,"Fig Jam(140 ml),Chinese Five Spice(78 gr),Pale Ale(68 ml),Lamb Shanks(135 gr)",378.03,22.76,26.31,18.84,58,Frying,7,2
+R-067!,Vanilla Sriracha Oat,"French Vanilla(58 ml),Sriracha Sauce(87 ml),Mushroom Soy Sauce(126 ml),Oat Flour(177 gr),Farina(133 gr)",239.97,26.6,36.34,12.96,58,Cooking,7,3
+R-068,Umeboshi Blackberry Dal,"Umeboshi Plums(138 gr),Blackberry Ginger Sauce(134 ml),Dal Pakwan(148 gr),Dried Shrimp Powder(79 gr),Yokohama Ramen Ingredients(123 gr),Cha Gyeong(85 gr),Japanese Soybean Paste(92 gr)",420.71,60.53,10.93,22.44,52,Frying,2,5
+R-069,Sweet Bean Vodka,"Chinese Sweet Bean Paste(158 gr),Garlic Chives Powder(125 gr),Vodka(50 ml)",465.82,60.92,23.74,27.16,10,Baking,2,3
+R-070,Shoyu Katsuobushi Banh Mi,"Shoyu Pack(176 ml),Katsuobushi Flakes(103 gr),Sour Cherries(143 ml),Banh Mi(98 gr)",410.59,47.36,33.84,9.23,47,Cooking,10,5
+R-071,Pistachio Papaya Pineapple,"Pistachios(113 gr),Papaya Ginger Butter(150 ml),Pineapple Cilantro Sauce(131 ml)",477.47,39.77,30.51,25.95,22,Cooking,9,4
+R-072!,Gruyere Coffee Shrimp Tortillas,"Gruyere Cheese(157 gr),Coffee Beans(93 gr),Dried Shrimp(124 gr),Flour Tortillas(118 pieces),Currant(89 ml)",169.84,69.21,16.47,6.7,39,Cooking,4,5
+R-073!,Coconut Black Espresso Lime,"Coconut Cream(155 ml),Black Lentils(161 ml),Espresso Beans(158 gr),Lime Leaves(93 ml),Green Tea Powder(141 gr),Ladyfinger Cookies(191 pieces),Star Anise(82 gr)",467.8,55.11,33.64,21.83,56,Frying,6,2
+R-074,Pickled Vanilla Sesame Raita,"Pickled Red Cabbage(115 gr),Vanilla Grapefruit Chutney(67 ml),Sesame Butter(94 gr),Raita(145 gr)",245.09,62.53,36.22,7.67,33,Frying,8,4
+R-075,Rice Khandvi Yakimeshi Sesame,"Rice Noodle Soup Base(197 ml),Khandvi(188 gr),Yakimeshi Kit(90 gr),Sesame Oil Paste Mix(81 gr),Bitter Melon Tea(192 ml)",212.02,34.84,27.48,19.59,31,Grilling,2,4
+R-076,Kakiage Coriander Sukiyaki Wasabi,"Kakiage Tempura(80 gr),Fresh Coriander Leaf Powder(57 gr),Sukiyaki Beef Pack Kit(74 gr),Wasabi Paste Pack Kit(144 gr),Rice Paper Rolls(162 gr)",168.99,41.04,35.61,24.79,60,Baking,7,2
+R-077!,Fermented Red Ancho Spinach,"Fermented Black Beans(164 gr),Red Quinoa(74 ml),Ancho Chili Powder(96 gr),Spinach(80 ml),Arrowroot Powder(133 gr)",220.57,24.44,11.93,29.11,11,Cooking,10,2
+R-078!,Blue Sesame Spaghetti Lemon,"Blue Curacao(129 ml),Sesame Oil(120 ml),Spaghetti Squash(141 ml),Lemon Extract(99 ml),Breadcrumbs(177 gr),Palm Sugar(94 gr)",117.37,60.95,18.57,29.91,25,Grilling,9,4
+R-079,Apricots Lemon Ramen Turmeric,"Dried Apricots(175 gr),Lemon Ginger Chutney(96 ml),Ramen Noodles(162 ml),Turmeric Ginger Tea(120 gr),Yam Bean Extract(82 ml),Black Bean Paste(53 gr)",264.86,69.7,12.63,8.37,12,Cooking,10,4
+R-080!,Duck Chili Oats Sugar,"Duck Breast(131 gr),Chili Powder(125 gr),Rolled Oats(163 gr),Granulated Sugar(192 gr),Peanut Oil(134 ml),Rye Flour(174 gr)",190.35,30.72,18.3,29.18,35,Cooking,5,3
+R-081,Yakitori Fish Ginger Cilantro,"Yakitori Sauce(108 ml),Dried Fish(58 gr),Ginger Cilantro Sauce(110 ml)",114.63,67.05,32.12,28.66,34,Baking,6,3
+R-082,Raspberry Sesame Jowar Tofu,"Raspberry Lemon Chutney(100 ml),Sesame Cilantro Chutney(84 ml),Jowar Flour(145 gr),Yam Bean Chips(57 gr),Tofu Cubes Pack(142 gr)",206.77,28.64,18.17,25.54,25,Frying,7,2
+R-083!,Fruit Acai Quinoa Rice Papaya,"Fruit Cocktail(104 ml),Acai Berries(71 gr),Quinoa Flour(196 gr),Rice(89 ml),Dried Papaya(112 gr)",303.38,68.47,23.81,22.03,59,Frying,10,4
+R-084,Sesame Asian Papaya Grapefruit,"Sesame Seed Flour(175 gr),Asian Chives(84 gr),Papaya Grapefruit Vinaigrette(168 ml)",199.21,27.28,10.23,8.38,52,Baking,8,5
+R-085,Kheer Pickled Jujube Fried,"Kheer Mix(102 gr),Pickled Ginger Juice(146 ml),Korean Jujube(147 gr),Fried Rice(82 gr),Asari Miso Soup(130 gr),Korean Bean Paste(109 gr)",385.34,46.54,13.45,18.87,18,Grilling,6,5
+R-086!,Pecan Asafoetida Beef Vanilla,"Pecan Nuts(118 gr),Asafoetida(128 gr),Beef Stock(146 ml),Vanilla Bean Paste(85 ml),Spinach(84 ml),Red Quinoa(53 ml),Brown Mushrooms(153 gr)",162.32,41.36,38.18,29.08,15,Frying,2,4
+R-087!,Tabbouleh Lettuce Tilapia Tom Yum,"Tabbouleh(156 ml),Boston Lettuce(167 ml),Tilapia Fillets(78 gr),Tom Yum Paste(190 ml)",221.66,35.19,36.4,19.24,56,Baking,5,3
+R-088,Green Tea Chili Sichuan,"Green Tea Essence(66 ml),Chili Garlic Powder(182 gr),Sichuan Spicy Bean Paste(127 ml),Fermented Soybean Paste Blend(91 ml),Black Cumin Seeds(100 gr)",367.49,59.64,14.67,21.85,23,Frying,2,2
+R-089,Chili Lotus Pomegranate Bean,"Chili Bean Paste Sauce(53 ml),Lotus Root(124 gr),Pomegranate Ginger Butter(65 ml),Chili Bean Sauce(180 ml)",111.53,27.65,36.28,26.98,37,Baking,6,3
+R-090!,Dried Tuna Pumpernickel Cane Harissa Cornichons,"Dried Mango(76 gr),Canned Tuna(134 ml),Pumpernickel Bread(90 pieces),Cane Sugar(81 gr),Harissa Paste(122 ml),Cornichons(74 ml),Condensed Milk(138 ml)",181.4,42.37,10.48,19.1,25,Cooking,2,4
+R-091!,Bonito Sesame Ghee Brie,"Bonito Flakes(132 gr),Sesame Seeds(171 gr),Ghee(66 ml),Demi-Glace(162 ml),Mustard Greens(188 ml),Brie Cheese(140 gr)",106.93,23.84,16.66,24.99,27,Grilling,7,3
+R-092!,Lemon Sugar Passion Olives,"Lemon Peel(146 gr),Sugar Cane(65 pieces),Vermicelli(62 ml),Passion Fruit(139 ml),Dried Tarragon(124 gr),Kalamata Olives(188 ml)",359.88,63.21,30.04,20.63,60,Cooking,2,5
+R-093!,Miso Yogurt Pineapple Coconut,"Miso Paste(143 gr),Yogurt(55 ml),Pineapple Tidbits(57 ml),Coconut Water(166 ml),Sour Cherries(79 pieces)",408.62,58.73,18.39,26.03,52,Baking,6,4
+R-094!,Beef Mango Cornmeal Turnip,"Beef Broth(158 ml),Mango(162 pieces),Yellow Cornmeal(122 gr),Turnip Greens(90 ml),Farro(123 ml),Chickpeas(106 ml)",239.4,47.2,10.46,25.17,47,Frying,3,4
+R-095,Strawberry Beetroot Rice Lamb,"Strawberry Thyme Sauce(83 ml),Beetroot Papaya Vinaigrette(166 ml),Rice Noodle Paste(179 gr),Lamb Rogan Josh(100 gr)",307.26,22.23,35.72,28.52,33,Frying,6,2
+R-096!,Liquorice Red Fig,"Liquorice(75 gr),Red Wine Vinegar(136 ml),Fig Jam(112 ml)",170.77,24.62,37.83,26.8,27,Cooking,10,3
+R-097,Edamame Pandan Methi,"Edamame(198 gr),Pandan Leaves(186 gr),Methi Seeds(115 gr)",273.27,66.79,30.15,21.44,15,Cooking,6,2
+R-098,Bento Sweet Mirin Tofu,"Bento Box(80 gr),Sweet Chili Sauce(125 gr),Mirin Sauce Pack(142 ml),Dried Tofu Skin(192 gr)",413.17,21.33,10.26,23.29,40,Baking,1,2
+R-099!,Meatballs Malted Butter Meringue,"Meatballs(160 gr),Malted Milk Powder(189 gr),Butter Beans(130 ml),Meringue Powder(82 gr),Clams(163 pieces),Crushed Red Pepper(169 gr),Jalape??o Peppers(62 pieces)",211.09,31.59,18.45,12.54,23,Baking,2,2
+R-100!,Lacquered Garlic Feta Celery,"Lacquered Duck(96 ml),Garlic Cloves(107 pieces),Feta Cheese(120 gr),Celery Seed(180 gr),Brazil Nuts(188 gr),Vegetable Oil(177 ml),Fennel Bulb(103 pieces)",247.49,53.22,19.67,12.56,51,Grilling,8,4

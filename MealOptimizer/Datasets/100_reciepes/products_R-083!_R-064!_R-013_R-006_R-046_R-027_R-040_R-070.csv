@@ -1,0 +1,52 @@
+ID,Product Name,Quantity,Unit,Date
+P001,Fruit Cocktail,104.0,ml,2024-10-10
+P002,Acai Berries,71.0,gr,2024-10-06
+P003,Quinoa Flour,196.0,gr,2024-09-21
+P004,Rice,89.0,ml,2024-09-27
+P005,Dried Papaya,112.0,gr,2024-09-29
+P006,Cashew Milk,114.0,ml,2024-09-27
+P007,Apple Butter,199.0,ml,2024-10-12
+P008,Ground Paprika,73.0,gr,2024-10-02
+P009,Basil,81.0,ml,2024-09-30
+P010,Red Grapes,172.0,pieces,2024-10-05
+P011,Chicken Livers,165.0,pieces,2024-09-19
+P012,Fermented Bean Curd,161.0,gr,2024-10-12
+P013,Tomato Puree Powder,128.0,gr,2024-09-20
+P014,Pickled Chinese Vegetables,135.0,gr,2024-09-27
+P015,Shabu-Shabu,74.0,gr,2024-10-14
+P016,Yuzu Basil Sauce,107.0,ml,2024-10-15
+P017,Mint Papaya Sauce,57.0,ml,2024-09-29
+P018,Korean Sweet Chilli Powder,177.0,gr,2024-10-13
+P019,Tofu Skin,120.0,gr,2024-10-15
+P020,Chinese Soybean Oil,159.0,ml,2024-09-20
+P021,Mirin Sweetener,134.0,ml,2024-09-24
+P022,Bajra Flour,119.0,gr,2024-09-23
+P023,Goya Champuru,190.0,gr,2024-10-13
+P024,Aloo Gobi,116.0,gr,2024-10-13
+P025,Seaweed Salad,73.0,gr,2024-09-24
+P026,Pomegranate Thyme Vinaigrette,71.0,ml,2024-10-06
+P027,Puri,138.0,gr,2024-10-17
+P028,Japanese Dashi,126.0,ml,2024-10-12
+P029,Korean Garlic Paste,185.0,ml,2024-10-02
+P030,Litti,156.0,gr,2024-10-01
+P031,Rice Bran Oil Powder,131.0,gr,2024-10-16
+P032,Rice Noodle Soup Base,155.0,ml,2024-09-21
+P033,Nectarine Basil Sauce,159.0,ml,2024-10-15
+P034,Japanese Red Miso,152.0,ml,2024-10-13
+P035,Vanilla Cilantro Sauce,146.0,ml,2024-10-10
+P036,Ginger Vinegar,198.0,ml,2024-09-27
+P037,Sesame Cilantro Butter,138.0,ml,2024-10-02
+P038,Shoyu Pack,176.0,ml,2024-09-20
+P039,Katsuobushi Flakes,103.0,gr,2024-09-21
+P040,Sour Cherries,143.0,ml,2024-10-10
+P041,Banh Mi,98.0,gr,2024-09-24
+P042,Random Product 1,141.0,ml,2024-09-24
+P043,Random Product 2,267.0,pieces,2024-10-18
+P044,Random Product 3,794.0,gr,2024-09-19
+P045,Random Product 4,74.0,pieces,2024-10-17
+P046,Random Product 5,295.0,gr,2024-10-17
+P047,Random Product 6,418.0,gr,2024-10-19
+P048,Random Product 7,567.0,gr,2024-10-17
+P049,Random Product 8,38.0,gr,2024-10-10
+P050,Random Product 9,272.0,pieces,2024-09-29
+P051,Random Product 10,354.0,pieces,2024-10-18
