@@ -8,7 +8,7 @@ class HomeFrame(ctk.CTkFrame):
         self.grid_rowconfigure(0, weight=1)  # Ensuring the row will expand to fill the frame
 
         # Load the image
-        self.original_image = Image.open("welcome_pic.png")  # Replace with your image file
+        self.original_image = Image.open("MealOptimizer/welcome_pic.png")  # Replace with your image file
         self.bg_image_tk = None  # This will hold the resized image
 
         # Create a canvas to hold the image

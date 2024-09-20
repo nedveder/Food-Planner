@@ -31,9 +31,51 @@ The project consists of several Python files organized into folders:
   - `greedy_algorithm.py`: Implements the `GreedySolver`
   - `reinforcement_learning_algorithm.py`: Implements the `RLSolver`
   - `simulated_annealing_algorithm.py`: Implements the `SimulatedAnnealingSolver`
+- `GUI/`: A folder containing the graphical user interface components
+  - `main_gui.py`: The main GUI application file containing the MealPlannerGUI class
+  - `results_frame.py`: Implements the ResultsFrame for displaying optimization results
+  - `home_frame.py`: Implements the HomeFrame for the main page of the GUI
+  - `upload_frame.py`: Implements the UploadFrame for uploading product data
+  - `settings_frame.py`: Implements the SettingsFrame for configuring optimization settings
+  - `scrollable_frame.py`: Implements a ScrollableProductFrame for displaying products
 
 
 ## Components
+
+### GUI Folder
+
+#### MealPlannerGUI (main_gui.py)
+
+The `MealPlannerGUI` class is the main application class that integrates all GUI components and handles the overall flow of the application. It creates the main window and manages navigation between different frames. This class is responsible for:
+
+- Creating the navigation frame
+- Initializing all other frames (HomeFrame, UploadFrame, SettingsFrame, ResultsFrame)
+- Handling navigation between frames
+- Running the optimization process
+- Managing temporary CSV file creation
+- Handling result downloads
+
+#### ResultsFrame (results_frame.py)
+
+The `ResultsFrame` class is responsible for displaying the optimization results. It shows the results for each solver, including the time taken, meals planned for each day, and the total score.
+
+#### HomeFrame (home_frame.py)
+
+The `HomeFrame` class implements the main page of the GUI, providing an overview of the application and instructions for use.
+
+#### UploadFrame (upload_frame.py)
+
+The `UploadFrame` class allows users to upload and manage product data. It includes functionality for adding products manually or via CSV file.
+
+#### SettingsFrame (settings_frame.py)
+
+The `SettingsFrame` class provides options for configuring the optimization process, including selecting the problem type, optimization parameters, and solvers to use.
+
+#### ScrollableProductFrame (scrollable_frame.py)
+
+The `ScrollableProductFrame` class implements a scrollable frame for displaying and managing a list of products.
+
+
 ### Experiment (experiment.py)
 
 The `Experiment` class is responsible for setting up and running the meal planning experiments. It loads datasets, initializes problems and solvers, and executes the experiments.
@@ -145,7 +187,8 @@ To use the meal planning system, you can either run the `main.py` script (see [R
 3. Create and run the experiment:
 
    ```python
-   experiment = Experiment(problem, solvers, start_date, products_data_path, recipes_data_path, number_of_days=5)
+   experiment = Experiment(problem, solvers, start_date, products_data_path, recipes_data_path, umber_of_days=1,
+                 meals_per_day=3, parameters_to_maximize=None)
    results = experiment.run()
    ```
 
@@ -162,15 +205,10 @@ To run the meal planning system using the provided `main.py` script:
 
 1. Ensure you're in the project root directory.
 
-2. Update the `products_data_path` and `recipes_data_path` variables in `main.py` to point to your CSV files:
-
-   ```python
-   products_data_path = "path/to/your/products_data.csv"
-   recipes_data_path = "path/to/your/recipes_data.csv"
-   ```
-
-3. Run the script:
+2. Run the script:
 
    ```
    python main.py
    ```
+This will launch the graphical user interface, allowing you to interact with the meal planning system.
+

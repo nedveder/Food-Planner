@@ -2,9 +2,10 @@ from MealOptimizer.Experiments import Experiment
 from MealOptimizer import Problems
 from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, PlanningGraphSolver, RLSolver
 from datetime import date
+from MealOptimizer.GUI.main_gui import MealPlannerGUI
 
 
-def main():
+def main_cmd():
     problem = Problems.MinimizeWasteProblem
     solvers = [GreedySolver(), SimulatedAnnealingSolver(), PlanningGraphSolver(), RLSolver()]
     products_data_path = "/Users/nadavlederman/Desktop/Projects/Food-Planner/Datasets/smaller_products_data.csv"
@@ -15,6 +16,9 @@ def main():
     for solver, state in results.items():
         print(f"{solver} reached the goal state with solution:\n {state}")
 
+def main():
+    gui = MealPlannerGUI()
+    gui.mainloop()
 
 if __name__ == "__main__":
     main()

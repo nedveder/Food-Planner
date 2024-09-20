@@ -4,7 +4,7 @@ from PIL import Image
 import pandas as pd
 from datetime import date
 from tkinter import filedialog, messagebox
-from scrollable_frame import ScrollableProductFrame
+from MealOptimizer.GUI.scrollable_frame import ScrollableProductFrame
 import random
 import string
 

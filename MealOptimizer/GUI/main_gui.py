@@ -12,10 +12,10 @@ from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, Planni
 import traceback
 
 
-from results_frame import ResultsFrame
-from home_frame import HomeFrame
-from upload_frame import UploadFrame
-from settings_frame import SettingsFrame
+from MealOptimizer.GUI.results_frame import ResultsFrame
+from MealOptimizer.GUI.home_frame import HomeFrame
+from MealOptimizer.GUI.upload_frame import UploadFrame
+from MealOptimizer.GUI.settings_frame import SettingsFrame
 
 
 class MealPlannerGUI(ctk.CTk):
