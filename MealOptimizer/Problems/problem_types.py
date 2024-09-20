@@ -5,6 +5,11 @@ from .utils import Action
 from ..Problems import Problem
 
 
+# TODO ADD TO THE GUI
+MAX_PARAMETERS = {"Shelf Time", "Taste Rating"}
+MIN_PARAMETERS = {"Number of Steps", "Preparation Time (min)", "Number of Products"}
+
+
 class MinimizeWasteProblem(Problem):
     def get_action_score(self, action) -> float:
         """
@@ -18,7 +23,7 @@ class MinimizeWasteProblem(Problem):
         return score
 
 
-class MaximizeByParametersProblem(Problem):
+class ParametersProblem(Problem):
     def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=2, meals_per_day=3, parameters_to_maximize: List[str] = None):
         super().__init__(actions_dataset, start_date, pieces_with_dates, number_of_days, meals_per_day)
         self.parameters_to_maximize = parameters_to_maximize or []
@@ -31,6 +36,7 @@ class MaximizeByParametersProblem(Problem):
         # Normalize the parameters
         self.normalized_parameters = self._normalize_parameters()
 
+
     def _normalize_parameters(self):
         normalized = {}
         for param in self.parameters_to_maximize:
@@ -42,13 +48,33 @@ class MaximizeByParametersProblem(Problem):
                 normalized[param] = (self.action_dataset[param] - min_val) / (max_val - min_val)
         return normalized
 
+    def get_score_by_minimize(self, action: Action, param) -> float:
+        """
+        Score is the sum of the normalized values of the specified parameters for the given action.
+        The goal is to minimize these parameters.
+        """
+        score = 0
+        for piece in action.pieces:
+            score += 1 / ((piece.expiration_date - self.start_date).days + 1)
+
+        normalized_value = self.normalized_parameters[param][self.action_dataset['Recipe ID'] == action.action_id].values[0]
+        score += normalized_value
+
+
     def get_action_score(self, action: Action) -> float:
         """
         Score is the sum of the normalized values of the specified parameters for the given action.
         The goal is to maximize these parameters.
         """
         score = 0
+        for piece in action.pieces:
+            score += 1 / ((piece.expiration_date - self.start_date).days + 1)
+
         for param in self.parameters_to_maximize:
-            normalized_value = self.normalized_parameters[param][self.action_dataset['Recipe ID'] == action.action_id].values[0]
-            score += normalized_value
+            if param in MAX_PARAMETERS:
+                normalized_value = self.normalized_parameters[param][self.action_dataset['Recipe ID'] == action.action_id].values[0]
+                score += normalized_value
+            elif param in MIN_PARAMETERS:
+                normalized_value = self.normalized_parameters[param][self.action_dataset['Recipe ID'] == action.action_id].values[0]
+                score -= normalized_value
         return score

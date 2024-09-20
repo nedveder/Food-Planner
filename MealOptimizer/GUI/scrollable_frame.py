@@ -8,10 +8,10 @@ class ScrollableProductFrame(ctk.CTkScrollableFrame):
         self.products = []
         self.entries = []
 
-    def add_product(self, id, product, quantity, unit, date):
-        label = ctk.CTkLabel(self, text=f"ID: {id} - {product} - {quantity} {unit} - Date: {date}", anchor="w")
+    def add_product(self, id, product, quantity, date):
+        label = ctk.CTkLabel(self, text=f"ID: {id} - {product} - Quantity: {quantity} - Date: {date}", anchor="w")
         label.grid(row=len(self.products), column=0, pady=(0, 5), sticky="w")
-        self.products.append((id, product, quantity, unit, date))
+        self.products.append((id, product, quantity, date))
         self.entries.append(label)
 
     def clear_products(self):

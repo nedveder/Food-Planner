@@ -2,6 +2,9 @@ import datetime
 from abc import ABC, abstractmethod
 import pandas as pd
 from typing import List, Dict, Any
+import re
+import ast
+
 
 from ..Problems.utils import Action, Piece
 
@@ -22,29 +25,30 @@ class Problem(ABC):
         for index, row in action_dataset.iterrows():
             pieces = []
             is_all_products_exist = True
-            for product in row["Products"].split(","):
-                try:
-                    name_part, quantity_part = product.rsplit("(", 1)
-                    name = name_part.strip()
-                    quantity_unit = quantity_part.rstrip(")").strip()
 
-                    # Try to split quantity and unit
-                    try:
-                        quantity, unit = quantity_unit.split(" ", 1)
-                    except ValueError:
-                        # If split fails, assume the whole string is quantity and unit is empty
-                        quantity = quantity_unit
-                        unit = ""
+            # Extract products from the 'Products' column using ast.literal_eval
+            try:
+                products = ast.literal_eval(row['Products'])
+            except Exception as e:
+                print(f"Error parsing products list at index {index}: {e}")
+                continue
+
+            # Process each product
+            for product in products:
+                try:
+                    name = product.strip()
+                    quantity = 1
 
                     if name not in pieces_with_dates["Product Name"].values:
-                        print(f"Product not found in dataset: {name}")
+                        # print(f"Product not found in dataset: {name}")
                         is_all_products_exist = False
                         break
+
                     expiration_date = pieces_with_dates[pieces_with_dates["Product Name"] == name]["Date"].values[0]
-                    piece = Piece(name, quantity, unit, expiration_date)
+                    piece = Piece(name, quantity, expiration_date)
                     pieces.append(piece)
                 except Exception as e:
-                    print(f"Error parsing product: {product}. Error: {str(e)}")
+                    print(f"Error processing product '{product}' at index {index}: {e}")
                     is_all_products_exist = False
                     break
 
@@ -54,7 +58,6 @@ class Problem(ABC):
             action = Action(row["Recipe ID"], row["Recipe Name"], pieces)
             legal_actions.append(action)
 
-        print(f"Created {len(legal_actions)} legal actions")
         return legal_actions
 
     @abstractmethod

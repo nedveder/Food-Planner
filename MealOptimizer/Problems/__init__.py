@@ -1,2 +1,2 @@
 from .problem import Problem
-from .problem_types import MinimizeWasteProblem, MaximizeByParametersProblem
+from .problem_types import MinimizeWasteProblem, ParametersProblem

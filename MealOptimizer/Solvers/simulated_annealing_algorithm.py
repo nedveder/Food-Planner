@@ -45,7 +45,7 @@ class SimulatedAnnealingSolver(Solver):
             removed_action = new_state.selected_actions.pop(random.randrange(len(new_state.selected_actions)))
             for piece in removed_action.pieces:
                 for available_piece in new_state.available_pieces:
-                    if available_piece.item_id == piece.item_id and available_piece.unit == piece.unit:
+                    if available_piece.item_id == piece.item_id:
                         available_piece.quantity += piece.quantity
                         break
 

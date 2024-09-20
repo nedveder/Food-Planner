@@ -37,7 +37,7 @@ class ResultsFrame(ctk.CTkFrame):
                     self.results_text.insert(ctk.END, f"  Meal {meal}: {action.name}\n")
                     self.results_text.insert(ctk.END, f"  Ingredients:\n")
                     for piece in action.pieces:
-                        self.results_text.insert(ctk.END, f"    - {piece.item_id}: {piece.quantity} {piece.unit}\n")
+                        self.results_text.insert(ctk.END, f"    - {piece.item_id}: {piece.quantity}\n")
                     self.results_text.insert(ctk.END, "\n")
                 self.results_text.insert(ctk.END, "\n")
 

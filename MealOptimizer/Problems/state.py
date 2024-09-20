@@ -21,7 +21,6 @@ class State:
     @staticmethod
     def is_there_enough(available_piece, piece):
         return available_piece.item_id == piece.item_id and \
-            available_piece.unit == piece.unit and \
             available_piece.quantity >= piece.quantity
 
     def is_available_piece(self, piece, current_date) -> bool:
@@ -42,7 +41,7 @@ class State:
     def __repr__(self):
         selected_recipes = "\n".join([action.name for action in self.selected_actions])
         pieces_used = "\n".join(
-            [f"{piece.item_id} {piece.quantity} {piece.unit}" for action in self.selected_actions for piece in action.pieces])
+            [f"{piece.item_id} {piece.quantity}" for action in self.selected_actions for piece in action.pieces])
         return f"Selected recipes: \n{selected_recipes} \nProducts used: \n{pieces_used}"
 
     def __copy__(self):

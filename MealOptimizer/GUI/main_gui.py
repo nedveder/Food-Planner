@@ -6,7 +6,7 @@ import pandas as pd
 from datetime import date
 from tkinter import filedialog, messagebox
 from MealOptimizer.Experiments import Experiment
-from MealOptimizer.Problems import MinimizeWasteProblem, MaximizeByParametersProblem
+from MealOptimizer.Problems import MinimizeWasteProblem, ParametersProblem
 from MealOptimizer import Problems
 from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, PlanningGraphSolver, RLSolver
 import traceback
@@ -19,8 +19,9 @@ from MealOptimizer.GUI.settings_frame import SettingsFrame
 
 
 class MealPlannerGUI(ctk.CTk):
-    def __init__(self):
+    def __init__(self, recipes_path=None):
         super().__init__()
+        self.recipes_path = recipes_path
 
         self.title("Meal Planner Optimization System")
         self.geometry("1100x700")  # Increased window size
@@ -133,28 +134,29 @@ class MealPlannerGUI(ctk.CTk):
             if self.settings_frame.problem_var.get() == "Minimize Waste":
                 problem = MinimizeWasteProblem
             else:  # Maximize Parameters
-
+                if self.settings_frame.num_steps_var.get():
+                    parameters_to_maximize.append("Number of Steps")
                 if self.settings_frame.prep_time_var.get():
                     parameters_to_maximize.append("Preparation Time (min)")
-                if self.settings_frame.taste_rating_var.get():
-                    parameters_to_maximize.append("Taste Rating")
-                if self.settings_frame.shelf_time_var.get():
-                    parameters_to_maximize.append("Shelf Time (days)")
+                if self.settings_frame.num_products_var.get():
+                    parameters_to_maximize.append("Number of Products")
 
-                problem = MaximizeByParametersProblem
-                # problem = lambda actions_dataset, start_date, pieces_with_dates, requested_amount, meals_per_day: \
-                #     MaximizeByParametersProblem(actions_dataset, start_date, pieces_with_dates,
-                #                                 requested_amount=requested_amount,
-                #                                 meals_per_day=meals_per_day,
-                #                                 parameters_to_maximize=parameters_to_maximize)
+                problem = ParametersProblem
+
+
+            products_pd =  pd.DataFrame(self.upload_frame.product_list.products,
+                         columns=["ID", "Product Name", "Quantity", "Date"])
+            recipes_path = self.settings_frame.recipes_path_var.get()
+            recipes_df = pd.read_csv(recipes_path)
+
 
             # Create Experiment instance
             experiment = Experiment(
                 problem,
                 selected_solvers,
                 start_date,
-                "temp_products.csv",  # piece_dataset_path
-                "temp_recipes.csv",  # action_dataset_path
+                products_pd,  # piece_dataset
+                recipes_df,  # action_dataset
                 number_of_days=number_of_days,
                 meals_per_day=meals_per_day,
                 parameters_to_maximize=parameters_to_maximize
@@ -171,7 +173,7 @@ class MealPlannerGUI(ctk.CTk):
     def create_temp_csv_files(self):
         # Create temporary products CSV
         products_df = pd.DataFrame(self.upload_frame.product_list.products,
-                                   columns=["ID", "Product Name", "Quantity", "Unit", "Date"])
+                                   columns=["ID", "Product Name", "Quantity", "Date"])
         products_df.to_csv("temp_products.csv", index=False)
 
         # Use the selected recipes CSV

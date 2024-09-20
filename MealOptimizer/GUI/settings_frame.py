@@ -51,7 +51,7 @@ class SettingsFrame(ctk.CTkFrame):
         self.problem_var = ctk.StringVar(value="Minimize Waste")
         self.problem_dropdown = ctk.CTkOptionMenu(
             self,
-            values=["Minimize Waste", "Maximize Parameters"],
+            values=["Minimize Waste", "Add Parameters"],
             variable=self.problem_var,
             command=self.toggle_parameter_options
         )
@@ -61,18 +61,28 @@ class SettingsFrame(ctk.CTkFrame):
         self.parameter_frame.grid(row=4, column=0, padx=20, pady=10, sticky="ew")
         self.parameter_frame.grid_columnconfigure((0, 1), weight=1)
 
+        self.num_steps_var = ctk.BooleanVar(value=False)
         self.prep_time_var = ctk.BooleanVar(value=False)
-        self.taste_rating_var = ctk.BooleanVar(value=False)
-        self.shelf_time_var = ctk.BooleanVar(value=False)
+        self.num_products_var = ctk.BooleanVar(value=False)
 
-        ctk.CTkCheckBox(self.parameter_frame, text="Preparation Time", variable=self.prep_time_var).grid(row=0, column=0, padx=10, pady=5, sticky="w")
-        ctk.CTkCheckBox(self.parameter_frame, text="Taste Rating", variable=self.taste_rating_var).grid(row=0, column=1, padx=10, pady=5, sticky="w")
-        ctk.CTkCheckBox(self.parameter_frame, text="Shelf Time", variable=self.shelf_time_var).grid(row=0, column=2, padx=10, pady=5, sticky="w")
+        ctk.CTkCheckBox(self.parameter_frame, text="Number of Steps", variable=self.num_steps_var).grid(row=0, column=0,
+                                                                                                        padx=10, pady=5,
+                                                                                                        sticky="w")
+        ctk.CTkCheckBox(self.parameter_frame, text="Preparation Time", variable=self.prep_time_var).grid(row=0,
+                                                                                                         column=1,
+                                                                                                         padx=10,
+                                                                                                         pady=5,
+                                                                                                         sticky="w")
+        ctk.CTkCheckBox(self.parameter_frame, text="Number of Products", variable=self.num_products_var).grid(row=0,
+                                                                                                              column=2,
+                                                                                                              padx=10,
+                                                                                                              pady=5,
+                                                                                                              sticky="w")
 
-        self.parameter_frame.grid_remove()  # Hide initially
+        self.parameter_frame.grid_remove()
 
     def toggle_parameter_options(self, _):
-        if self.problem_var.get() == "Maximize Parameters":
+        if self.problem_var.get() == "Add Parameters":
             self.parameter_frame.grid()
         else:
             self.parameter_frame.grid_remove()
@@ -92,8 +102,8 @@ class SettingsFrame(ctk.CTkFrame):
 
         ctk.CTkCheckBox(self.algorithm_frame, text="Greedy", variable=self.greedy_var).grid(row=0, column=0, padx=20, pady=10, sticky="w")
         ctk.CTkCheckBox(self.algorithm_frame, text="Simulated Annealing", variable=self.sa_var).grid(row=0, column=1, padx=20, pady=10, sticky="w")
-        ctk.CTkCheckBox(self.algorithm_frame, text="Planning Graph", variable=self.graph_var).grid(row=1, column=0, padx=20, pady=10, sticky="w")
-        ctk.CTkCheckBox(self.algorithm_frame, text="Reinforcement Learning", variable=self.rl_var).grid(row=1, column=1, padx=20, pady=10, sticky="w")
+        ctk.CTkCheckBox(self.algorithm_frame, text="Planning Graph", variable=self.graph_var).grid(row=0, column=3, padx=20, pady=10, sticky="w")
+        ctk.CTkCheckBox(self.algorithm_frame, text="Reinforcement Learning", variable=self.rl_var).grid(row=0, column=4, padx=20, pady=10, sticky="w")
 
     def create_recipes_options(self):
         recipes_label = ctk.CTkLabel(self, text="Recipes Data", font=ctk.CTkFont(size=16, weight="bold"))
