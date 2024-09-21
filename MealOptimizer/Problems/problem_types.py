@@ -5,7 +5,6 @@ from .utils import Action
 from ..Problems import Problem
 
 
-# TODO ADD TO THE GUI
 MAX_PARAMETERS = {"Shelf Time", "Taste Rating"}
 MIN_PARAMETERS = {"Number of Steps", "Preparation Time (min)", "Number of Products"}
 
@@ -24,7 +23,8 @@ class MinimizeWasteProblem(Problem):
 
 
 class ParametersProblem(Problem):
-    def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=2, meals_per_day=3, parameters_to_maximize: List[str] = None):
+    def __init__(self, actions_dataset, start_date, pieces_with_dates, number_of_days=2, meals_per_day=3,
+                 parameters_to_maximize: List[str] = None):
         super().__init__(actions_dataset, start_date, pieces_with_dates, number_of_days, meals_per_day)
         self.parameters_to_maximize = parameters_to_maximize or []
 
