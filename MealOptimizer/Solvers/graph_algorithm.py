@@ -8,7 +8,7 @@ from .solver import Solver
 class PlanningGraphSolver(Solver):
     def solve(self, problem: Problem, initial_state: State) -> State:
         graph = self.build_planning_graph(problem, initial_state)
-        plan = self.extract_solution(graph, problem)
+        plan = self.extract_solution(graph, problem, initial_state)
 
         final_state = initial_state
         for action in plan:
@@ -43,16 +43,23 @@ class PlanningGraphSolver(Solver):
 
         return graph
 
-    def extract_solution(self, graph: List[Dict], problem: Problem) -> List[Action]:
+    def extract_solution(self, graph: List[Dict], problem: Problem, initial_state: State) -> List[Action]:
         goal_layer = len(graph) - 1
         plan = []
+        current_state = initial_state
 
         while len(plan) < problem.requested_amount and goal_layer >= 0:
             layer = graph[goal_layer]
-            best_action = max(layer["actions"].keys(), key=problem.get_action_score, default=None)
+            best_action = max(
+                layer["actions"].keys(),
+                key=lambda act: problem.get_action_score(act, current_state),
+                default=None
+            )
 
             if best_action:
                 plan.append(best_action)
+                # Update the current state
+                current_state = self.apply_action(current_state, best_action)
                 # Remove the pieces used by this action from all previous layers
                 for piece in best_action.pieces:
                     for prev_layer in graph[:goal_layer + 1]:
@@ -69,3 +76,9 @@ class PlanningGraphSolver(Solver):
     @staticmethod
     def pieces_to_set(pieces: List[Piece]) -> Set[Piece]:
         return set(pieces)
+
+    @staticmethod
+    def apply_action(state: State, action: Action) -> State:
+        new_state = State([Piece(p.item_id, p.quantity, p.expiration_date) for p in state.get_available_pieces])
+        new_state.update_state(action)
+        return new_state
