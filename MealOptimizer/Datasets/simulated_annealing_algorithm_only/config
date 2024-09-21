@@ -1,0 +1,3 @@
+start_date = date(2024, 9, 21)
+experiment = Experiment(number_of_days=2,
+                            meals_per_day=1)
