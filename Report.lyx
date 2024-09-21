@@ -113,71 +113,139 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-This project tackles the challenge of optimizing food inventory usage in
- kitchens using AI-driven planning techniques.
- The goal is to maximize the number and variety of dishes prepared from
- available ingredients while minimizing waste by considering expiration
- dates.
- Food waste is a significant global issue.
- In the United States alone, up to 40% of food goes uneaten.
- Much of this waste occurs in homes and restaurants due to poor inventory
- management and meal planning.
- By developing an intelligent system to optimize ingredient use, we can
- reduce waste, save money, and lessen environmental impact.
- Our approach uses a planning graph with a knowledge base of available recipes.
- Each plan represents a state where no further meals can be produced.
- We evaluate plans on two key metrics:
-\end_layout
+This project addresses the critical challenge of optimizing food inventory
+ management in kitchens through AI-driven planning techniques.
+ Our goal is to maximize the variety of meals created from available ingredients
+ while minimizing food waste, specifically by considering ingredient expiration
+ dates and other meal values.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-Waste minimization, measured by unused expired ingredients
-\end_layout
+Food waste is a pressing global issue, with up to 40% of food in the United
+ States going uneaten.
+ A significant portion of this waste occurs in homes and restaurants, largely
+ due to ineffective inventory management and meal planning.
+ By developing an intelligent system that optimizes ingredient usage, we
+ aim to reduce waste, save costs, and lessen the environmental impact of
+ food disposal.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-Meal value, initially based on the nutritional value of ingredients
-\end_layout
+Our approach is grounded in AI-based planning.
+ We use a planning graph that integrates a knowledge base of available recipes.
+ Each meal plan generated represents a state where no further meals can
+ be produced from the remaining ingredients.
+ We evaluate these plans using two key metrics:
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-The system applies constraint satisfaction techniques to navigate the complex
- decision space of meal preparation and inventory management.
- This approach allows us to balance multiple objectives and handle real-world
- constraints effectively.
- We model the problem as a state space search, where each state represents
+1.
+ Waste minimization – measured by the amount of expired, unused ingredients.
+\begin_inset Newline newline
+\end_inset
+
+2.
+ Meal value – determined by parameters like taste, shelf life, and preparation
+ time.
+\begin_inset Newline newline
+\end_inset
+
+To navigate the complex decision-making involved in meal preparation and
+ inventory management, the system applies constraint satisfaction techniques.
+ This allows us to balance multiple objectives while effectively handling
+ real-world constraints.
+ We model the problem as a state space search, where each state reflects
  the current inventory and meal plan.
- Actions are the selection of recipes, which transform the state by using
- ingredients and adding meals to the plan.
- The goal is to find a sequence of actions that produces an optimal meal
- plan according to our evaluation criteria.
- To solve this problem, we implement and compare several algorithms:
-\end_layout
+ Actions, in this context, are recipe selections that transform the state
+ by consuming ingredients and adding meals to the plan.
+ The goal is to find a sequence of actions that optimizes meal planning
+ based on our evaluation criteria.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-A greedy algorithm that selects the best available action at each step
-\end_layout
+To solve this optimization problem, we implement and compare several algorithms:
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-A planning graph algorithm that builds a graph of possible actions and extracts
- an optimal solution
-\end_layout
+1.
+ Greedy Algorithm: Select the best immediate action at each step.
+ 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-A simulated annealing approach that iteratively improves a random initial
- solution
-\end_layout
+2.
+ Planning Graph Algorithm: Constructs a graph of potential actions and derives
+ an optimal solution.
+ 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-A reinforcement learning algorithm that learns an optimal policy through
- repeated interactions with the environment
-\end_layout
+3.
+ Simulated Annealing: Iteratively refines a random solution to improve performan
+ce.
+ 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-By comparing these diverse approaches, we aim to identify the most effective
- methods for solving this complex optimization problem.
- Our system's architecture also allows for future enhancements, such as
- incorporating nutritional balance constraints and dietary restrictions.
- This work has practical applications in both home and commercial kitchen
- management, potentially reducing food waste and improving meal planning
- efficiency on a large scale.
+4.
+ Reinforcement Learning: Learns an optimal policy through repeated interactions
+ with the environment.
+ 
+\begin_inset Newline newline
+\end_inset
+
+By exploring these diverse techniques, we aim to identify the most effective
+ method for optimizing food inventory usage.
+\begin_inset Newline newline
+\end_inset
+
+To ensure usability, we’ve developed a user-friendly graphical interface
+ using Python's Tkinter library.
+ Key components of the interface include: 
+\begin_inset Newline newline
+\end_inset
+
+• A Home frame providing an overview and instructions.
+ 
+\begin_inset Newline newline
+\end_inset
+
+• An Upload frame for managing product and inventory data.
+ 
+\begin_inset Newline newline
+\end_inset
+
+• A Settings frame for configuring optimization parameters and selecting
+ solvers.
+ 
+\begin_inset Newline newline
+\end_inset
+
+• A Results frame displaying optimized meal plans, scores, and solver execution
+ times.
+ 
+\begin_inset Newline newline
+\end_inset
+
+This intuitive GUI enables users to interact with the AI system without
+ requiring technical knowledge.
+ Furthermore, our system’s flexible architecture allows for future enhancements,
+ such as incorporating nutritional balance and dietary restriction constraints.
+\begin_inset Newline newline
+\end_inset
+
+The project has broad practical applications in both home and commercial
+ kitchen management, offering a scalable solution to reducing food waste
+ and improving meal planning efficiency.
+ By merging AI algorithms with an intuitive interface, this project aims
+ to contribute to more sustainable and efficient food management practices.
+ 
+\begin_inset Newline newline
+\end_inset
+
+This work demonstrates how advanced AI techniques can address important
+ societal and environmental challenges, offering a real-world solution to
+ one of today’s most pressing issues.
 \end_layout
 
 \begin_layout Section
@@ -185,12 +253,13 @@ Previous Work
 \end_layout
 
 \begin_layout Standard
-Recent research has explored AI-driven approaches to meal planning and food
- waste reduction, key areas of focus for our project.
+Recent advancements in AI-driven approaches to meal planning and food waste
+ reduction provide the foundation for our project, which aims to optimize
+ these two areas using advanced techniques.
  Meal planning systems have evolved from simple recommendation engines to
- more complex AI-powered tools.
- Freyne and Berkovsky (2010) developed an early personalized recipe recommender
- system 
+ more sophisticated AI tools that handle complex decision-making.
+ Freyne and Berkovsky (2010) developed one of the first personalized recipe
+ recommenders, offering tailored suggestions based on user preferences 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
@@ -199,12 +268,13 @@ literal "true"
 \end_inset
 
 .
- While promising, it lacked the advanced optimization techniques our project
- employs.
+ However, this early system lacked the optimization methods and multi-objective
+ capabilities that our project seeks to implement, such as balancing meal
+ variety and quality with minimizing waste.
  
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 More recent work has tackled personalized meal planning for specific dietary
  needs.
  A study by unnamed authors integrated semantic reasoning, fuzzy logic,
@@ -217,14 +287,22 @@ literal "true"
 \end_inset
 
 .
- This approach aligns with our goal of considering multiple factors in meal
- planning, though our system aims for broader applicability.
-\end_layout
+ This aligns with our objective of factoring in multiple variables—like
+ ingredient availability, expiration dates, and dietary preferences—into
+ meal planning.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-In the realm of food waste reduction, Deng et al.
- proposed a multi-objective optimization model for food waste management
+ While previous studies have focused on specific dietary needs, our project
+ aims for broader applicability, making it useful across a wide range of
+ kitchen environments, from household to commercial settings.
  
+\begin_inset Newline newline
+\end_inset
+
+In the domain of food waste reduction, researchers like Deng et al.
+ have explored multi-objective optimization models for large-scale food
+ waste management
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-4"
@@ -233,13 +311,18 @@ literal "true"
 \end_inset
 
 .
- Their focus on large-scale systems differs from our household-level approach,
- but underscores the importance of multi-objective optimization in this
- field.
-\end_layout
+ Their work highlights how AI can optimize waste reduction, although their
+ focus is on industrial-scale operations.
+ Our project applies similar optimization principles but tailors them to
+ the household level, where balancing waste minimization and meal value
+ is critical.
+ 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-Machine learning has shown promise in predicting food expiration, a crucial
+A significant aspect of food waste reduction involves predicting food expiration
+ accurately.
+ Machine learning has shown promise in predicting food expiration, a crucial
  aspect of our waste reduction goal.
  A review by unnamed authors discussed various learning techniques for estimatin
 g the shelf life of perishable foods 
@@ -253,15 +336,14 @@ literal "true"
 .
  This research supports our use of expiration dates as a key factor in optimizat
 ion.
- 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-The application of advanced AI algorithms to meal planning remains an open
+Despite these advancements, applying AI to meal planning remains an open
  area for innovation.
  Pareek et al.
- explored the use of natural language processing and generative adversarial
- networks for recipe generation 
+ explored using natural language processing (NLP) and generative adversarial
+ networks (GANs) to generate new recipes
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-2"
@@ -270,26 +352,32 @@ literal "true"
 \end_inset
 
 .
- While their focus was on creating new recipes, it highlights the potential
- of applying diverse AI techniques to food-related problems.
-\end_layout
+ Although their work focused on recipe generation rather than optimization,
+ it shows the potential of applying diverse AI techniques to food-related
+ challenges.
+ Our project builds on these innovations, merging meal planning and waste
+ reduction into a unified optimization problem that introduces planning
+ graphs and reinforcement learning to tackle this complexity.
+ Our approach addresses gaps in previous research by dynamically adapting
+ to real-world constraints.
+ 
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 Our project builds on these foundations by integrating meal planning and
  waste reduction into a single optimization problem.
  We also introduce novel applications of planning graphs and reinforcement
  learning to this domain, addressing a gap in current research.
-\end_layout
-
-\begin_layout Standard
-Common assumptions in previous work include perfect information about nutritiona
-l content and expiration dates.
+ Common assumptions in previous work include perfect information about nutrition
+al content and expiration dates.
  Our approach acknowledges these limitations and aims to create a flexible
  system that can adapt to varying levels of information.
-\end_layout
+ This flexibility makes it more practical for everyday use, enabling the
+ system to adjust in real-time based on the available data.
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
-‌ 
+
 \end_layout
 
 \begin_layout Section
