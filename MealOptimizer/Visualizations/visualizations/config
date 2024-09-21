@@ -1,0 +1,31 @@
+    problem_class = Problems.MinimizeWasteProblem
+    products_data_path = r"C:\Users\moric\Documents\CS\year4\B\Food-Planner\MealOptimizer\Datasets\non optimality of greedy\products.csv"
+    recipes_data_path = r"C:\Users\moric\Documents\CS\year4\B\Food-Planner\MealOptimizer\Datasets\non optimality of greedy\recipes.csv"
+
+    parameter_sets = [
+        {
+            'start_date': date(2024, 9, 1),
+            'num_days': 12,
+            'meals_per_day': 1,
+            'parameters_to_maximize': []
+        },
+
+        {
+            'start_date': date(2024, 9, 1),
+            'num_days': 5,
+            'meals_per_day': 2,
+            'parameters_to_maximize': []
+        },
+        {
+            'start_date': date(2024, 9, 1),
+            'num_days': 1,
+            'meals_per_day': 12,
+            'parameters_to_maximize': []
+        },
+        {
+            'start_date': date(2024, 9, 1),
+            'num_days': 11,
+            'meals_per_day': 1,
+            'parameters_to_maximize': []
+        }
+    ]
