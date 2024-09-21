@@ -9,10 +9,10 @@ import pandas as pd
 
 
 def main_cmd():
-    problem = Problems.CountExpiredItemsProblem
+    problem = Problems.MinimizeWasteProblem
     solvers = [GreedySolver(), SimulatedAnnealingSolver(), PlanningGraphSolver(), RLSolver()]
-    products_data_path = "MealOptimizer/Datasets/products_dataset/known_400.csv"  # insert path
-    recipes_data_path = "MealOptimizer/Datasets/recipes_smaller.csv"  # insert path
+    products_data_path = "MealOptimizer/Datasets/non optimality of greedy/products.csv"  # insert path
+    recipes_data_path = "MealOptimizer/Datasets/non optimality of greedy/recipes.csv"  # insert path
     start_date = date(2024, 9, 1)
     experiment = Experiment(problem, solvers, start_date, pd.read_csv(products_data_path), pd.read_csv(recipes_data_path),
                             number_of_days=12,

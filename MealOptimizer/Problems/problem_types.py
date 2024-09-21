@@ -16,10 +16,19 @@ class MinimizeWasteProblem(Problem):
         meaning the closer the expiration date the higher the score.
         The goal is to minimize waste, so we want to use products that are closer to expiration date.
         """
+        if state is None:
+            raise RuntimeError("State is required for this problem.")
+        expired_count = 0
+        meals_cooked = len(state.selected_actions)
+        tomorrow_date = self.start_date + datetime.timedelta(days=1 + (meals_cooked // self.meals_per_day))
+        for piece in state.get_available_pieces:
+            if piece.expiration_date < tomorrow_date and piece.quantity > 0 and piece not in action.pieces:
+                expired_count += 1
+
         score = 0
         for piece in action.pieces:
             score += 1 / ((piece.expiration_date - self.start_date).days + 1)
-        return score
+        return score+1/(expired_count+1)
 
 
 class CountExpiredItemsProblem(Problem):
