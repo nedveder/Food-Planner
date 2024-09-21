@@ -1,3 +1,5 @@
+import random
+
 from MealOptimizer.Experiments import Experiment
 from MealOptimizer import Problems
 from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, PlanningGraphSolver, RLSolver
@@ -7,7 +9,7 @@ import pandas as pd
 
 
 def main_cmd():
-    problem = Problems.MinimizeWasteProblem
+    problem = Problems.CountExpiredItemsProblem
     solvers = [GreedySolver(), SimulatedAnnealingSolver(), PlanningGraphSolver(), RLSolver()]
     products_data_path = "MealOptimizer/Datasets/products_dataset/known_400.csv"  # insert path
     recipes_data_path = "MealOptimizer/Datasets/recipes_smaller.csv"  # insert path
@@ -27,4 +29,5 @@ def main():
 
 
 if __name__ == "__main__":
+    random.seed(42)
     main_cmd()
