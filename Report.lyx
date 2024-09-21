@@ -1,0 +1,772 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+% for subfigures/subtables
+\usepackage[caption=false,font=footnotesize]{subfig}
+\end_preamble
+\options journal
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Final Project - Meal Planner
+\end_layout
+
+\begin_layout Title
+Introduction to AI (67842)
+\end_layout
+
+\begin_layout Author
+Nadav Lederman (ID: 208585760), Mor Ben Ami (ID: 209789924), Daniel Gibor
+ (Bogatyrevich) (ID: 334065281)
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+This project tackles the challenge of optimizing food inventory usage in
+ kitchens using AI-driven planning techniques.
+ The goal is to maximize the number and variety of dishes prepared from
+ available ingredients while minimizing waste by considering expiration
+ dates.
+ Food waste is a significant global issue.
+ In the United States alone, up to 40% of food goes uneaten.
+ Much of this waste occurs in homes and restaurants due to poor inventory
+ management and meal planning.
+ By developing an intelligent system to optimize ingredient use, we can
+ reduce waste, save money, and lessen environmental impact.
+ Our approach uses a planning graph with a knowledge base of available recipes.
+ Each plan represents a state where no further meals can be produced.
+ We evaluate plans on two key metrics:
+\end_layout
+
+\begin_layout Enumerate
+Waste minimization, measured by unused expired ingredients
+\end_layout
+
+\begin_layout Enumerate
+Meal value, initially based on the nutritional value of ingredients
+\end_layout
+
+\begin_layout Standard
+The system applies constraint satisfaction techniques to navigate the complex
+ decision space of meal preparation and inventory management.
+ This approach allows us to balance multiple objectives and handle real-world
+ constraints effectively.
+ We model the problem as a state space search, where each state represents
+ the current inventory and meal plan.
+ Actions are the selection of recipes, which transform the state by using
+ ingredients and adding meals to the plan.
+ The goal is to find a sequence of actions that produces an optimal meal
+ plan according to our evaluation criteria.
+ To solve this problem, we implement and compare several algorithms:
+\end_layout
+
+\begin_layout Enumerate
+A greedy algorithm that selects the best available action at each step
+\end_layout
+
+\begin_layout Enumerate
+A planning graph algorithm that builds a graph of possible actions and extracts
+ an optimal solution
+\end_layout
+
+\begin_layout Enumerate
+A simulated annealing approach that iteratively improves a random initial
+ solution
+\end_layout
+
+\begin_layout Enumerate
+A reinforcement learning algorithm that learns an optimal policy through
+ repeated interactions with the environment
+\end_layout
+
+\begin_layout Standard
+By comparing these diverse approaches, we aim to identify the most effective
+ methods for solving this complex optimization problem.
+ Our system's architecture also allows for future enhancements, such as
+ incorporating nutritional balance constraints and dietary restrictions.
+ This work has practical applications in both home and commercial kitchen
+ management, potentially reducing food waste and improving meal planning
+ efficiency on a large scale.
+\end_layout
+
+\begin_layout Section
+Previous Work
+\end_layout
+
+\begin_layout Standard
+Recent research has explored AI-driven approaches to meal planning and food
+ waste reduction, key areas of focus for our project.
+ Meal planning systems have evolved from simple recommendation engines to
+ more complex AI-powered tools.
+ Freyne and Berkovsky (2010) developed an early personalized recipe recommender
+ system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1"
+literal "true"
+
+\end_inset
+
+.
+ While promising, it lacked the advanced optimization techniques our project
+ employs.
+ 
+\end_layout
+
+\begin_layout Standard
+More recent work has tackled personalized meal planning for specific dietary
+ needs.
+ A study by unnamed authors integrated semantic reasoning, fuzzy logic,
+ and heuristic search to create tailored meal plans 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-3"
+literal "true"
+
+\end_inset
+
+.
+ This approach aligns with our goal of considering multiple factors in meal
+ planning, though our system aims for broader applicability.
+\end_layout
+
+\begin_layout Standard
+In the realm of food waste reduction, Deng et al.
+ proposed a multi-objective optimization model for food waste management
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+literal "true"
+
+\end_inset
+
+.
+ Their focus on large-scale systems differs from our household-level approach,
+ but underscores the importance of multi-objective optimization in this
+ field.
+\end_layout
+
+\begin_layout Standard
+Machine learning has shown promise in predicting food expiration, a crucial
+ aspect of our waste reduction goal.
+ A review by unnamed authors discussed various learning techniques for estimatin
+g the shelf life of perishable foods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-5"
+literal "true"
+
+\end_inset
+
+.
+ This research supports our use of expiration dates as a key factor in optimizat
+ion.
+ 
+\end_layout
+
+\begin_layout Standard
+The application of advanced AI algorithms to meal planning remains an open
+ area for innovation.
+ Pareek et al.
+ explored the use of natural language processing and generative adversarial
+ networks for recipe generation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-2"
+literal "true"
+
+\end_inset
+
+.
+ While their focus was on creating new recipes, it highlights the potential
+ of applying diverse AI techniques to food-related problems.
+\end_layout
+
+\begin_layout Standard
+Our project builds on these foundations by integrating meal planning and
+ waste reduction into a single optimization problem.
+ We also introduce novel applications of planning graphs and reinforcement
+ learning to this domain, addressing a gap in current research.
+\end_layout
+
+\begin_layout Standard
+Common assumptions in previous work include perfect information about nutritiona
+l content and expiration dates.
+ Our approach acknowledges these limitations and aims to create a flexible
+ system that can adapt to varying levels of information.
+\end_layout
+
+\begin_layout Standard
+‌ 
+\end_layout
+
+\begin_layout Section
+Methodology
+\end_layout
+
+\begin_layout Subsection*
+Algorithms
+\end_layout
+
+\begin_layout Standard
+Our project uses four different algorithms to solve the meal planning and
+ food waste reduction problem.
+ Each algorithm takes a unique approach to find an optimal solution.
+\end_layout
+
+\begin_layout Subsubsection*
+Greedy Solver
+\end_layout
+
+\begin_layout Standard
+The Greedy Solver makes the best choice at each step without looking ahead.
+ It:
+\end_layout
+
+\begin_layout Standard
+- Checks available actions (meals that can be made with current ingredients)
+ 
+\end_layout
+
+\begin_layout Standard
+- Picks the action with the highest score 
+\end_layout
+
+\begin_layout Standard
+- Updates the state and repeats until the goal is reached or no more actions
+ are possible
+\end_layout
+
+\begin_layout Standard
+This method is fast but may miss better overall solutions by focusing on
+ immediate gains.
+\end_layout
+
+\begin_layout Subsubsection*
+Planning Graph Solver
+\end_layout
+
+\begin_layout Standard
+This solver builds a graph of possible actions and their outcomes.
+ It works in two main steps:
+\end_layout
+
+\begin_layout Standard
+- Build the graph: Starting with the initial ingredients, it adds layers
+ of possible meals and the resulting ingredient states.
+ 
+\end_layout
+
+\begin_layout Standard
+- Extract the solution: It works backwards from the goal state, choosing
+ the best meals at each step.
+\end_layout
+
+\begin_layout Standard
+This method can find good solutions for complex problems but may take more
+ time for larger datasets.
+\end_layout
+
+\begin_layout Subsubsection*
+Reinforcement Learning Solver
+\end_layout
+
+\begin_layout Standard
+This solver learns from repeated attempts to solve the problem.
+ It uses Q-learning, a type of reinforcement learning.
+ The process includes:
+\end_layout
+
+\begin_layout Standard
+- Trying different actions and observing outcomes 
+\end_layout
+
+\begin_layout Standard
+- Updating a "Q-table" that stores the expected value of each action in
+ each state 
+\end_layout
+
+\begin_layout Standard
+- Balancing exploration of new options with using known good choices
+\end_layout
+
+\begin_layout Standard
+The solver improves its decisions over many episodes, potentially finding
+ clever solutions that other methods might miss.
+\end_layout
+
+\begin_layout Subsubsection*
+Simulated Annealing Solver
+\end_layout
+
+\begin_layout Standard
+Inspired by the metal annealing process, this solver:
+\end_layout
+
+\begin_layout Standard
+- Starts with a random solution 
+\end_layout
+
+\begin_layout Standard
+- Makes small changes to the solution 
+\end_layout
+
+\begin_layout Standard
+- Accepts improvements always and worse solutions sometimes, based on a
+ "temperature" that decreases over time
+\end_layout
+
+\begin_layout Standard
+This method can escape local optima and find good solutions for complex
+ problems.
+\end_layout
+
+\begin_layout Subsection*
+Assumptions and Success Criteria
+\end_layout
+
+\begin_layout Subsubsection*
+All solvers work towards two main goals:
+\end_layout
+
+\begin_layout Enumerate
+Minimize waste by using ingredients before they expire 
+\end_layout
+
+\begin_layout Enumerate
+Maximize meal value, initially based on nutritional content
+\end_layout
+
+\begin_layout Standard
+We define a "State" as the current set of available ingredients and chosen
+ meals.
+ An "Action" represents making a meal, which uses some ingredients and adds
+ to the meal plan.
+\end_layout
+
+\begin_layout Standard
+The project allows for easy comparison of these methods on different problem
+ sizes and types.
+ This flexibility lets us test which approach works best for various scenarios.
+\end_layout
+
+\begin_layout Subsubsection*
+Our system makes some key assumptions:
+\end_layout
+
+\begin_layout Standard
+- We have accurate data on ingredient expiration dates and nutritional values
+ 
+\end_layout
+
+\begin_layout Standard
+- Meal preparation time is not a constraint 
+\end_layout
+
+\begin_layout Standard
+- All recipes are equally feasible to prepare
+\end_layout
+
+\begin_layout Subsubsection*
+Reward functions
+\end_layout
+
+\begin_layout Standard
+Our project uses two reward functions as heuristics to guide the meal planning
+ process.
+\end_layout
+
+\begin_layout Enumerate
+MinimizeWasteProblem Function: This function scores meals based on how soon
+ their ingredients will expire.
+ It sum over all ingredients in a meal (action):
+\begin_inset Formula 
+\[
+\mathrm{score}=\sum\frac{1}{\mathrm{expirationdate}-\mathrm{currentdate}+1}
+\]
+
+\end_inset
+
+for each ingredient.
+ This heuristic pushes the solvers to use ingredients that would spoil soon,
+ directly addressing our goal of reducing food waste.
+\end_layout
+
+\begin_layout Enumerate
+ParametersProblem Function: This function builds on the waste minimization
+ score and adds considerations for other meal attributes.
+ It normalizes various parameters (like taste rating or preparation time)
+ to a 
+\begin_inset Formula $0-1$
+\end_inset
+
+ scale, then adjusts the score:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+- For parameters to maximize: score += normalized_value 
+\end_layout
+
+\begin_layout Standard
+- For parameters to minimize: score -= normalized_value
+\end_layout
+
+\begin_layout Standard
+This heuristic balances waste reduction with other desirable meal qualities.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+These functions serve as heuristics because they provide a quick way to
+ estimate the value of choosing a particular meal without exploring the
+ entire solution space.
+ Clearly it is difficult to 
+\end_layout
+
+\begin_layout Standard
+The effectiveness of these heuristics lies in their ability to capture multiple
+ objectives in a single value, allowing our algorithms to make informed
+ decisions quickly.
+ However, they are simplifications and may not capture all nuances of real-world
+ meal planning.
+\end_layout
+
+\begin_layout Standard
+Future work could address these limitations by incorporating more real-world
+ constraints and user preferences.
+\end_layout
+
+\begin_layout Standard
+This methodology provides a robust framework for tackling the complex task
+ of optimizing meal planning while reducing food waste.
+ By comparing different AI approaches, we aim to find effective solutions
+ that can be applied in real-world settings.
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\family sans
+A single column figure goes here
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Captions go 
+\emph on
+under
+\emph default
+ the figure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Table captions go 
+\emph on
+above
+\emph default
+ the table
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+delete
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+this
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+example
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+table
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions
+\end_layout
+
+\begin_layout Standard
+bla bla
+\end_layout
+
+\begin_layout Appendices
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Don't add text here!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+First appendix
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+J.
+ Freyne and S.
+ Berkovsky, “Intelligent food planning,” Proceedings of the 15th international
+ conference on Intelligent user interfaces - IUI ’10, 2010, doi: https://doi.org/
+10.1145/1719970.1720021.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+A.
+ Pareek, A.
+ Gahlot, N.
+ Khatri, and M.
+ Sachdeva, “Enhancing Recipe Generation Using AI and ML,” vol.
+ 9, pp.
+ 2456–4184, 2024, Accessed: Sep.
+ 21, 2024.
+ [Online].
+ Available: https://www.ijnrd.org/papers/IJNRD2404062.pdf
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+M.
+ Amiri, J.
+ Li, and W.
+ U.
+ Hasan, “Personalized flexible meal planning for individuals with diet-related
+ health concerns: System design and feasibility validation study,” JMIR
+ formative research, vol.
+ 7, pp.
+ e46434–e46434, Aug.
+ 2023, doi: https://doi.org/10.2196/46434.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Y.
+ Deng, Y.
+ Shi, Y.
+ Huang, and J.
+ Xu, “An optimization approach for food waste management system based on
+ technical integration under different Water/Grease proportions,” Journal
+ of Cleaner Production, vol.
+ 394, pp.
+ 136254–136254, Mar.
+ 2023, doi: https://doi.org/10.1016/j.jclepro.2023.136254.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+V.
+ K.
+ Pandey et al., “Machine Learning Algorithms and Fundamentals as Emerging
+ Safety Tools in Preservation of Fruits and Vegetables: A Review,” Processes,
+ vol.
+ 11, no.
+ 6, p.
+ 1720, Jun.
+ 2023, doi: https://doi.org/10.3390/pr11061720.
+\end_layout
+
+\end_body
+\end_document
