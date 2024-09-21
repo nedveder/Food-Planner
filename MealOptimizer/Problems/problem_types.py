@@ -1,16 +1,16 @@
-from datetime import date
+import datetime
 from typing import List
 
+from .state import State
 from .utils import Action
 from ..Problems import Problem
-
 
 MAX_PARAMETERS = {"Shelf Time", "Taste Rating"}
 MIN_PARAMETERS = {"Number of Steps", "Preparation Time (min)", "Number of Products"}
 
 
 class MinimizeWasteProblem(Problem):
-    def get_action_score(self, action) -> float:
+    def get_action_score(self, action, state: State = None) -> float:
         """
         Score is the sum of the inverse difference between the expiration date of the products and the current date,
         meaning the closer the expiration date the higher the score.
@@ -20,6 +20,24 @@ class MinimizeWasteProblem(Problem):
         for piece in action.pieces:
             score += 1 / ((piece.expiration_date - self.start_date).days + 1)
         return score
+
+
+class CountExpiredItemsProblem(Problem):
+    def get_action_score(self, action: Action, state: State = None) -> float:
+        """
+        Score is the negative count of items that would expire if not used in this action.
+        The goal is to minimize the number of expired items.
+        """
+        if state is None:
+            raise RuntimeError("State is required for this problem.")
+        expired_count = 0
+        meals_cooked = len(state.selected_actions)
+        tomorrow_date = self.start_date + datetime.timedelta(days=1 + (meals_cooked // self.meals_per_day))
+        for piece in state.get_available_pieces:
+            if piece.expiration_date < tomorrow_date and piece.quantity > 0 and piece not in action.pieces:
+                expired_count += 1
+
+        return 1 / (expired_count + 1)
 
 
 class ParametersProblem(Problem):
@@ -35,7 +53,6 @@ class ParametersProblem(Problem):
 
         # Normalize the parameters
         self.normalized_parameters = self._normalize_parameters()
-
 
     def _normalize_parameters(self):
         normalized = {}
@@ -60,8 +77,7 @@ class ParametersProblem(Problem):
         normalized_value = self.normalized_parameters[param][self.action_dataset['Recipe ID'] == action.action_id].values[0]
         score += normalized_value
 
-
-    def get_action_score(self, action: Action) -> float:
+    def get_action_score(self, action: Action, state: State = None) -> float:
         """
         Score is the sum of the normalized values of the specified parameters for the given action.
         The goal is to maximize these parameters.

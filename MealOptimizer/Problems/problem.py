@@ -5,7 +5,6 @@ from typing import List, Dict, Any
 import re
 import ast
 
-
 from ..Problems.utils import Action, Piece
 
 
@@ -61,7 +60,7 @@ class Problem(ABC):
         return legal_actions
 
     @abstractmethod
-    def get_action_score(self, action) -> float:
+    def get_action_score(self, action, state) -> float:
         """Action is selected recipe"""
         pass
 
@@ -78,9 +77,8 @@ class Problem(ABC):
 
     def get_score(self, state) -> float:
         """Calculate the score of the current state"""
-        return sum(self.get_action_score(action) for action in state.selected_actions)
+        return sum(self.get_action_score(action, state) for action in state.selected_actions)
 
     def is_goal_state(self, state) -> bool:
         """Have we reached the requested amount of recipes"""
-        return len(
-            state.selected_actions) >= self.number_of_days * self.meals_per_day or not state.get_available_pieces
+        return len(state.selected_actions) >= self.number_of_days * self.meals_per_day or not state.get_available_pieces

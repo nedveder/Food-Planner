@@ -16,16 +16,9 @@ class GreedySolver(Solver):
                 break  # No more actions available, terminate
 
             # Find the action with the highest score
-            best_action = max(available_actions, key=problem.get_action_score)
+            best_action = max(available_actions, key=lambda act: problem.get_action_score(act, state))
 
             # Update the state with the best action
             state.update_state(best_action)
 
         return state
-
-    @staticmethod
-    def select_best_action(problem: Problem, available_actions: List[Action]) -> Action:
-        """
-        Select the best action based on the problem's scoring method.
-        """
-        return max(available_actions, key=problem.get_action_score)

@@ -146,7 +146,7 @@ def create_csv_with_products(products_df, output_file):
 # Main execution
 if __name__ == "__main__":
 
-    recipes_file = r"C:\Users\moric\Documents\CS\year4\B\Food-Planner\MealOptimizer\Datasets\recipes.csv"
+    recipes_file = r"MealOptimizer\Datasets\recipes.csv"
     # Read the recipes CSV file
     recipes_df = pd.read_csv(recipes_file)
 
