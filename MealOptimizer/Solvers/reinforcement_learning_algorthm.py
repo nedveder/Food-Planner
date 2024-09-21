@@ -33,7 +33,7 @@ class RLSolver(Solver):
                 next_state = state.__copy__()
                 next_state.update_state(action)
 
-                reward = problem.get_action_score(action)
+                reward = problem.get_action_score(action,state)
                 self.update_q_value(state, action, reward, next_state, problem)
 
                 state = next_state
