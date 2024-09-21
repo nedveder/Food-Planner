@@ -7,7 +7,7 @@ import pandas as pd
 
 
 def main_cmd():
-    problem = Problems.CountExpiredItemsProblem
+    problem = Problems.MinimizeWasteProblem
     solvers = [GreedySolver(), SimulatedAnnealingSolver(), PlanningGraphSolver(), RLSolver()]
     products_data_path = "MealOptimizer/Datasets/products_dataset/known_400.csv"  # insert path
     recipes_data_path = "MealOptimizer/Datasets/recipes_smaller.csv"  # insert path
