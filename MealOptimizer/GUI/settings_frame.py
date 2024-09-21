@@ -51,7 +51,7 @@ class SettingsFrame(ctk.CTkFrame):
         self.problem_var = ctk.StringVar(value="Minimize Waste")
         self.problem_dropdown = ctk.CTkOptionMenu(
             self,
-            values=["Minimize Waste", "Add Parameters"],
+            values=["Minimize Waste", "Add Parameters", "Count Expired Items"],
             variable=self.problem_var,
             command=self.toggle_parameter_options
         )
@@ -105,13 +105,11 @@ class SettingsFrame(ctk.CTkFrame):
 
         self.greedy_var = ctk.BooleanVar(value=True)
         self.sa_var = ctk.BooleanVar(value=True)
-        self.graph_var = ctk.BooleanVar(value=True)
         self.rl_var = ctk.BooleanVar(value=True)
 
         ctk.CTkCheckBox(self.algorithm_frame, text="Greedy", variable=self.greedy_var).grid(row=0, column=0, padx=20, pady=10, sticky="w")
         ctk.CTkCheckBox(self.algorithm_frame, text="Simulated Annealing", variable=self.sa_var).grid(row=0, column=1, padx=20, pady=10, sticky="w")
-        ctk.CTkCheckBox(self.algorithm_frame, text="Planning Graph", variable=self.graph_var).grid(row=0, column=3, padx=20, pady=10, sticky="w")
-        ctk.CTkCheckBox(self.algorithm_frame, text="Reinforcement Learning", variable=self.rl_var).grid(row=0, column=4, padx=20, pady=10, sticky="w")
+        ctk.CTkCheckBox(self.algorithm_frame, text="Reinforcement Learning", variable=self.rl_var).grid(row=0, column=2, padx=20, pady=10, sticky="w")
 
     def create_recipes_options(self):
         recipes_label = ctk.CTkLabel(self, text="Recipes Data", font=ctk.CTkFont(size=16, weight="bold"))
