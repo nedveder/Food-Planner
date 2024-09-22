@@ -7,12 +7,13 @@ from .solver import Solver
 
 
 class RLSolver(Solver):
-    def __init__(self, learning_rate=0.3, discount_factor=0.95, epsilon=0.3, episodes=1000):
+    def __init__(self, learning_rate=0.1, discount_factor=0.95, epsilon=0.3, episodes=1000,convergence_threshold=0.001):
         self.learning_rate = learning_rate
         self.discount_factor = discount_factor
         self.epsilon = epsilon
         self.episodes = episodes
         self.q_table: Dict[Tuple[State, Action], float] = {}
+        self.convergence_threshold = convergence_threshold
 
     def solve(self, problem: Problem, initial_state: State) -> State:
         """
@@ -25,7 +26,6 @@ class RLSolver(Solver):
             problem.reset_legal_actions()
             self.epsilon *= 0.99
             state = initial_state
-            print(f"Episode {episode + 1}/{self.episodes}")
             while not problem.is_goal_state(state):
                 available_actions = problem.get_available_actions(state)
                 if not available_actions:
@@ -39,6 +39,8 @@ class RLSolver(Solver):
 
                 state = next_state
             score = problem.get_score(state)
+            if abs(score - best_score) < self.convergence_threshold:
+                break
             if score > best_score:
                 best_score = score
                 best_state = state
