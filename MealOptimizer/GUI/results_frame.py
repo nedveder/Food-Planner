@@ -18,9 +18,9 @@ class ResultsFrame(ctk.CTkFrame):
         self.download_button = ctk.CTkButton(self, text="Download Results", command=self.download_results)
         self.download_button.grid(row=1, column=0, padx=20, pady=20)
 
-    def display_results(self, results, number_of_days, problem):
+    def display_results(self, results, number_of_days, meals_per_day, problem):
         self.results_text.delete("1.0", ctk.END)
-        for solver, (state, solve_time) in results.items():
+        for solver, (state, solve_time, score) in results.items():
             self.results_text.insert(ctk.END, f"{solver.__class__.__name__} Results:\n")
             self.results_text.insert(ctk.END, f"Time taken: {solve_time:.2f} seconds\n\n")
 
@@ -30,7 +30,7 @@ class ResultsFrame(ctk.CTkFrame):
 
             for day in range(number_of_days):
                 self.results_text.insert(ctk.END, f"Day {day + 1}:\n")
-                day_actions = state.selected_actions[day * problem.meals_per_day:(day + 1) * problem.meals_per_day]
+                day_actions = state.selected_actions[day * meals_per_day:(day + 1) * meals_per_day]
                 if not day_actions:
                     self.results_text.insert(ctk.END, "  No meals planned for this day.\n")
                 for meal, action in enumerate(day_actions, 1):
@@ -41,7 +41,7 @@ class ResultsFrame(ctk.CTkFrame):
                     self.results_text.insert(ctk.END, "\n")
                 self.results_text.insert(ctk.END, "\n")
 
-            self.results_text.insert(ctk.END, f"Total Score: {problem.get_score(state):.2f}\n\n")
+            self.results_text.insert(ctk.END, f"Total Score: {score:.2f}\n\n")
 
     def download_results(self):
         file_path = filedialog.asksaveasfilename(defaultextension=".txt")

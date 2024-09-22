@@ -165,7 +165,7 @@ class MealPlannerGUI(ctk.CTk):
             )
 
             results = experiment.run()
-            self.results_frame.display_results(results, number_of_days, experiment.problem)
+            self.results_frame.display_results(results, number_of_days, meals_per_day, experiment.problem)
             self.select_frame_by_name("results")
         except Exception as e:
             error_message = f"An error occurred during optimization:\n{str(e)}\n\nStacktrace:\n{traceback.format_exc()}"

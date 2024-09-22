@@ -19,6 +19,9 @@ class Problem(ABC):
         self.number_of_days = number_of_days
         self.meals_per_day = meals_per_day
 
+    def get_meals_per_day(self):
+        return self.meals_per_day
+
     def reset_legal_actions(self) -> List[Action]:
         legal_actions = []
         for index, row in self.action_dataset.iterrows():

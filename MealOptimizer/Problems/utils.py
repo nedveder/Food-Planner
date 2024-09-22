@@ -8,8 +8,16 @@ class Piece:
         self.item_id = item_id
         self.quantity = int(quantity)
         # Format date time
-        year, month, day = expiration_date.split("-")
-        self.expiration_date = datetime.date(int(year), int(month), int(day)) if expiration_date else None
+        if expiration_date:
+            for fmt in ('%Y-%m-%d', '%d/%m/%Y'):
+                try:
+                    self.expiration_date = datetime.datetime.strptime(expiration_date, fmt).date()
+                    break
+                except ValueError:
+                    continue
+            else:
+                # If none of the formats match, raise an error
+                raise ValueError(f"Invalid date format: {expiration_date}")
 
     def __hash__(self):
         return hash((self.item_id, self.quantity, self.expiration_date))
