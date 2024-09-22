@@ -8,7 +8,7 @@ from tkinter import filedialog, messagebox
 from MealOptimizer.Experiments import Experiment
 from MealOptimizer.Problems import MinimizeWasteProblem, ParametersProblem
 from MealOptimizer import Problems
-from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, PlanningGraphSolver, RLSolver
+from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, RLSolver
 import traceback
 
 
@@ -131,8 +131,6 @@ class MealPlannerGUI(ctk.CTk):
             # Determine which problem to use
             if self.settings_frame.problem_var.get() == "Minimize Waste":
                 problem = MinimizeWasteProblem
-            elif self.settings_frame.problem_var.get() == "Count Expired Items":
-                problem = Problems.CountExpiredItemsProblem
             else:  # Maximize Parameters
                 if self.settings_frame.num_steps_var.get():
                     parameters_to_maximize.append("Number of Steps")

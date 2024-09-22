@@ -1,3 +1,4 @@
+import copy
 import datetime
 from typing import List
 
@@ -22,5 +23,3 @@ class Action:
 
     def __hash__(self):
         return hash((self.action_id, self.name, tuple(self.pieces)))
-
-

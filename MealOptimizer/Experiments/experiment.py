@@ -26,12 +26,13 @@ class Experiment:
         self.solvers = solvers
         self.piece_dataset = piece_dataset
         self.action_dataset = action_dataset
-        self.current_state = self.create_initial_state(self.piece_dataset)
-        pieces_with_dates = self.piece_dataset[["Product Name", "Date"]]
-        self.problem = problem(self.action_dataset, start_date, pieces_with_dates,
-                               number_of_days=number_of_days,
-                               meals_per_day=meals_per_day,
-                               parameters_to_maximize=parameters)
+        self.current_state = None
+        self.pieces_with_dates = self.piece_dataset[["Product Name", "Date"]]
+        self.start_date = start_date
+        self.number_of_days = number_of_days
+        self.meals_per_day = meals_per_day
+        self.parameters = parameters
+        self.problem = problem
 
     @staticmethod
     def create_initial_state(piece_dataset) -> State:
@@ -45,14 +46,19 @@ class Experiment:
     def run(self) -> Dict[str, Tuple[State, float]]:
         results = {}
         for solver in self.solvers:
+            problem = self.problem(self.action_dataset, self.start_date, self.pieces_with_dates,
+                                   number_of_days=self.number_of_days,
+                                   meals_per_day=self.meals_per_day,
+                                   parameters_to_maximize=self.parameters)
+            self.current_state = self.create_initial_state(self.piece_dataset)
             start_time = time.time()
-            solver_final_state = solver.solve(self.problem, self.current_state)
+            solver_final_state = solver.solve(problem, self.current_state)
             end_time = time.time()
             solver_time = end_time - start_time
 
-            if self.problem.is_goal_state(solver_final_state):
+            if problem.is_goal_state(solver_final_state):
                 results[solver] = (solver_final_state, solver_time)
-                print(f"{solver} reached the goal state with score {self.problem.get_score(solver_final_state)}")
+                print(f"{solver} reached the goal state with score {problem.get_score(solver_final_state)}")
             else:
                 results[solver] = (None, solver_time)
                 print(f"{solver} did not reach the goal state")

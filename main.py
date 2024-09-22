@@ -2,7 +2,7 @@ import random
 
 from MealOptimizer.Experiments import Experiment
 from MealOptimizer import Problems
-from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, PlanningGraphSolver, RLSolver
+from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, RLSolver
 from datetime import date
 from MealOptimizer.GUI.main_gui import MealPlannerGUI
 import pandas as pd
@@ -10,7 +10,8 @@ import pandas as pd
 
 def main_cmd():
     problem = Problems.MinimizeWasteProblem
-    solvers = [GreedySolver(), SimulatedAnnealingSolver(), PlanningGraphSolver(), RLSolver()]
+    solvers = [GreedySolver(), SimulatedAnnealingSolver(), RLSolver()]
+    # solvers = [RLSolver()]
     products_data_path = "MealOptimizer/Datasets/non optimality of greedy/products.csv"  # insert path
     recipes_data_path = "MealOptimizer/Datasets/non optimality of greedy/recipes.csv"  # insert path
     start_date = date(2024, 9, 1)

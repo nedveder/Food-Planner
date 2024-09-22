@@ -37,14 +37,13 @@ class SimulatedAnnealingSolver(Solver):
         return best_state
 
     def get_neighbor_state(self, problem: Problem, current_state: State) -> State:
-        new_state = State(current_state.get_available_pieces.copy())
-        new_state.selected_actions = current_state.get_selected_actions.copy()
+        new_state = State(current_state.get_available_pieces, current_state.get_selected_actions)
 
         if len(new_state.selected_actions) > 0 and random.random() < 0.5:
             # Remove a random action
             removed_action = new_state.selected_actions.pop(random.randrange(len(new_state.selected_actions)))
             for piece in removed_action.pieces:
-                for available_piece in new_state.available_pieces:
+                for available_piece in new_state.get_available_pieces:
                     if available_piece.item_id == piece.item_id:
                         available_piece.quantity += piece.quantity
                         break

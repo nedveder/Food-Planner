@@ -7,12 +7,12 @@ from .solver import Solver
 
 
 class RLSolver(Solver):
-    def __init__(self, learning_rate=0.5, discount_factor=0.95, epsilon=0.1, episodes=1000):
+    def __init__(self, learning_rate=0.3, discount_factor=0.95, epsilon=0.3, episodes=1000):
         self.learning_rate = learning_rate
         self.discount_factor = discount_factor
         self.epsilon = epsilon
         self.episodes = episodes
-        self.q_table: Dict[Tuple[Tuple[str], str], float] = {}
+        self.q_table: Dict[Tuple[State, Action], float] = {}
 
     def solve(self, problem: Problem, initial_state: State) -> State:
         """
@@ -21,23 +21,23 @@ class RLSolver(Solver):
         best_state = None
         best_score = float('-inf')
 
-        for _ in range(self.episodes):
-            state = initial_state.__copy__()
-
+        for episode in range(self.episodes):
+            problem.reset_legal_actions()
+            self.epsilon *= 0.99
+            state = initial_state
+            print(f"Episode {episode + 1}/{self.episodes}")
             while not problem.is_goal_state(state):
                 available_actions = problem.get_available_actions(state)
                 if not available_actions:
                     break
-
-                action = self.choose_action(problem, state, available_actions)
+                action = self.choose_action(state, available_actions)
                 next_state = state.__copy__()
                 next_state.update_state(action)
 
-                reward = problem.get_action_score(action,state)
+                reward = problem.get_action_score(action, state) + len(next_state.get_selected_actions)
                 self.update_q_value(state, action, reward, next_state, problem)
 
                 state = next_state
-
             score = problem.get_score(state)
             if score > best_score:
                 best_score = score
@@ -45,7 +45,7 @@ class RLSolver(Solver):
 
         return best_state
 
-    def choose_action(self, problem: Problem, state: State, available_actions: List[Action]) -> Action:
+    def choose_action(self, state: State, available_actions: List[Action]) -> Action:
         if random.random() < self.epsilon:
             return random.choice(available_actions)
         else:
@@ -57,12 +57,7 @@ class RLSolver(Solver):
             self.get_q_value(next_state, a) for a in problem.get_available_actions(next_state)) if problem.get_available_actions(
             next_state) else 0
         new_q = current_q + self.learning_rate * (reward + self.discount_factor * max_next_q - current_q)
-        self.q_table[self.state_action_to_key(state, action)] = new_q
+        self.q_table[(state, action)] = new_q
 
     def get_q_value(self, state: State, action: Action) -> float:
-        return self.q_table.get(self.state_action_to_key(state, action), 0.0)
-
-    @staticmethod
-    def state_action_to_key(state: State, action: Action) -> Tuple[Tuple[str], str]:
-        state_key = tuple(sorted(p.item_id for p in state.get_available_pieces))
-        return (state_key, action.action_id)
+        return self.q_table.get((state, action), 0.0)

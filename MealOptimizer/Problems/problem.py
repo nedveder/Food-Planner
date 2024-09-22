@@ -13,15 +13,15 @@ class Problem(ABC):
                  parameters_to_maximize: List[str] = None):
         self.start_date = start_date
         self.action_dataset = actions_dataset
-        self.legal_actions = self.create_legal_actions(actions_dataset, pieces_with_dates)
+        self.pieces_with_dates = pieces_with_dates
+        self.legal_actions = self.reset_legal_actions()
         self.requested_amount = number_of_days * meals_per_day
         self.number_of_days = number_of_days
         self.meals_per_day = meals_per_day
 
-    @staticmethod
-    def create_legal_actions(action_dataset, pieces_with_dates) -> List[Action]:
+    def reset_legal_actions(self) -> List[Action]:
         legal_actions = []
-        for index, row in action_dataset.iterrows():
+        for index, row in self.action_dataset.iterrows():
             pieces = []
             is_all_products_exist = True
 
@@ -38,12 +38,12 @@ class Problem(ABC):
                     name = product.strip()
                     quantity = 1
 
-                    if name not in pieces_with_dates["Product Name"].values:
+                    if name not in self.pieces_with_dates["Product Name"].values:
                         # print(f"Product not found in dataset: {name}")
                         is_all_products_exist = False
                         break
 
-                    expiration_date = pieces_with_dates[pieces_with_dates["Product Name"] == name]["Date"].values[0]
+                    expiration_date = self.pieces_with_dates[self.pieces_with_dates["Product Name"] == name]["Date"].values[0]
                     piece = Piece(name, quantity, expiration_date)
                     pieces.append(piece)
                 except Exception as e:
