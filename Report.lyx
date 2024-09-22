@@ -2499,7 +2499,21 @@ noprefix "false"
 
  shows how well the algorithm transfers between different problem types.
  Points closer to the diagonal line indicate better transfer, meaning the
- algorithm performs similarly on both problems, but as we can see 
+ algorithm performs similarly on both problems, and as we can see CountExpiredIt
+emsProblem is affected by raising scores on MinimizeWasteProblem, the transfer
+ isn't perfect for obvious reason like the discretization of the score,
+ but we can see that an effect exists.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This isn't a rigorous statistical observation, and the size of the effect
+ is indeed minimal, yet in our opinion worth mentioning.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
