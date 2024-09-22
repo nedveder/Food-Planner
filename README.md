@@ -153,6 +153,16 @@ To install the project, follow these steps:
    ```
    cd meal-planning-optimization
    ```
+   
+3. Install the required packages:
+   ```
+   conda env create -f environment.yml
+   ```
+   
+4. Activate the conda environment:
+   ```
+    conda activate AI_Project
+    ```
 
 
 ## Usage
