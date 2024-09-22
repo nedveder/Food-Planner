@@ -27,7 +27,6 @@ The project consists of several Python files organized into folders:
   - `utils.py`: Contains utility classes like `Piece` and `Action`
 - `Solvers/`: A folder containing various optimization algorithms
   - `solver.py`: Defines the base `Solver` abstract class
-  - `graph_algorithm.py`: Implements the `PlanningGraphSolver`
   - `greedy_algorithm.py`: Implements the `GreedySolver`
   - `reinforcement_learning_algorithm.py`: Implements the `RLSolver`
   - `simulated_annealing_algorithm.py`: Implements the `SimulatedAnnealingSolver`
@@ -94,9 +93,10 @@ The `Problem` class is an abstract base class that defines the structure for mea
 This file defines specific problem types:
 
 1. `MinimizeWasteProblem`: Aims to minimize food waste by prioritizing ingredients closer to expiration.
-2. `MaximizeByParametersProblem`: Allows optimization based on specified parameters (e.g., nutritional values).
+2. `ParametersProblem`: Allows optimization based on specified parameters (e.g., nutritional values).
+3. `CountExpiredItemsProblem`:  Aims to minimize the number of items that would expire if not used.
 
-Both classes implement custom `get_action_score` methods to evaluate recipes based on their respective objectives.
+All the classes implement custom `get_action_score` methods to evaluate recipes based on their respective objectives.
 
 #### State (state.py)
 
@@ -119,12 +119,6 @@ This file contains utility classes:
 
 The `Solver` class is an abstract base class that defines the interface for all solver implementations. It includes an abstract `solve` method that must be implemented by all concrete solver classes.
 
-#### Graph Algorithm (graph_algorithm.py)
-
-The `PlanningGraphSolver` class implements a graph-based algorithm for solving meal planning problems. It builds a planning graph and extracts an optimal solution. Key methods include:
-
-- `build_planning_graph`: Constructs the planning graph
-- `extract_solution`: Extracts the best meal plan from the graph
 
 #### Greedy Algorithm (greedy_algorithm.py)
 
@@ -170,7 +164,7 @@ To use the meal planning system, you can either run the `main.py` script (see [R
    ```python
    from MealOptimizer.Experiments import Experiment
    from MealOptimizer import Problems
-   from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, PlanningGraphSolver, RLSolver
+   from MealOptimizer.Solvers import GreedySolver, SimulatedAnnealingSolver, RLSolver
    from datetime import date
    ```
 
@@ -178,7 +172,7 @@ To use the meal planning system, you can either run the `main.py` script (see [R
 
    ```python
    problem = Problems.MinimizeWasteProblem
-   solvers = [GreedySolver(), SimulatedAnnealingSolver(), PlanningGraphSolver(), RLSolver()]
+   solvers = [GreedySolver(), SimulatedAnnealingSolver(), RLSolver()]
    products_data_path = "path/to/your/products_data.csv"
    recipes_data_path = "path/to/your/recipes_data.csv"
    start_date = date(2024, 9, 1)
