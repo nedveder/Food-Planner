@@ -133,20 +133,14 @@ To navigate the complex decision-making involved in meal preparation and
  by consuming ingredients and adding meals to the plan.
  The goal is to find a sequence of actions that optimizes meal planning
  based on our evaluation criteria.
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Standard
 To solve this optimization problem, we implement and compare several algorithms:
 \end_layout
 
 \begin_layout Itemize
 Greedy Algorithm: Select the best immediate action at each step.
- 
-\end_layout
-
-\begin_layout Itemize
-Planning Graph Algorithm: Constructs a graph of potential actions and derives
- an optimal solution.
  
 \end_layout
 
@@ -163,12 +157,16 @@ Reinforcement Learning: Learns an optimal policy through repeated interactions
 \end_layout
 
 \begin_layout Standard
+Initially we planed on using GRAPHPLAN algorithm as well for solving this,
+ but due to time constraints, and the size of datasets after a number of
+ trials we decided to remove it (we were not able to properly test it since
+ every run took a very long time).
+\end_layout
+
+\begin_layout Standard
 By exploring these diverse techniques, we aim to identify the most effective
  method for optimizing food inventory usage.
-\begin_inset Newline newline
-\end_inset
-
-To ensure usability, we’ve developed a user-friendly graphical interface
+ To ensure usability, we’ve developed a user-friendly graphical interface
  using Python's Tkinter library.
  Key components of the interface include: 
 \end_layout
@@ -489,27 +487,6 @@ Updates the state and repeats until the goal is reached or no more actions
 \end_layout
 
 \begin_layout Subsubsection*
-Planning Graph Solver
-\end_layout
-
-\begin_layout Standard
-This solver builds a graph of possible actions and their outcomes from each
- state.
- It works in two main steps:
-\end_layout
-
-\begin_layout Itemize
-Build the graph: Starting with the initial ingredients, it adds layers of
- possible meals and the resulting ingredient states.
- 
-\end_layout
-
-\begin_layout Itemize
-Extract the solution: It works backwards from the goal state, choosing the
- best meals at each step.
-\end_layout
-
-\begin_layout Subsubsection*
 Reinforcement Learning Solver
 \end_layout
 
@@ -664,6 +641,11 @@ Since we are trying to minimize the cost in this problem, for admissibility
  for every action and state.
  But by definition it is defined as a sum of CountExpiredItemsProblem score,
  and a positive value.
+\end_layout
+
+\begin_layout Standard
+For evaluation we made a number of datasets of both products and recipes,
+ ranging in sizes, parameters and dates.
 \end_layout
 
 \begin_layout Section
