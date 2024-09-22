@@ -608,6 +608,8 @@ where expired count is the number of items that would expire by the next
 MinimizeWasteProblem: This problem scores meals based on how soon their
  ingredients will expire.
  It calculates for each action the sum over each ingredient:
+\size footnotesize
+
 \begin_inset Formula 
 \begin{eqnarray*}
 \text{score} & =\frac{1}{\text{expired count}+1}+ & \sum\frac{1}{\text{expiration date}-\text{current date}+1}
@@ -615,6 +617,8 @@ MinimizeWasteProblem: This problem scores meals based on how soon their
 
 \end_inset
 
+
+\size default
 The main goal of this problem setup is to solve the issue with the previous
  setup, and give a sense of continuity to choices of actions over time.
  This problem can be thought of as a heuristic for the first problem, and
@@ -684,6 +688,13 @@ status open
 
 \begin_layout Plain Layout
 Algorithm Score Overview
+\begin_inset CommandInset label
+LatexCommand label
+name "fig1"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -697,8 +708,17 @@ Algorithm Score Overview
 \end_layout
 
 \begin_layout Standard
-Figure 1 shows the overall score performance of each algorithm across all
- problem types.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows the overall score performance of each algorithm across all problem
+ types.
  Simulated Annealing stands out as the top performer, consistently achieving
  the highest scores across various scenarios.
 \end_layout
@@ -726,6 +746,13 @@ status open
 
 \begin_layout Plain Layout
 Algorithm Runtime Overview
+\begin_inset CommandInset label
+LatexCommand label
+name "fig2"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -739,7 +766,16 @@ Algorithm Runtime Overview
 \end_layout
 
 \begin_layout Standard
-Figure 2 presents the execution time comparison.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ presents the execution time comparison.
  The Greedy algorithm is the fastest, followed closely by Simulated Annealing.
  Reinforcement Learning shows significantly longer run times.
 \end_layout
@@ -760,8 +796,18 @@ The Greedy algorithm excelled in speed but often failed to produce complete
 \end_layout
 
 \begin_layout Standard
-As seen in Figure 2, the Greedy algorithm consistently had the shortest
- execution times across all problem types.
+As seen in
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the Greedy algorithm consistently had the shortest execution times across
+ all problem types.
  However, its speed came at a cost to solution quality.
 \end_layout
 
@@ -776,8 +822,17 @@ Simulated Annealing emerged as the most effective algorithm in our tests.
 \end_layout
 
 \begin_layout Standard
-Figure 1 illustrates Simulated Annealing's superior performance in terms
- of solution quality.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ illustrates Simulated Annealing's superior performance in terms of solution
+ quality.
  It consistently outscored the other algorithms across all problem types.
 \end_layout
 
@@ -804,8 +859,18 @@ However, Reinforcement Learning had two significant drawbacks:
 \end_layout
 
 \begin_layout Enumerate
-Long execution times: As seen in Figure 2, Reinforcement Learning consistently
- took much longer to run than the other algorithms.
+Long execution times: As seen in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, Reinforcement Learning consistently took much longer to run than the other
+ algorithms.
 \end_layout
 
 \begin_layout Enumerate
@@ -836,6 +901,13 @@ Top 5 Hyperparameter Configurations for both
 \end_inset
 
 MinimizeWasteProblem and CountExpiredItemsProblem
+\begin_inset CommandInset label
+LatexCommand label
+name "tbl1"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2314,105 +2386,61 @@ Bold is highest, underline is second highest.
 \end_layout
 
 \begin_layout Standard
-This table shows that the best hyperparameter settings differ between problem
- types.
+This 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tbl1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows that the best hyperparameter settings differ between problem types.
  This highlights the challenge of using Reinforcement Learning in practice,
  as it requires tuning for each specific problem.
 \end_layout
 
 \begin_layout Subsection
-Performance Across Problem Types
+Performance Across Problem Types and Problem Transfer
 \end_layout
 
 \begin_layout Standard
 Each problem type—MinimizeWasteProblem, CountExpiredItemsProblem, and Parameters
 Problem—produced different results with each algorithm.
-\end_layout
-
-\begin_layout Standard
-[[score_performance_comparison_by_problem.png]]
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
-placement htbp
-wide false
+placement tp
+wide true
 sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
+\begin_inset Graphics
+	filename MealOptimizer/Visualizations/visualizations/score_overall_performance_comparison.png
+	lyxscale 20
+	scale 50
 
-\family sans
-A single column figure goes here
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Captions go 
-\emph on
-under
-\emph default
- the figure
-\end_layout
+Algorithms score on a variety of problem configurations
+\begin_inset CommandInset label
+LatexCommand label
+name "fig3"
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Figure 3 breaks down the performance by problem type.
- Simulated Annealing consistently outperformed the other algorithms across
- all three problem types.
- The Greedy algorithm struggled particularly with the CountExpiredItemsProblem,
- likely due to its short-term focused approach.
-\end_layout
-
-\begin_layout Standard
-Reinforcement Learning showed more consistent performance across problem
- types compared to the Greedy algorithm, but still fell short of Simulated
- Annealing's results.
-\end_layout
-
-\begin_layout Subsection
-Problem Transfer
-\end_layout
-
-\begin_layout Standard
-[[problem_transfer.png]]
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement htbp
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\family sans
-A single column figure goes here
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Captions go 
-\emph on
-under
-\emph default
- the figure
 \end_layout
 
 \end_inset
@@ -2426,19 +2454,94 @@ under
 \end_layout
 
 \begin_layout Standard
-Figure 5 shows how well the algorithms transfer between different problem
- types.
- Points closer to the diagonal line indicate better transfer, meaning the
- algorithm performs similarly on both problems.
-\end_layout
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig3"
+plural "false"
+caps "false"
+noprefix "false"
 
-\begin_layout Standard
-Simulated Annealing clusters near the top-right corner, showing high and
+\end_inset
+
+ we can see the results of each of the algorithms on different datasets
+ with different parameters (Start time, number of meals etc.).
+ Simulated Annealing clusters near the top-right corner, showing high and
  consistent performance across problem types.
  Reinforcement Learning shows more spread, indicating its performance varies
- more between problems.
- The Greedy algorithm clusters in the bottom-left, confirming its generally
- lower performance.
+ more between problems, the algorithm showed more consistent performance
+ across problem types compared to the Greedy algorithm, but still fell short
+ of Simulated Annealing's results
+\end_layout
+
+\begin_layout Standard
+The Greedy algorithm performs similar to Simulated Annealing on problem
+ layouts it was able to solve, but we can see the number of solutions is
+ sparse, meaning it wasn't able to find a solution for many of the problems.
+\end_layout
+
+\begin_layout Standard
+We wanted to check the ability of learning a policy using RL for a heuristic
+ function, so we tried to analyze the ability of the RL solver to learn
+ one problem i.e MinimizeWasteProblem, and use the policy gathered for CountExpir
+edItemsProblem which is a more accurate depiction of our problem.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ shows how well the algorithm transfers between different problem types.
+ Points closer to the diagonal line indicate better transfer, meaning the
+ algorithm performs similarly on both problems, but as we can see 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename MealOptimizer/Visualizations/rl_visualization_results2/problem_transfer.png
+	lyxscale 20
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Problem Transfer
+\begin_inset CommandInset label
+LatexCommand label
+name "fig4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2462,32 +2565,6 @@ Simulated Annealing proved most robust in these cases.
 \end_layout
 
 \begin_layout Subsection
-Scalability
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-[TO ADD: Results on how algorithm performance changed with dataset size]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This section will discuss how each algorithm's performance scaled with increasin
-g dataset size.
- We expect to see increased execution times for all algorithms, but the
- rate of increase may differ.
- This analysis will help understand each algorithm's suitability for larger,
- real-world meal planning scenarios.
-\end_layout
-
-\begin_layout Subsection
 Unexpected Findings
 \end_layout
 
@@ -2495,7 +2572,7 @@ Unexpected Findings
 The strong performance of Simulated Annealing was unexpected.
  Despite being a relatively simple algorithm, it outperformed the more complex
  Reinforcement Learning approach in both score and runtime across the number
- of iterations we tested.
+ of iterations and datasets we tested.
 \end_layout
 
 \begin_layout Standard
@@ -2571,15 +2648,14 @@ Reinforcement Learning, while powerful, requires careful consideration before
 
 \begin_layout Enumerate
 The choice of algorithm should consider the specific problem type.
- For example, Simulated Annealing's particular strength in the MinimizeWasteProb
-lem suggests it should be favored for applications focusing on reducing
- food waste.
+ For example, Simulated Annealing's particular short runtime suggests it
+ would be better for very large datasets.
 \end_layout
 
 \begin_layout Enumerate
 Robust meal planning systems should incorporate multiple algorithms.
- Using Simulated Annealing as a primary solver with the Greedy algorithm
- as a quick fallback could provide a good balance of performance and speed.
+ Using Simulated Annealing as a primary solver with a RLHF algorithm for
+ creating personalized recipes and meal plans would make for a great platform.
 \end_layout
 
 \begin_layout Section
@@ -2662,11 +2738,13 @@ Assumptions: Our model assumes accurate data on ingredient expiration dates
 \end_layout
 
 \begin_layout Enumerate
-Scalability: While we tested our algorithms on various dataset sizes, we
- didn't fully explore their performance on very large, real-world scale
- problems.
+Real world applications: While we tested our algorithms on various dataset
+ sizes, we didn't fully explore their performance on very large, real-world
+ scale problems.
  This is crucial for understanding how these algorithms would perform in
  commercial or industrial settings.
+ Our current model doesn't account for new items being added to the inventory
+ over time, which is a common occurrence in real kitchens.
 \end_layout
 
 \begin_layout Enumerate
@@ -2677,23 +2755,13 @@ User preferences: Our model considers taste as a parameter but doesn't account
 \end_layout
 
 \begin_layout Enumerate
-Nutritional balance: While our system allows for optimization of nutritional
+Parameter optimization: While our system allows for optimization of nutritional
  parameters, we didn't deeply explore how well the generated meal plans
  meet comprehensive nutritional guidelines.
  This is an important aspect for any practical meal planning system.
-\end_layout
-
-\begin_layout Enumerate
-Environmental impact: Although our system aims to reduce food waste, we
- didn't explicitly model or optimize for other environmental factors like
- greenhouse gas emissions associated with different ingredients or cooking
- methods.
-\end_layout
-
-\begin_layout Enumerate
-Dynamic inventory: Our current model doesn't account for new items being
- added to the inventory over time, which is a common occurrence in real
- kitchens.
+ And although our system aims to reduce food waste, we didn't explicitly
+ model or optimize for other environmental factors like greenhouse gas emissions
+ associated with different ingredients or cooking methods.
 \end_layout
 
 \begin_layout Standard
@@ -2710,23 +2778,23 @@ Other methods that could potentially solve this problem include:
 \end_layout
 
 \begin_layout Enumerate
-Constraint Programming: This could be particularly effective in handling
- complex constraints like dietary restrictions or nutritional balance.
-\end_layout
-
-\begin_layout Enumerate
 Genetic Algorithms: These could be useful for exploring a wider solution
- space and potentially finding novel meal combinations.
+ space and potentially finding novel meal combinations, these perform in
+ similar manner to Simulated Annealing but allow for more complex policies
+ to arise.
 \end_layout
 
 \begin_layout Enumerate
 Mixed Integer Programming: This could provide optimal solutions for smaller
- problem instances and serve as a benchmark for our heuristic approaches.
+ problem instances and serve as a benchmark for our heuristic approaches,
+ in fact this is the main method used today, as seen in previous work section.
 \end_layout
 
 \begin_layout Enumerate
-Deep Reinforcement Learning: More advanced RL techniques might overcome
- some of the limitations we encountered with our Q-learning approach.
+Deep Reinforcement Learning: More advanced RL techniques might use an Actor-Crit
+ic architecture to both determine best values for each recipe based upon
+ personal taste and chosen parameters, and optimize the meal plan for that
+ specific reward function.
 \end_layout
 
 \begin_layout Standard
@@ -2737,14 +2805,6 @@ In conclusion, our work provides a solid foundation for AI-driven meal planning
  Future work should focus on addressing the limitations we've identified
  and exploring additional optimization techniques to create more robust,
  flexible, and practical meal planning solutions.
-\end_layout
-
-\begin_layout Appendices
-
-\end_layout
-
-\begin_layout Section
-First appendix
 \end_layout
 
 \begin_layout Standard
