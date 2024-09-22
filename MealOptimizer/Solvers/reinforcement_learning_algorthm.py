@@ -7,7 +7,7 @@ from .solver import Solver
 
 
 class RLSolver(Solver):
-    def __init__(self, learning_rate=0.1, discount_factor=0.95, epsilon=0.3, episodes=1000,convergence_threshold=0.001):
+    def __init__(self, learning_rate=0.1, discount_factor=0.95, epsilon=0.3, episodes=1000, convergence_threshold=0.001):
         self.learning_rate = learning_rate
         self.discount_factor = discount_factor
         self.epsilon = epsilon

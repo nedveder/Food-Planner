@@ -13,7 +13,7 @@ from tqdm import tqdm
 
 
 class RLSolverVisualization:
-    def __init__(self, initial_state, piece_dataset, action_dataset, start_date, output_dir="rl_visualization_results"):
+    def __init__(self, initial_state, piece_dataset, action_dataset, start_date, output_dir="rl_visualization_results2"):
         self.initial_state = initial_state
         self.piece_dataset = piece_dataset
         self.action_dataset = action_dataset
@@ -157,12 +157,12 @@ class RLSolverVisualization:
                 self.plot_parameter_vs_score(results, param)
                 pbar.update(1)
 
-            for x_param in parameter_ranges.keys():
-                for y_param in parameter_ranges.keys():
-                    if x_param != y_param:
-                        self.plot_heatmap(results, x_param, y_param)
-                        self.plot_3d_surface(results, x_param, y_param)
-                        pbar.update(1)
+            # for x_param in parameter_ranges.keys():
+            #     for y_param in parameter_ranges.keys():
+            #         if x_param != y_param:
+            #             self.plot_heatmap(results, x_param, y_param)
+            #             self.plot_3d_surface(results, x_param, y_param)
+            #             pbar.update(1)
 
             self.plot_problem_transfer(results)
             pbar.update(1)
@@ -184,10 +184,10 @@ def main():
     visualizer = RLSolverVisualization(initial_state, piece_dataset, action_dataset, start_date)
 
     parameter_ranges = {
-        'learning_rate': [0.1, 0.01, 0.001],
-        'discount_factor': [0.9, 0.95, 0.99],
-        'epsilon': [0.1, 0.2, 0.3],
-        'episodes': [100, 500, 1000]
+        'learning_rate': [0.01]*5,
+        'discount_factor': [0.99]*5,
+        'epsilon': [0.2]*5,
+        'episodes': [100]*5
     }
 
     visualizer.run_all_visualizations(parameter_ranges)

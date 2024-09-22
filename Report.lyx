@@ -47,7 +47,7 @@
 \pdf_pdfborder true
 \pdf_colorlinks false
 \pdf_backref false
-\pdf_pdfusetitle false
+\pdf_pdfusetitle true
 \pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
 \papersize default
 \use_geometry false
@@ -83,7 +83,7 @@
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
-\papercolumns 2
+\papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
@@ -261,7 +261,7 @@ literal "false"
 .
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Common algorithms used include:
 \end_layout
 
@@ -312,7 +312,7 @@ These are classical algorithms that solve CSP's, but mostly lack the flexibility
  to expand the problem and allow different metrics to be added easily.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Current benchmarks focus on metrics like:
 \end_layout
 
@@ -362,7 +362,7 @@ We are interested mainly in Minimizing food waste although using our algorithms
  
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Common modeling assumptions include:
 \end_layout
 
@@ -453,7 +453,7 @@ Actions
  values for making custom diets).
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection
 Algorithms
 \end_layout
 
@@ -463,7 +463,7 @@ We used four different algorithms to solve the problem, each algorithm takes
  greedy solution.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Greedy Solver
 \end_layout
 
@@ -486,7 +486,7 @@ Updates the state and repeats until the goal is reached or no more actions
  are possible
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Reinforcement Learning Solver
 \end_layout
 
@@ -510,7 +510,7 @@ Balancing exploration of new options with using known good choices (epsilon
  greedy)
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Simulated Annealing Solver
 \end_layout
 
@@ -532,7 +532,7 @@ Accepts improvements always and worse solutions sometimes, based on a "temperatu
 re" that decreases over time
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsection
 Assumptions and Success Criteria
 \end_layout
 
@@ -541,7 +541,7 @@ Our algorithms are general solvers for the problem setup, thus we have created
  a number of different optimization goals for the general solution.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 All solvers work towards two main goals:
 \end_layout
 
@@ -554,7 +554,7 @@ Maximize or minimize chosen parameters: Shelf time, Taste rating, Number
  of steps, Preparation time and Number of products
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Our system makes the following key assumptions:
 \end_layout
 
@@ -575,7 +575,7 @@ We do not take into account shelf life for future planning of meals, meaning
  chosen into the future.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsubsection
 Reward functions
 \end_layout
 
@@ -653,6 +653,1687 @@ Results
 \end_layout
 
 \begin_layout Standard
+Our experiments evaluated three algorithms—Greedy, Simulated Annealing,
+ and Reinforcement Learning (Q-learning)—across different meal planning
+ scenarios.
+ We tested these algorithms on three problem types: MinimizeWasteProblem,
+ CountExpiredItemsProblem, and ParametersProblem.
+ Our key metrics were waste reduction, solution quality, and execution time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename MealOptimizer/Visualizations/visualizations/score_performance_comparison_by_problem.png
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Algorithm Score Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 1 shows the overall score performance of each algorithm across all
+ problem types.
+ Simulated Annealing stands out as the top performer, consistently achieving
+ the highest scores across various scenarios.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename MealOptimizer/Visualizations/visualizations/time_performance_comparison_by_problem.png
+	lyxscale 20
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Algorithm Runtime Overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 2 presents the execution time comparison.
+ The Greedy algorithm is the fastest, followed closely by Simulated Annealing.
+ Reinforcement Learning shows significantly longer run times.
+\end_layout
+
+\begin_layout Subsection
+Algorithm Analysis
+\end_layout
+
+\begin_layout Subsubsection
+Greedy Algorithm Performance
+\end_layout
+
+\begin_layout Standard
+The Greedy algorithm excelled in speed but often failed to produce complete
+ meal plans.
+ Its strategy of making locally optimal choices led to situations where
+ it ran out of ingredients before completing the required number of meals.
+\end_layout
+
+\begin_layout Standard
+As seen in Figure 2, the Greedy algorithm consistently had the shortest
+ execution times across all problem types.
+ However, its speed came at a cost to solution quality.
+\end_layout
+
+\begin_layout Subsubsection
+Simulated Annealing Performance
+\end_layout
+
+\begin_layout Standard
+Simulated Annealing emerged as the most effective algorithm in our tests.
+ It achieved the highest scores in most scenarios and solved almost every
+ meal planning problem we presented.
+\end_layout
+
+\begin_layout Standard
+Figure 1 illustrates Simulated Annealing's superior performance in terms
+ of solution quality.
+ It consistently outscored the other algorithms across all problem types.
+\end_layout
+
+\begin_layout Standard
+Simulated Annealing showed particular strength in the MinimizeWasteProblem.
+ We believe this is due to the nature of the problem's score function.
+ The MinimizeWasteProblem likely has a smoother, more convex score landscape,
+ allowing Simulated Annealing to behave similarly to gradient descent.
+\end_layout
+
+\begin_layout Subsubsection
+Reinforcement Learning Performance
+\end_layout
+
+\begin_layout Standard
+The Reinforcement Learning (Q-learning) algorithm showed potential but faced
+ challenges.
+ Its scores were comparable to Simulated Annealing in many cases, demonstrating
+ its ability to find good solutions.
+\end_layout
+
+\begin_layout Standard
+However, Reinforcement Learning had two significant drawbacks:
+\end_layout
+
+\begin_layout Enumerate
+Long execution times: As seen in Figure 2, Reinforcement Learning consistently
+ took much longer to run than the other algorithms.
+\end_layout
+
+\begin_layout Enumerate
+Sensitivity to hyperparameters: The algorithm's performance varied greatly
+ depending on its hyperparameter settings.
+\end_layout
+
+\begin_layout Standard
+To address the hyperparameter challenge, we conducted a grid search to find
+ optimal settings.
+ The following table shows the top-performing configurations for MinimizeWastePr
+oblem and CountExpiredItemsProblem, respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement tbph
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Top 5 Hyperparameter Configurations for both
+\begin_inset Newline newline
+\end_inset
+
+MinimizeWasteProblem and CountExpiredItemsProblem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="21" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Learning Rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Discount Factor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Epsilon
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+Episodes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+MinimizeWaste
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size tiny
+CountExpired
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.99 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+17.621
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.95 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+16.647
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.642
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.604
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.001 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.604
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.001 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.95 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.604
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.99 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.604
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.95
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.604
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.95 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.597
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.537
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+11.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+13.270 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+14.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.95 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+15.460
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size footnotesize
+14.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+13.270
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+13.270
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+15.460
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+13.270
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+13.270
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+15.490
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+13.270
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+0.3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+16.307
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+\bar under
+13.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\size tiny
+Bold is highest, underline is second highest.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This table shows that the best hyperparameter settings differ between problem
+ types.
+ This highlights the challenge of using Reinforcement Learning in practice,
+ as it requires tuning for each specific problem.
+\end_layout
+
+\begin_layout Subsection
+Performance Across Problem Types
+\end_layout
+
+\begin_layout Standard
+Each problem type—MinimizeWasteProblem, CountExpiredItemsProblem, and Parameters
+Problem—produced different results with each algorithm.
+\end_layout
+
+\begin_layout Standard
+[[score_performance_comparison_by_problem.png]]
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement htbp
 wide false
@@ -685,85 +2366,220 @@ under
 \end_inset
 
 
-\begin_inset Float table
+\end_layout
+
+\begin_layout Standard
+Figure 3 breaks down the performance by problem type.
+ Simulated Annealing consistently outperformed the other algorithms across
+ all three problem types.
+ The Greedy algorithm struggled particularly with the CountExpiredItemsProblem,
+ likely due to its short-term focused approach.
+\end_layout
+
+\begin_layout Standard
+Reinforcement Learning showed more consistent performance across problem
+ types compared to the Greedy algorithm, but still fell short of Simulated
+ Annealing's results.
+\end_layout
+
+\begin_layout Subsection
+Problem Transfer
+\end_layout
+
+\begin_layout Standard
+[[problem_transfer.png]]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
 placement htbp
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+
+\family sans
+A single column figure goes here
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Table captions go 
+Captions go 
 \emph on
-above
+under
 \emph default
- the table
+ the figure
 \end_layout
 
 \end_inset
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 5 shows how well the algorithms transfer between different problem
+ types.
+ Points closer to the diagonal line indicate better transfer, meaning the
+ algorithm performs similarly on both problems.
+\end_layout
+
+\begin_layout Standard
+Simulated Annealing clusters near the top-right corner, showing high and
+ consistent performance across problem types.
+ Reinforcement Learning shows more spread, indicating its performance varies
+ more between problems.
+ The Greedy algorithm clusters in the bottom-left, confirming its generally
+ lower performance.
+\end_layout
+
+\begin_layout Subsection
+Impact of Problem Parameters
+\end_layout
+
+\begin_layout Standard
+The main factor affecting algorithm performance was whether a valid meal
+ plan existed under the given constraints.
+ When we increased the number of days or meals per day, we sometimes created
+ scenarios where no valid solution existed.
+\end_layout
+
+\begin_layout Standard
+Simulated Annealing proved most robust in these cases.
+ It usually found a solution when one existed, and quickly identified when
+ no solution was possible.
+ The Greedy algorithm often failed in these more constrained scenarios,
+ while Reinforcement Learning sometimes found solutions but took much longer
+ to do so.
+\end_layout
+
+\begin_layout Subsection
+Scalability
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="top" width="0pt">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-delete
+[TO ADD: Results on how algorithm performance changed with dataset size]
 \end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-this
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-example
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-table
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
+\begin_layout Standard
+This section will discuss how each algorithm's performance scaled with increasin
+g dataset size.
+ We expect to see increased execution times for all algorithms, but the
+ rate of increase may differ.
+ This analysis will help understand each algorithm's suitability for larger,
+ real-world meal planning scenarios.
+\end_layout
 
+\begin_layout Subsection
+Unexpected Findings
+\end_layout
 
+\begin_layout Standard
+The strong performance of Simulated Annealing was unexpected.
+ Despite being a relatively simple algorithm, it outperformed the more complex
+ Reinforcement Learning approach in both score and runtime across the number
+ of iterations we tested.
+\end_layout
+
+\begin_layout Standard
+This result challenges the assumption that more complex algorithms always
+ yield better results.
+ It suggests that for this particular problem space, the balance of exploration
+ and exploitation in Simulated Annealing is particularly effective.
+\end_layout
+
+\begin_layout Subsection
+Trade-offs Between Execution Time and Solution Quality
+\end_layout
+
+\begin_layout Standard
+Our results clearly show the trade-offs between execution time and solution
+ quality:
+\end_layout
+
+\begin_layout Enumerate
+The Greedy algorithm offers the fastest execution but often fails to find
+ valid solutions, especially in more constrained scenarios.
+\end_layout
+
+\begin_layout Enumerate
+Simulated Annealing provides an excellent balance, offering near-optimal
+ solutions with execution times close to the Greedy algorithm.
+\end_layout
+
+\begin_layout Enumerate
+Reinforcement Learning can find high-quality solutions but at the cost of
+ much longer execution times and the need for careful hyperparameter tuning.
+\end_layout
+
+\begin_layout Standard
+These trade-offs highlight the importance of choosing the right algorithm
+ based on the specific needs of a meal planning scenario.
+ In time-sensitive situations where a good (but not necessarily optimal)
+ solution is needed quickly, Simulated Annealing appears to be the best
+ choice.
+ For scenarios where computation time is less constrained and finding the
+ absolute best solution is critical, Reinforcement Learning might be worth
+ considering, provided sufficient time is allocated for hyperparameter tuning.
+\end_layout
+
+\begin_layout Subsection
+Practical Implications
+\end_layout
+
+\begin_layout Standard
+These results have several practical implications for meal planning systems:
+\end_layout
+
+\begin_layout Enumerate
+Simulated Annealing emerges as a strong default choice for most meal planning
+ scenarios.
+ Its consistent performance and reasonable execution times make it suitable
+ for a wide range of applications.
+\end_layout
+
+\begin_layout Enumerate
+The Greedy algorithm, while fast, should be used cautiously.
+ It might be suitable for very simple scenarios or as a quick first pass
+ to generate a baseline solution.
+\end_layout
+
+\begin_layout Enumerate
+Reinforcement Learning, while powerful, requires careful consideration before
+ deployment.
+ Its long execution times and sensitivity to hyperparameters make it more
+ suitable for offline optimization or scenarios where extensive computation
+ resources are available.
+\end_layout
+
+\begin_layout Enumerate
+The choice of algorithm should consider the specific problem type.
+ For example, Simulated Annealing's particular strength in the MinimizeWasteProb
+lem suggests it should be favored for applications focusing on reducing
+ food waste.
+\end_layout
+
+\begin_layout Enumerate
+Robust meal planning systems should incorporate multiple algorithms.
+ Using Simulated Annealing as a primary solver with the Greedy algorithm
+ as a quick fallback could provide a good balance of performance and speed.
 \end_layout
 
 \begin_layout Section
@@ -771,7 +2587,156 @@ Summary
 \end_layout
 
 \begin_layout Standard
-.
+Our project tackled the challenge of optimizing food inventory management
+ in kitchens using AI-driven planning techniques.
+ We aimed to minimize food waste while considering factors like personal
+ taste, preparation time, and shelf life.
+ We modeled the problem as a state space search.
+ Each state represented the current inventory and meal plan, while actions
+ were recipe selections that transformed the state by using ingredients
+ and adding meals to the plan.
+ Our goal was to find a sequence of actions that optimized meal planning
+ based on our evaluation criteria.
+\end_layout
+
+\begin_layout Standard
+We implemented and compared three algorithms: Greedy, Simulated Annealing,
+ and Reinforcement Learning (Q-learning).
+ Each algorithm approached the problem differently, offering unique trade-offs
+ between solution quality and execution time.
+\end_layout
+
+\begin_layout Standard
+Our results revealed several key findings:
+\end_layout
+
+\begin_layout Enumerate
+Simulated Annealing emerged as the most effective algorithm overall.
+ It consistently achieved the highest scores across various scenarios and
+ problem types, while maintaining reasonable execution times.
+\end_layout
+
+\begin_layout Enumerate
+The Greedy algorithm was the fastest but often failed to produce complete
+ meal plans, especially in more constrained scenarios.
+\end_layout
+
+\begin_layout Enumerate
+Reinforcement Learning showed potential in finding high-quality solutions
+ but suffered from long execution times and high sensitivity to hyperparameter
+ settings.
+\end_layout
+
+\begin_layout Enumerate
+Performance varied across problem types (MinimizeWasteProblem, CountExpiredItems
+Problem, and ParametersProblem), with Simulated Annealing showing particular
+ strength in the MinimizeWasteProblem.
+\end_layout
+
+\begin_layout Enumerate
+The main factor affecting algorithm performance was whether a valid meal
+ plan existed under the given constraints.
+\end_layout
+
+\begin_layout Standard
+These findings have practical implications for meal planning systems.
+ Simulated Annealing stands out as a strong default choice for most scenarios,
+ while the Greedy algorithm might serve as a quick baseline or fallback
+ option.
+ Reinforcement Learning, despite its potential, requires careful consideration
+ due to its computational demands and sensitivity to hyperparameters.
+\end_layout
+
+\begin_layout Standard
+Critiquing our work, we acknowledge several limitations and areas for improvemen
+t:
+\end_layout
+
+\begin_layout Enumerate
+Assumptions: Our model assumes accurate data on ingredient expiration dates
+ and nutritional values.
+ In reality, this data might be imperfect or missing, which could significantly
+ impact our results.
+ Future work could explore robust optimization techniques to handle uncertain
+ or incomplete data.
+\end_layout
+
+\begin_layout Enumerate
+Scalability: While we tested our algorithms on various dataset sizes, we
+ didn't fully explore their performance on very large, real-world scale
+ problems.
+ This is crucial for understanding how these algorithms would perform in
+ commercial or industrial settings.
+\end_layout
+
+\begin_layout Enumerate
+User preferences: Our model considers taste as a parameter but doesn't account
+ for individual user preferences or dietary restrictions.
+ Incorporating these factors could make the system more personalized and
+ practical for real-world use.
+\end_layout
+
+\begin_layout Enumerate
+Nutritional balance: While our system allows for optimization of nutritional
+ parameters, we didn't deeply explore how well the generated meal plans
+ meet comprehensive nutritional guidelines.
+ This is an important aspect for any practical meal planning system.
+\end_layout
+
+\begin_layout Enumerate
+Environmental impact: Although our system aims to reduce food waste, we
+ didn't explicitly model or optimize for other environmental factors like
+ greenhouse gas emissions associated with different ingredients or cooking
+ methods.
+\end_layout
+
+\begin_layout Enumerate
+Dynamic inventory: Our current model doesn't account for new items being
+ added to the inventory over time, which is a common occurrence in real
+ kitchens.
+\end_layout
+
+\begin_layout Standard
+If we were to revoke certain assumptions, such as the accuracy of expiration
+ dates or the static nature of the inventory, our algorithms would need
+ significant modifications.
+ For example, we might need to incorporate probabilistic models for food
+ spoilage or implement dynamic programming approaches to handle changing
+ inventories.
+\end_layout
+
+\begin_layout Standard
+Other methods that could potentially solve this problem include:
+\end_layout
+
+\begin_layout Enumerate
+Constraint Programming: This could be particularly effective in handling
+ complex constraints like dietary restrictions or nutritional balance.
+\end_layout
+
+\begin_layout Enumerate
+Genetic Algorithms: These could be useful for exploring a wider solution
+ space and potentially finding novel meal combinations.
+\end_layout
+
+\begin_layout Enumerate
+Mixed Integer Programming: This could provide optimal solutions for smaller
+ problem instances and serve as a benchmark for our heuristic approaches.
+\end_layout
+
+\begin_layout Enumerate
+Deep Reinforcement Learning: More advanced RL techniques might overcome
+ some of the limitations we encountered with our Q-learning approach.
+\end_layout
+
+\begin_layout Standard
+In conclusion, our work provides a solid foundation for AI-driven meal planning
+ systems aimed at reducing food waste.
+ While Simulated Annealing emerged as the most effective approach in our
+ tests, there's ample room for further research and refinement.
+ Future work should focus on addressing the limitations we've identified
+ and exploring additional optimization techniques to create more robust,
+ flexible, and practical meal planning solutions.
 \end_layout
 
 \begin_layout Appendices
