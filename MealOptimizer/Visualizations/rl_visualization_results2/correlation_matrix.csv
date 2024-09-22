@@ -1,0 +1,7 @@
+,learning_rate,discount_factor,epsilon,episodes,minimize_waste_score,count_expired_score
+learning_rate,,,,,,
+discount_factor,,,,,,
+epsilon,,,,,,
+episodes,,,,,,
+minimize_waste_score,,,,,1.0,-0.16817799034000758
+count_expired_score,,,,,-0.16817799034000758,1.0
