@@ -114,8 +114,6 @@ class MealPlannerGUI(ctk.CTk):
             selected_solvers.append(GreedySolver())
         if self.settings_frame.sa_var.get():
             selected_solvers.append(SimulatedAnnealingSolver())
-        if self.settings_frame.graph_var.get():
-            selected_solvers.append(PlanningGraphSolver())
         if self.settings_frame.rl_var.get():
             selected_solvers.append(RLSolver())
 
@@ -133,6 +131,8 @@ class MealPlannerGUI(ctk.CTk):
             # Determine which problem to use
             if self.settings_frame.problem_var.get() == "Minimize Waste":
                 problem = MinimizeWasteProblem
+            elif self.settings_frame.problem_var.get() == "Count Expired Items":
+                problem = Problems.CountExpiredItemsProblem
             else:  # Maximize Parameters
                 if self.settings_frame.num_steps_var.get():
                     parameters_to_maximize.append("Number of Steps")
