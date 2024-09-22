@@ -57,9 +57,9 @@ class Experiment:
             solver_time = end_time - start_time
 
             if problem.is_goal_state(solver_final_state):
-                results[solver] = (solver_final_state, solver_time, problem.get_score(solver_final_state))
+                results[solver] = (solver_final_state, solver_time)
                 print(f"{solver} reached the goal state with score {problem.get_score(solver_final_state)}")
             else:
-                results[solver] = (None, solver_time, 0)
+                results[solver] = (None, solver_time)
                 print(f"{solver} did not reach the goal state")
         return results
